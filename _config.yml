@@ -34,7 +34,7 @@ aux_links:
 aux_links_new_tab: True # Open link in a new tab
 
 # Build settings
-theme: just-the-docs
+# theme: just-the-docs
 plugins:
   - jekyll-feed
 
