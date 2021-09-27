@@ -1,0 +1,356 @@
+{"0": {
+    "doc": "Accuracy",
+    "title": "Accuracy",
+    "content": "It represents the ratio of correctly classified samples to the total number of samples. It is defined as: . accuracy = (tp + tn)/(tp + tn + fp + fn) . Example . from odin.classes import Metrics my_metric = Metrics.ACCURACY # use my_metric as 'metric' parameter in the analyses . Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | yes | yes | yes | no | no | . ",
+    "url": "http://localhost:4000/odin-docs/metrics_curves/accuracy.html",
+    "relUrl": "/metrics_curves/accuracy.html"
+  },"1": {
+    "doc": "analyze_cams_threshold()",
+    "title": "analyze_cams_threshold()",
+    "content": "It provides a per-category analysis of the model CAMs at different thresholds. Parameters . categories list, optionalList of categories to be included in the analysis. If not specified, all the categories are included.(default is None) metric Metrics or str, optionalEvaluation metric used for the analysis. If not specified, the default one is used.(default is None) show bool, optionalIndicates whether the plot should be shown or not. If False, returns the results as dict.(default is True) . Example . Localization . from odin.classes import AnalyzerCAMs my_analyzer = AnalyzerCAMs(\"my_classifier_name\", my_CAMs_dataset) my_analyzer.analyze_cams_threshold() . Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | yes | yes | yes | no | no | . ",
+    "url": "http://localhost:4000/odin-docs/analyzer/analyze_cams_threshold.html",
+    "relUrl": "/analyzer/analyze_cams_threshold.html"
+  },"2": {
+    "doc": "analyze_confusion_matrix()",
+    "title": "analyze_confusion_matrix()",
+    "content": "It analyzes the confusion matrix of the model. The analysis can be performed for the entire data set or for a subset with a specific property value. Parameters . categories list, optionalList of categories to be included in the analysis. If not specified, all the categories are included.(default is None) properties_names list, optionalList of properties to be included in the analysis. If not specified, all the properties are included.(default is None) properties_values list of list, optionalProperties values to be considered in te analysis. If not specified, all the values are considered.(default is None)The index of the properties values must be the same of the properties names. Example:properties_names=['name1', 'name2']properties_values=[['value1_of_name1', 'value2_of_name1'], ['value1_of_name2']] show bool, optionalIndicates whether the plot should be shown or not. If False, returns the results as dict.(default is True) . Example . Classification . from odin.classes import AnalyzerClassification my_analyzer = AnalyzerClassification(\"my_classifier_name\", my_classification_dataset) my_analyzer.analyze_confusion_matrix() . N.B. As example, it is shown only the output of a single category, but the analysis is performed for all the categories selected. N.B. The confusion matrix among the categories is supported only for single-label classification task. Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | yes | yes | yes | no | no | . ",
+    "url": "http://localhost:4000/odin-docs/analyzer/analyze_confusion_matrix.html",
+    "relUrl": "/analyzer/analyze_confusion_matrix.html"
+  },"3": {
+    "doc": "analyze_curve()",
+    "title": "analyze_curve()",
+    "content": "It provides an overall analysis of the model performances by plotting the desired curve. Parameters . curve Curves, optionalEvaluation curve used for the analysis.(default is Curves.PRECISION_RECALL_CURVE) average str, optionalIndicates the averaging method. It can be 'macro' or 'micro'.(default is 'macro') show bool, optionalIndicates whether the plot should be shown or not. If False, returns the results as dict.(default is True) . Example . Classification . from odin.classes import AnalyzerClassification my_analyzer = AnalyzerClassification(\"my_classifier_name\", my_classification_dataset) my_analyzer.analyze_curve() . Localization . from odin.classes import AnalyzerLocalization my_analyzer = AnalyzerLocalization(\"my_detector_name\", my_localization_dataset) my_analyzer.analyze_curve() . Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | yes | yes | yes | yes | yes | . ",
+    "url": "http://localhost:4000/odin-docs/analyzer/analyze_curve.html",
+    "relUrl": "/analyzer/analyze_curve.html"
+  },"4": {
+    "doc": "analyze_curve_for_categories()",
+    "title": "analyze_curve_for_categories()",
+    "content": "For each category, it provides an analysis of the model performances by plotting the desired curve. Parameters . categories list, optionalList of categories to be included in the analysis. If not specified, all the categories are included.(default is None) curve Curves, optionalEvaluation curve used for the analysis.(default is Curves.PRECISION_RECALL_CURVE) show bool, optionalIndicates whether the plot should be shown or not. If False, returns the results as dict.(default is True) . Example . Classification . from odin.classes import AnalyzerClassification my_analyzer = AnalyzerClassification(\"my_classifier_name\", my_classification_dataset) my_analyzer.analyze_curve_for_categories() . Localization . from odin.classes import AnalyzerLocalization my_analyzer = AnalyzerLocalization(\"my_detector_name\", my_localization_dataset) my_analyzer.analyze_curve_for_categories() . Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | no | yes | yes | yes | yes | . ",
+    "url": "http://localhost:4000/odin-docs/analyzer/analyze_curve_for_categories.html",
+    "relUrl": "/analyzer/analyze_curve_for_categories.html"
+  },"5": {
+    "doc": "analyze_false_positive_error_for_category()",
+    "title": "analyze_false_positive_error_for_category()",
+    "content": "It analyzes the false positives for a specific category, by identifying the type of the errors and shows the gain that the model could achieve by removing all the false positives of each type. Parameters . category strName of the category to be analyzed. categories list, optionalList of categories to be included in the analysis. If not specified, only the selected category is included.(default is None) metric Metrics or str, optionalEvaluation metric used for the analysis. If not specified, the default one is used.(default is None) show bool, optionalIndicates whether the plot should be shown or not. If False, returns the results as dict.(default is True) . Example . Classification . from odin.classes import AnalyzerClassification my_analyzer = AnalyzerClassification(\"my_classifier_name\", my_classification_dataset) my_analyzer.analyze_false_positive_error_for_category('catA') . Localization . from odin.classes import AnalyzerLocalization my_analyzer = AnalyzerLocalization(\"my_detector_name\", my_localization_dataset) my_analyzer.analyze_false_positive_error_for_category('catA') . Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | no | yes | yes | yes | yes | . ",
+    "url": "http://localhost:4000/odin-docs/analyzer/analyze_false_positive_error_for_category.html",
+    "relUrl": "/analyzer/analyze_false_positive_error_for_category.html"
+  },"6": {
+    "doc": "analyze_false_positive_errors()",
+    "title": "analyze_false_positive_errors()",
+    "content": "For each class, it analyzes the false positives by identifying the type of the errors and shows the gain that the model could achieve by removing all the false positives of each type. Parameters . categories list, optionalList of categories to be included in the analysis. If not specified, all the categories are included.(default is None) metric Metrics or str, optionalEvaluation metric used for the analysis. If not specified, the default one is used.(default is None) show bool, optionalIndicates whether the plot should be shown or not. If False, returns the results as dict.(default is True) . Example . Classification . from odin.classes import AnalyzerClassification my_analyzer = AnalyzerClassification(\"my_classifier_name\", my_classification_dataset) my_analyzer.analyze_false_positive_errors() . N.B. As example, it is shown only the output of a single category, but the analysis is performed for all the categories selected. Localization . from odin.classes import AnalyzerLocalization my_analyzer = AnalyzerLocalization(\"my_detector_name\", my_localization_dataset) my_analyzer.analyze_false_positive_errors() . N.B. As example, it is shown only the output of a single category, but the analysis is performed for all the categories selected. Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | no | yes | yes | yes | yes | . ",
+    "url": "http://localhost:4000/odin-docs/analyzer/analyze_false_positive_errors.html",
+    "relUrl": "/analyzer/analyze_false_positive_errors.html"
+  },"7": {
+    "doc": "analyze_intersection_over_union()",
+    "title": "analyze_intersection_over_union()",
+    "content": "It provides a per-category analysis of the model performances at different Intersection Over Union (IoU) thresholds. Parameters . categories list, optionalList of categories to be included in the analysis. If not specified, all the categories are included.(default is None) metric Metrics or str, optionalEvaluation metric used for the analysis. If not specified, the default one is used.(default is None) show bool, optionalIndicates whether the plot should be shown or not. If False, returns the results as dict.(default is True) . Example . Localization . from odin.classes import AnalyzerLocalization my_analyzer = AnalyzerLocalization(\"my_detector_name\", my_localization_dataset) my_analyzer.analyze_intersection_over_union() . Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | no | no | no | yes | yes | . ",
+    "url": "http://localhost:4000/odin-docs/analyzer/analyze_intersection_over_union.html",
+    "relUrl": "/analyzer/analyze_intersection_over_union.html"
+  },"8": {
+    "doc": "analyze_intersection_over_union_for_category()",
+    "title": "analyze_intersection_over_union_for_category()",
+    "content": "It provides a per-category analysis of the model performances at different Intersection Over Union (IoU) thresholds. Parameters . category strName of the category to be analyzed. metric Metrics or str, optionalEvaluation metric used for the analysis. If not specified, the default one is used.(default is None) show bool, optionalIndicates whether the plot should be shown or not. If False, returns the results as dict.(default is True) . Example . Localization . from odin.classes import AnalyzerLocalization my_analyzer = AnalyzerLocalization(\"my_detector_name\", my_localization_dataset) my_analyzer.analyze_intersection_over_union_for_category('catA') . Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | no | no | no | yes | yes | . ",
+    "url": "http://localhost:4000/odin-docs/analyzer/analyze_intersection_over_union_for_category.html",
+    "relUrl": "/analyzer/analyze_intersection_over_union_for_category.html"
+  },"9": {
+    "doc": "analyze_properties()",
+    "title": "analyze_properties()",
+    "content": "For each property, the model performances are analyzed for each category considering subsets of the data set which have a specific property value. Parameters . properties list, optionalList of properties to be included in the analysis. If not specified, all the properties are included.(default is None) metric Metrics or str, optionalEvaluation metric used for the analysis. If not specified, the default one is used.(default is None) split_by str, optionalIf there are too many values, the plot is divided into subplots. The split can be performed by 'categories' or by 'meta-annotations'.(default is 'meta-annotations') show bool, optionalIndicates whether the plot should be shown or not. If False, returns the results as dict.(default is True) . Example . Classification . from odin.classes import AnalyzerClassification my_analyzer = AnalyzerClassification(\"my_classifier_name\", my_classification_dataset) my_analyzer.analyze_properties() . Localization . from odin.classes import AnalyzerLocalization my_analyzer = AnalyzerLocalization(\"my_detector_name\", my_localization_dataset) my_analyzer.analyze_properties() . Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | yes | yes | yes | yes | yes | . ",
+    "url": "http://localhost:4000/odin-docs/analyzer/analyze_properties.html",
+    "relUrl": "/analyzer/analyze_properties.html"
+  },"10": {
+    "doc": "analyze_property()",
+    "title": "analyze_property()",
+    "content": "The model performances are analyzed for each category considering subsets of the data set which have a specific property value. Parameters . property_name strName of the property to be analyzed. possible_values list, optionalProperty values to be analyzed. If not specified, all the property values are considered.(default is None) show bool, optionalIndicates whether the plot should be shown or not. If False, returns the results as dict.(default is True) metric Metrics or str, optionalEvaluation metric used for the analysis. If not specified, the default one is used.(default is None) split_by str, optionalIf there are too many values, the plot is divided into subplots. The split can be performed by 'categories' or by 'meta-annotations'.(default is 'meta-annotations') . Example . Classification . from odin.classes import AnalyzerClassification my_analyzer = AnalyzerClassification(\"my_classifier_name\", my_classification_dataset) my_analyzer.analyze_property('prop1') . Localization . from odin.classes import AnalyzerLocalization my_analyzer = AnalyzerLocalization(\"my_detector_name\", my_localization_dataset) my_analyzer.analyze_property('prop1') . Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | yes | yes | yes | yes | yes | . ",
+    "url": "http://localhost:4000/odin-docs/analyzer/analyze_property.html",
+    "relUrl": "/analyzer/analyze_property.html"
+  },"11": {
+    "doc": "analyze_reliability()",
+    "title": "analyze_reliability()",
+    "content": "It provides the reliability analysis by showing the distribution of the proposals among different confidence values and the corresponding confidence calibration. Parameters . categories list, optionalIf not specified, it performs the analysis on the entire data set, otherwise it performs a per-category analysis.(default is None) bins int, optionalThe number of bins the confidence values are split into.(default is 10) show bool, optionalIndicates whether the plot should be shown or not. If False, returns the results as dict.(default is True) . Example . Classification . from odin.classes import AnalyzerClassification my_analyzer = AnalyzerClassification(\"my_classifier_name\", my_classification_dataset) my_analyzer.analyze_reliability() . Localization . from odin.classes import AnalyzerLocalization my_analyzer = AnalyzerLocalization(\"my_detector_name\", my_localization_dataset) my_analyzer.analyze_reliability() . Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | yes | yes | yes | yes | yes | . ",
+    "url": "http://localhost:4000/odin-docs/analyzer/analyze_reliability.html",
+    "relUrl": "/analyzer/analyze_reliability.html"
+  },"12": {
+    "doc": "analyze_sensitivity_impact_of_properties()",
+    "title": "analyze_sensitivity_impact_of_properties()",
+    "content": "It provides the sensitivity of the model for each property and the impact that the latter could have on the overall performance of the model. The sensitivity to a property is the difference between the maximum and minimum score obtained for that meta-annotation. The impact of a property, instead, is the difference between the maximum score achieved for it and the overall score obtained by the model. Parameters . properties list, optionalList of properties to be included in the analysis. If not specified, all the properties are included.(default is None) metric Metrics or str, optionalEvaluation metric used for the analysis. If not specified, the default one is used.(default is None) show bool, optionalIndicates whether the plot should be shown or not. If False, returns the results as dict.(default is True) . Example . Classification . from odin.classes import AnalyzerClassification my_analyzer = AnalyzerClassification(\"my_classifier_name\", my_classification_dataset) my_analyzer.analyze_sensitivity_impact_of_properties() . Localization . from odin.classes import AnalyzerLocalization my_analyzer = AnalyzerLocalization(\"my_detector_name\", my_localization_dataset) my_analyzer.analyze_sensitivity_impact_of_properties() . Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | yes | yes | yes | yes | yes | . ",
+    "url": "http://localhost:4000/odin-docs/analyzer/analyze_sensitivity_impact_of_properties.html",
+    "relUrl": "/analyzer/analyze_sensitivity_impact_of_properties.html"
+  },"13": {
+    "doc": "analyze_top1_top5_error()",
+    "title": "analyze_top1_top5_error()",
+    "content": "It analyzes the model performances by considering the top-1 and the top-5 classification predictions. The analysis can be performed for the entire data set or for a subset with a specific property value. Parameters . properties list, optionalIf not specified, it performs the analysis on the entire data set, otherwise it performs a per-property analysis.(default is None) metric Metrics or str, optionalEvaluation metric used for the analysis.(default is Metrics.ERROR_RATE) show bool, optionalIndicates whether the plot should be shown or not. If False, returns the results as dict.(default is True) . Example . Classification . from odin.classes import AnalyzerClassification my_analyzer = AnalyzerClassification(\"my_classifier_name\", my_classification_dataset) my_analyzer.analyze_top1_top5_error() . from odin.classes import AnalyzerClassification my_analyzer = AnalyzerClassification(\"my_classifier_name\", my_classification_dataset) my_analyzer.analyze_top1_top5_error(properties=['prop1']) . Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | no | yes | no | no | no | . ",
+    "url": "http://localhost:4000/odin-docs/analyzer/analyze_top1_top5_error.html",
+    "relUrl": "/analyzer/analyze_top1_top5_error.html"
+  },"14": {
+    "doc": "Average Precision",
+    "title": "Average Precision",
+    "content": "It represents the weighted mean of precision achieved at each threshold, with the increase in recall from the previous threshold used as weight. It is defined as: . ap = sum[(recall(n) - recall(n-1))*precision(n)] . Example . from odin.classes import Metrics my_metric = Metrics.AVERAGE_PRECISION_SCORE # use my_metric as 'metric' parameter in the analyses . Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | yes | yes | yes | yes | yes | . ",
+    "url": "http://localhost:4000/odin-docs/metrics_curves/average_precision_score.html",
+    "relUrl": "/metrics_curves/average_precision_score.html"
+  },"15": {
+    "doc": "base_report()",
+    "title": "base_report()",
+    "content": "It summarizes all the performance scores of the model at all levels of granularity: it provides the overall scores, the per-category scores and the per-property scores. Parameters . metrics list, optionalList of evaluation metrics to be included in the analysis. If not specified, all the evaluation metrics are included.(default is None) categories list, optionalList of categories to be included in the analysis. If not specified, all the categories are included.(default is None) properties bool, optionalList of properties to be included in the analysis. If not specified, all the properties are included.(default is None) show_categories bool, optionalIndicates whether the categories should be included in the report.(default is True) show_properties bool, optionalIndicates whether the properties should be included in the report.(default is True) . Example . Classification . from odin.classes import AnalyzerClassification my_analyzer = AnalyzerClassification(\"my_classifier_name\", my_classification_dataset) my_analyzer.base_report() . Localization . from odin.classes import AnalyzerLocalization my_analyzer = AnalyzerLocalization(\"my_detector_name\", my_localization_dataset) my_analyzer.base_report() . N.B. For localization models, the Accuracy and Error Rate evaluation metrics are not supported. Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | yes | yes | yes | yes | yes | . ",
+    "url": "http://localhost:4000/odin-docs/analyzer/base_report.html",
+    "relUrl": "/analyzer/base_report.html"
+  },"16": {
+    "doc": "CAM Bbox Coverage",
+    "title": "CAM Bbox Coverage",
+    "content": "It evaluates how many bounding boxes are covered by each class activation map. This metrics considers that a bounding box is covered by the class activation map only if their intersection is greater than or equal to a coverage threshold of the bounding box area. Example . from odin.classes import Metrics my_metric = Metrics.CAM_BBOX_COVERAGE # use my_metric as 'metric' parameter in the analyses . Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | yes | yes | yes | no | no | . ",
+    "url": "http://localhost:4000/odin-docs/metrics_curves/cam_bbox_coverage.html",
+    "relUrl": "/metrics_curves/cam_bbox_coverage.html"
+  },"17": {
+    "doc": "CAM Component IoU",
+    "title": "CAM Component IoU",
+    "content": "It evaluates how much the class activation map focuses on multiple components of the same category. First, the class activation map foreground area is divided into connected components, i.e., groups of pixels connected to each other. The IoU value is calculated between each ground truth bounding box and the connected components that intersect it. Then, the average IoU across all the components is taken. Example . from odin.classes import Metrics my_metric = Metrics.CAM_COMPONENT_IOU # use my_metric as 'metric' parameter in the analyses . Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | yes | yes | yes | no | no | . ",
+    "url": "http://localhost:4000/odin-docs/metrics_curves/cam_component_iou.html",
+    "relUrl": "/metrics_curves/cam_component_iou.html"
+  },"18": {
+    "doc": "CAM Global IoU",
+    "title": "CAM Global IoU",
+    "content": "It evaluates the IoU between the union of all the bounding boxes in the image and the entire foreground area of the class activation map given a threshold. Example . from odin.classes import Metrics my_metric = Metrics.CAM_GLOBAL_IOU # use my_metric as 'metric' parameter in the analyses . Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | yes | yes | yes | no | no | . ",
+    "url": "http://localhost:4000/odin-docs/metrics_curves/cam_global_iou.html",
+    "relUrl": "/metrics_curves/cam_global_iou.html"
+  },"19": {
+    "doc": "CAM Irrelevant Attention",
+    "title": "CAM Irrelevant Attention",
+    "content": "It evaluates how much the class activation maps focus on irrelevant parts of the image. This metric corresponds to the percentage of CAM area outside any bounding box. Example . from odin.classes import Metrics my_metric = Metrics.CAM_IRRELEVANT_ATTENTION # use my_metric as 'metric' parameter in the analyses . Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | yes | yes | yes | no | no | . ",
+    "url": "http://localhost:4000/odin-docs/metrics_curves/cam_irrelevant_attention.html",
+    "relUrl": "/metrics_curves/cam_irrelevant_attention.html"
+  },"20": {
+    "doc": "compare_models_base_report()",
+    "title": "compare_models_base_report()",
+    "content": "It summarizes the models performances at all levels of granularity. Parameters . metrics list, optionalList of evaluation metrics to be included in the analysis. If not specified, all the evaluation metrics are included.(default is None) categories list, optionalList of categories to be included in the analysis. If not specified, all the categories are included.(default is None) properties bool, optionalList of properties to be included in the analysis. If not specified, all the properties are included.(default is None) show_categories bool, optionalIndicates whether the categories should be included in the report.(default is True) show_properties bool, optionalIndicates whether the properties should be included in the report.(default is True) . Example . Classification . from odin.classes import ComparatorClassification my_comparator = ComparatorClassification(dataset_gt_param, classification_type, models_proposals) my_comparator.compare_models_base_report() . Localization . from odin.classes import ComparatorLocalization my_comparator = ComparatorLocalization(dataset_gt_param, task_type, models_proposals) my_comparator.compare_models_base_report() . N.B. For localization models, the Accuracy and Error Rate evaluation metrics are not supported. Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | yes | yes | yes | yes | yes | . ",
+    "url": "http://localhost:4000/odin-docs/comparator/compare_models_base_report.html",
+    "relUrl": "/comparator/compare_models_base_report.html"
+  },"21": {
+    "doc": "compare_models_on_cams_threshold()",
+    "title": "compare_models_on_cams_threshold()",
+    "content": "It compares the CAMs of the models at different threshold values. Parameters . metric Metrics, optionalEvaluation metric used for the analysis. If not specified, the default one is used.(default is None) . Example . Classification . from odin.classes import ComparatorCAMs my_comparator = ComparatorCAMs(dataset_gt_param, classification_type, models_proposals) my_comparator.compare_models_on_cams_threshold() . Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | yes | yes | yes | no | no | . ",
+    "url": "http://localhost:4000/odin-docs/comparator/compare_models_on_cams_threshold.html",
+    "relUrl": "/comparator/compare_models_on_cams_threshold.html"
+  },"22": {
+    "doc": "compare_models_on_curve()",
+    "title": "compare_models_on_curve()",
+    "content": "It compares the overall models performances by plotting the desired curve. Parameters . curve Curves, optionalEvaluation curve used for the analysis.(default is Curves.PRECISION_RECALL_CURVE) average str, optionalIndicates the averaging method. It can be 'macro' or 'micro'.(default is 'macro') . Example . Classification . from odin.classes import ComparatorClassification my_comparator = ComparatorClassification(dataset_gt_param, classification_type, models_proposals) my_comparator.compare_models_on_curve() . Localization . from odin.classes import ComparatorLocalization my_comparator = ComparatorLocalization(dataset_gt_param, task_type, models_proposals) my_comparator.compare_models_on_curve() . Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | yes | yes | yes | yes | yes | . ",
+    "url": "http://localhost:4000/odin-docs/comparator/compare_models_on_curve.html",
+    "relUrl": "/comparator/compare_models_on_curve.html"
+  },"23": {
+    "doc": "compare_models_on_curve_for_categories()",
+    "title": "compare_models_on_curve_for_categories()",
+    "content": "It compares the models performances for each category by plotting the desired curve. Parameters . categories list, optionalList of categories to be included in the analysis. If not specified, all the categories are included.(default is None) curve Curves, optionalEvaluation curve used for the analysis.(default is Curves.PRECISION_RECALL_CURVE) . Example . Classification . from odin.classes import ComparatorClassification my_comparator = ComparatorClassification(dataset_gt_param, classification_type, models_proposals) my_comparator.compare_models_on_curve_for_categories() . Localization . from odin.classes import ComparatorLocalization my_comparator = ComparatorLocalization(dataset_gt_param, task_type, models_proposals) my_comparator.compare_models_on_curve_for_categories() . Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | no | yes | yes | yes | yes | . ",
+    "url": "http://localhost:4000/odin-docs/comparator/compare_models_on_curve_for_categories.html",
+    "relUrl": "/comparator/compare_models_on_curve_for_categories.html"
+  },"24": {
+    "doc": "compare_models_on_errors_impact()",
+    "title": "compare_models_on_errors_impact()",
+    "content": "It compares the false positives by identifying the type of the errors of the models and shows the gain that each model could achieve by removing all the false positives of each type. Parameters . categories list, optionalList of categories to be included in the analysis. If not specified, all the categories are included.(default is None) metric Metrics or str, optionalEvaluation metric used for the analysis. If not specified, the default one is used.(default is None) . Example . Classification . from odin.classes import ComparatorClassification similar_categories = [[1, 3], [2, 3]] my_comparator = ComparatorClassification(dataset_gt_param, classification_type, models_proposals, similar_classes=similar_categories) my_comparator.compare_models_on_errors_impact() . Localization . from odin.classes import ComparatorLocalization my_comparator = ComparatorLocalization(dataset_gt_param, task_type, models_proposals, similar_classes=similar_categories) my_comparator.compare_models_on_errors_impact() . . Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | no | yes | yes | yes | yes | . ",
+    "url": "http://localhost:4000/odin-docs/comparator/compare_models_on_errors_impact.html",
+    "relUrl": "/comparator/compare_models_on_errors_impact.html"
+  },"25": {
+    "doc": "compare_models_on_false_negative()",
+    "title": "compare_models_on_false_negative()",
+    "content": "It compares the false negatives of the models. Parameters . categories list, optionalList of categories to be included in the analysis. If not specified, all the categories are included.(default is None) . Example . Classification . from odin.classes import ComparatorClassification my_comparator = ComparatorClassification(dataset_gt_param, classification_type, models_proposals) my_comparator.compare_models_on_false_negative() . Localization . from odin.classes import ComparatorLocalization my_comparator = ComparatorLocalization(dataset_gt_param, task_type, models_proposals) my_comparator.compare_models_on_false_negative() . Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | no | yes | yes | yes | yes | . ",
+    "url": "http://localhost:4000/odin-docs/comparator/compare_models_on_false_negative.html",
+    "relUrl": "/comparator/compare_models_on_false_negative.html"
+  },"26": {
+    "doc": "compare_models_on_false_positive()",
+    "title": "compare_models_on_false_positive()",
+    "content": "It compares the false positives of the models. Parameters . categories list, optionalList of categories to be included in the analysis. If not specified, all the categories are included.(default is None) . Example . Classification . from odin.classes import ComparatorClassification my_comparator = ComparatorClassification(dataset_gt_param, classification_type, models_proposals) my_comparator.compare_models_on_false_positive() . Localization . from odin.classes import ComparatorLocalization my_comparator = ComparatorLocalization(dataset_gt_param, task_type, models_proposals) my_comparator.compare_models_on_false_positive() . Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | no | yes | yes | yes | yes | . ",
+    "url": "http://localhost:4000/odin-docs/comparator/compare_models_on_false_positive.html",
+    "relUrl": "/comparator/compare_models_on_false_positive.html"
+  },"27": {
+    "doc": "compare_models_on_property()",
+    "title": "compare_models_on_property()",
+    "content": "It compares the performances of the models for each category considering subsets pf the data set which have a specific property value. Parameters . property_name strName of the property to be analyzed. possible_values list, optionalProperty values to be analyzed. If not specified, all the property values are considered.(default is None) metric Metrics or str, optionalEvaluation metric used for the analysis. If not specified, the default one is used.(default is None) . Example . Classification . from odin.classes import ComparatorClassification my_comparator = ComparatorClassification(dataset_gt_param, classification_type, models_proposals) my_comparator.compare_models_on_property('prop1') . Localization . from odin.classes import ComparatorLocalization my_comparator = ComparatorLocalization(dataset_gt_param, task_type, models_proposals) my_comparator.compare_models_on_property('prop1') . . Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | yes | yes | yes | yes | yes | . ",
+    "url": "http://localhost:4000/odin-docs/comparator/compare_models_on_property.html",
+    "relUrl": "/comparator/compare_models_on_property.html"
+  },"28": {
+    "doc": "compare_models_on_sensitivity_impact()",
+    "title": "compare_models_on_sensitivity_impact()",
+    "content": "It compares the sensitivity and impact of the models on the different properties. Parameters . properties list, optionalList of properties to be included in the analysis. If not specified, all the properties are included.(default is None) metric Metrics or str, optionalEvaluation metric used for the analysis. If not specified, the default one is used.(default is None) . Example . Classification . from odin.classes import ComparatorClassification my_comparator = ComparatorClassification(dataset_gt_param, classification_type, models_proposals) my_comparator.compare_models_on_sensitivity_impact() . Localization . from odin.classes import ComparatorLocalization my_comparator = ComparatorLocalization(dataset_gt_param, task_type, models_proposals) my_comparator.compare_models_on_sensitivity_impact() . Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | yes | yes | yes | yes | yes | . ",
+    "url": "http://localhost:4000/odin-docs/comparator/compare_models_on_sensitivity_impact.html",
+    "relUrl": "/comparator/compare_models_on_sensitivity_impact.html"
+  },"29": {
+    "doc": "compare_models_on_true_negative()",
+    "title": "compare_models_on_true_negative()",
+    "content": "It compares the true negatives of the models. Parameters . categories list, optionalList of categories to be included in the analysis. If not specified, all the categories are included.(default is None) . Example . Classification . from odin.classes import ComparatorClassification my_comparator = ComparatorClassification(dataset_gt_param, classification_type, models_proposals) my_comparator.compare_models_on_true_negative() . Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | no | yes | yes | no | no | . ",
+    "url": "http://localhost:4000/odin-docs/comparator/compare_models_on_true_negative.html",
+    "relUrl": "/comparator/compare_models_on_true_negative.html"
+  },"30": {
+    "doc": "compare_models_on_true_positive()",
+    "title": "compare_models_on_true_positive()",
+    "content": "It compares the true positives of the models. Parameters . categories list, optionalList of categories to be included in the analysis. If not specified, all the categories are included.(default is None) . Example . Classification . from odin.classes import ComparatorClassification my_comparator = ComparatorClassification(dataset_gt_param, classification_type, models_proposals) my_comparator.compare_models_on_true_positive() . Localization . from odin.classes import ComparatorLocalization my_comparator = ComparatorLocalization(dataset_gt_param, task_type, models_proposals) my_comparator.compare_models_on_true_positive() . Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | no | yes | yes | yes | yes | . ",
+    "url": "http://localhost:4000/odin-docs/comparator/compare_models_on_true_positive.html",
+    "relUrl": "/comparator/compare_models_on_true_positive.html"
+  },"31": {
+    "doc": "Custom Metric",
+    "title": "Custom Metric",
+    "content": "Odin provides the possibility to execute all the analyses with user custom evaluation metrics. To take advantage of this functionality, it is mandatory to extend the CustomMetric interface and to implement the evaluation_metric() method with the computation of the metric. ",
+    "url": "http://localhost:4000/odin-docs/metrics_curves/custom_metric.html",
+    "relUrl": "/metrics_curves/custom_metric.html"
+  },"32": {
+    "doc": "Custom Metric",
+    "title": "evaluation_metric()",
+    "content": "Parameters . gt list or pandas.DataFrameFor classification tasks, it is a list representing the ground truth categories.For localization tasks, it is a pandas.DataFrame representing the ground truth. detections list or pandas.DataFrameFor classification tasks, it is a list representing the predictions scores.For localization tasks, it is a pandas.DataFrame representing the predictions. matching pandas.DataFrameFor classification tasks, it is None.For localization tasks, it represents the matching between the ground truth and the proposals. For each matching row, the following fields can be accessed:confidence (prediction confidence value)difficult (if it is difficult to predict the annotation)iou (intersection over union value)det_id (id of the detection)ann_id (id of the annotation)category_det (id of the category predicted)category_ann (id of the ground truth category) is_micro_required bool, optionalIndicates whether the gt and detections represent a single category.(default is False) Example . from odin.classes import CustomMetric class MyEvaluationMetric(CustomMetric): def evaluate_metric(self, gt, predictions, matching, is_micro_required=False): if not is_micro_required: #is_micro_required == false # implement your evaluation return my_score, my_standard_error #when called from base report for micro avg else: #is_micro_required == true # implement your micro evaluation return my_score, my_standard_error my_evaluation_metric = MyEvaluationMetric(\"my_metric_name\") my_analyzer.add_custom_metric(my_evaluation_metric) # use my_metric_name as 'metric' parameter in the analyses . Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | yes | yes | yes | yes | yes | . ",
+    "url": "http://localhost:4000/odin-docs/metrics_curves/custom_metric.html#evaluation_metric",
+    "relUrl": "/metrics_curves/custom_metric.html#evaluation_metric"
+  },"33": {
+    "doc": "Error Rate",
+    "title": "Error Rate",
+    "content": "It represents the ratio of misclassified samples to the total number of samples. It is the complement of the accuracy and it is defined as: . error_rate = (fp + fn)/(tp + tn + fp + fn) . Example . from odin.classes import Metrics my_metric = Metrics.ERROR_RATE # use my_metric as 'metric' parameter in the analyses . Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | yes | yes | yes | no | no | . ",
+    "url": "http://localhost:4000/odin-docs/metrics_curves/error_rate.html",
+    "relUrl": "/metrics_curves/error_rate.html"
+  },"34": {
+    "doc": "F1 AUC",
+    "title": "F1 AUC",
+    "content": "It represents the Area Under the Curve (auc) of the F1 curve. Example . from odin.classes import Metrics my_metric = Metrics.F1_AUC # use my_metric as 'metric' parameter in the analyses . Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | yes | yes | yes | yes | yes | . ",
+    "url": "http://localhost:4000/odin-docs/metrics_curves/f1_auc.html",
+    "relUrl": "/metrics_curves/f1_auc.html"
+  },"35": {
+    "doc": "F1 Curve",
+    "title": "F1 Curve",
+    "content": "The F1 curve evaluates the model performances at different threshold by considering the f1 score. Example . from odin.classes import Curves my_curve = Curves.F1_CURVE # use my_curve as 'curve' parameter in the analyses . Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | yes | yes | yes | yes | yes | . ",
+    "url": "http://localhost:4000/odin-docs/metrics_curves/f1_curve.html",
+    "relUrl": "/metrics_curves/f1_curve.html"
+  },"36": {
+    "doc": "F1 Score",
+    "title": "F1 Score",
+    "content": "It represents the harmonic mean of precision and recall. It is defined as: . f1_score = 2*(precision * recall)/(precision + recall) . Example . from odin.classes import Metrics my_metric = Metrics.F1_SCORE # use my_metric as 'metric' parameter in the analyses . Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | yes | yes | yes | yes | yes | . ",
+    "url": "http://localhost:4000/odin-docs/metrics_curves/f1_score.html",
+    "relUrl": "/metrics_curves/f1_score.html"
+  },"37": {
+    "doc": "Home",
+    "title": "Odin",
+    "content": " ",
+    "url": "http://localhost:4000/odin-docs/#odin",
+    "relUrl": "/#odin"
+  },"38": {
+    "doc": "Home",
+    "title": "Home",
+    "content": " ",
+    "url": "http://localhost:4000/odin-docs/",
+    "relUrl": "/"
+  },"39": {
+    "doc": "Analyzer",
+    "title": "Analyzer",
+    "content": "The Analyzer component provides multiple analyses and metrics in order to evaluate the performances of the model. It is possible to evaluate the model on the whole data set or only on a subset, splitting the evaluation for each category or for each meta-annotation value. Depending on the model task, it is mandatory to instantiate a specific class of the Analyzer. Odin supports three different Analyzer classes: . | AnalyzerClassification | AnalyzerLocalization | AnalyzerCAMs | . ",
+    "url": "http://localhost:4000/odin-docs/analyzer/",
+    "relUrl": "/analyzer/"
+  },"40": {
+    "doc": "Analyzer",
+    "title": "AnalyzerClassification",
+    "content": "The AnalyzerClassification class can be used to perform diagnostics for classification models. Parameters . classifier_name strName of the classifier. It is used as folder to save results. dataset DatasetClassificationDataset used to perform the analysis. result_saving_path str, optionalPath used to save results.(default is './results/') use_normalization bool, optionalIndicates whether normalisation should be used.(default is False) norm_factor_categories float, optionalNormalisation factor for the categories. If not specified, the default value is 1/number_of_categories.(default is None) norm_factors_properties list of pair, optionalNormalization factor for the properties. Each pair (property_name, value) specifies the normalisation factor to be applied to a specific property. If not specified, for each property the default value is 1/number_of_property_values.(default is None) conf_thresh float, optionalConfidence threshold. All the predictions with a confidence value less than the threshold are ignored. If not specified, for single-label classification problems, the default value is 0.If not specified, for binary and multi-label classification problems the default value is 0.5.(default is None) metric Metrics, optionalThe evaluation metric that will be used as default.(default is Metrics.F1_SCORE) save_graphs_as_png bool, optionalIndicates whether plots should be saved as .png images.(default is True) Example . from odin.classes import AnalyzerClassification my_analyzer = AnalyzerClassification(\"my_classifier_name\", my_classification_dataset) . ",
+    "url": "http://localhost:4000/odin-docs/analyzer/#analyzerclassification",
+    "relUrl": "/analyzer/#analyzerclassification"
+  },"41": {
+    "doc": "Analyzer",
+    "title": "AnalyzerLocalization",
+    "content": "The AnalyzerLocalization class can be used to perform diagnostics for localization models, such as object detection and instance segmentation. Parameters . detector_name strName of the detector. It is used as folder to save results. dataset DatasetLocalizationDataset used to perform the analysis. result_saving_path str, optionalPath used to save results.(default is './results/') use_normalization bool, optionalIndicates whether normalisation should be used.(default is False) norm_factor_categories float, optionalNormalisation factor for the categories. If not specified, the default value is 1/number_of_categories.(default is None) norm_factors_properties list of pair, optionalNormalization factor for the properties. Each pair (property_name, value) specifies the normalisation factor to be applied to a specific property. If not specified, for each property the default value is 1/number_of_property_values.(default is None) iou float, optionalIntersection Over Union threshold. All the predictions with a iou value less than the threshold are considered False Positives. If not specified, the default value is 0.5.(default is None) conf_thresh float, optionalConfidence threshold. All the predictions with a confidence value less than the threshold are ignored. If not specified, the default value is 0.5.(default is None) metric Metrics, optionalThe evaluation metric that will be used as default.(default is Metrics.Metrics.AVERAGE_PRECISION_SCORE) save_graphs_as_png bool, optionalIndicates whether plots should be saved as .png images.(default is True) Example . from odin.classes import AnalyzerLocalization my_analyzer = AnalyzerLocalization(\"my_detector_name\", my_localization_dataset) . ",
+    "url": "http://localhost:4000/odin-docs/analyzer/#analyzerlocalization",
+    "relUrl": "/analyzer/#analyzerlocalization"
+  },"42": {
+    "doc": "Analyzer",
+    "title": "AnalyzerCAMs",
+    "content": "The AnalyzerCAMs class can be used to diagnose Class Activation Maps generated by classification models. Parameters . classifier_name strName of the classifier. It is used as folder to save results. dataset DatasetCAMsDataset used to perform the analysis. cam_thresh float, optionalCAM confidence threshold. All the pixels with a confidence value less than the threshold are ignored. (default is 0.5) cam_coverage_thresh float, optionalCAM coverage threshold. All the CAMs with a iou less than the threshold do not cover the annotation. (default is 0.5) result_saving_path str, optionalPath used to save results.(default is './results/') use_normalization bool, optionalIndicates whether normalisation should be used.(default is False) norm_factor_categories float, optionalNormalisation factor for the categories. If not specified, the default value is 1/number_of_categories.(default is None) norm_factors_properties list of pair, optionalNormalization factor for the properties. Each pair (property_name, value) specifies the normalisation factor to be applied to a specific property. If not specified, for each property the default value is 1/number_of_property_values.(default is None) conf_thresh float, optionalConfidence threshold. All the predictions with a confidence value less than the threshold are ignored. If not specified, the default value is 0.5.(default is None) metric Metrics, optionalThe evaluation metric that will be used as default.(default is Metrics.Metrics.CAM_GLOBAL_IOU) save_graphs_as_png bool, optionalIndicates whether plots should be saved as .png images.(default is True) Example . from odin.classes import AnalyzerCAMs my_analyzer = AnalyzerCAMs(\"my_classifier_name\", my_cams_dataset) . ",
+    "url": "http://localhost:4000/odin-docs/analyzer/#analyzercams",
+    "relUrl": "/analyzer/#analyzercams"
+  },"43": {
+    "doc": "Metrics and Curves",
+    "title": "Metrics and Curves",
+    "content": "Odin provides different evaluation metrics which can be used to perform the different analyses supported by the framework. It is important to evaluate the model with different metrics, because it can perform very well with one type of measurement but can perform very poorly with another type. ",
+    "url": "http://localhost:4000/odin-docs/metrics_curves/",
+    "relUrl": "/metrics_curves/"
+  },"44": {
+    "doc": "Dataset",
+    "title": "Dataset",
+    "content": "todo . ",
+    "url": "http://localhost:4000/odin-docs/dataset/",
+    "relUrl": "/dataset/"
+  },"45": {
+    "doc": "Comparator",
+    "title": "Comparator",
+    "content": "The Comparator component provides the possibility to compare the performances of different models on the same data set. All the comparison analyses provided are based on the Analyzer analyses. Depending on the models task, it is mandatory to instantiate a specific class of the Comparator. Odin supports three different Comparator classes: . | ComparatorClassification | ComparatorLocalization | ComparatorCAMs | . ",
+    "url": "http://localhost:4000/odin-docs/comparator/",
+    "relUrl": "/comparator/"
+  },"46": {
+    "doc": "Comparator",
+    "title": "ComparatorClassification",
+    "content": "The ComparatorClassification class can be used to perform comparison of classification models. Parameters . dataset_gt_param strPath of the ground truth .json file. task_type TaskTypeProblem task type. It can be:TaskType.CLASSIFICATION_BINARY, TaskType.CLASSIFICATION_SINGLE_LABEL, TaskType.CLASSIFICATION_MULTI_LABEL. multiple_proposals_path list of listList of the models proposals path. For each model, it must be specified the model name and the model proposals path directory; optionally can be specified also the default confidence threshold.Example:multiple_proposals_path = [['model_a', 'model_a_path', 0.65], ['model_b', 'model_b_path']] result_saving_path str, optionalPath used to save results.(default is './results/') properties_file str, optionalThe name of the file used to store the names of and values of the properties and the names of the categories.(default is 'properties.json') use_normalization bool, optionalIndicates whether normalisation should be used.(default is False) norm_factor_categories float, optionalNormalisation factor for the categories. If not specified, the default value is 1/number_of_categories.(default is None) norm_factors_properties list of pair, optionalNormalization factor for the properties. Each pair (property_name, value) specifies the normalisation factor to be applied to a specific property. If not specified, for each property the default value is 1/number_of_property_values.(default is None) conf_thresh float, optionalConfidence threshold. All the predictions with a confidence value less than the threshold are ignored. If not specified, for single-label classification problems, the default value is 0.If not specified, for binary and multi-label classification problems the default value is 0.5.(default is None) metric Metrics, optionalThe evaluation metric that will be used as default.(default is Metrics.F1_SCORE) similar_classes list of list, optionalList of groups of ids of categories which are similar to each other.(default is None) match_on_filename bool, optionalIndicates whether the predictions refer to the ground truth by file_name (set to True) or by id (set to False).(default is False) save_graphs_as_png bool, optionalIndicates whether plots should be saved as .png images.(default is True) Example . from odin.classes import ComparatorClassification dataset_gt_param = \"path/to/gt/file.json\" classification_type = TaskType.CLASSIFICATION_MULTI_LABEL # Models for the analyses ('model_name', 'predictions_path', [confidence_threshold]) models_proposals = [('model_A', \"path/to/model_A/predictions\", 0.35), ('model_B', \"path/to/model_B/predictions\", 0.65), ('model_C', \"path/to/model_C/predictions\")] my_comparator = ComparatorClassification(dataset_gt_param, classification_type, models_proposals) . ",
+    "url": "http://localhost:4000/odin-docs/comparator/#comparatorclassification",
+    "relUrl": "/comparator/#comparatorclassification"
+  },"47": {
+    "doc": "Comparator",
+    "title": "ComparatorLocalization",
+    "content": "The ComparatorLocalization class can be used to perform comparison of localization models, such as object detection and instance segmentation. Parameters . dataset_gt_param strPath of the ground truth .json file. task_type TaskTypeProblem task type. It can be:TaskType.OBJECT_DETECTION, TaskType.INSTANCE_SEGMENTATION. multiple_proposals_path list of listList of the models proposals path. For each model, it must be specified the model name and the model proposals path directory; optionally can be specified also the default confidence threshold.Example:multiple_proposals_path = [['model_a', 'model_a_path', 0.65], ['model_b', 'model_b_path']] result_saving_path str, optionalPath used to save results.(default is './results/') properties_file str, optionalThe name of the file used to store the names of and values of the properties and the names of the categories.(default is 'properties.json') use_normalization bool, optionalIndicates whether normalisation should be used.(default is False) norm_factor_categories float, optionalNormalisation factor for the categories. If not specified, the default value is 1/number_of_categories.(default is None) norm_factors_properties list of pair, optionalNormalization factor for the properties. Each pair (property_name, value) specifies the normalisation factor to be applied to a specific property. If not specified, for each property the default value is 1/number_of_property_values.(default is None) iou float, optionalIntersection Over Union threshold. All the predictions with a iou value less than the threshold are considered False Positives. If not specified, the default value is 0.5.(default is None) conf_thresh float, optionalConfidence threshold. All the predictions with a confidence value less than the threshold are ignored. If not specified, for single-label classification problems, the default value is 0.If not specified, for binary and multi-label classification problems the default value is 0.5.(default is None) metric Metrics, optionalThe evaluation metric that will be used as default.(default is Metrics.AVERAGE_PRECISION_SCORE) similar_classes list of list, optionalList of groups of ids of categories which are similar to each other.(default is None) match_on_filename bool, optionalIndicates whether the predictions refer to the ground truth by file_name (set to True) or by id (set to False).(default is False) save_graphs_as_png bool, optionalIndicates whether plots should be saved as .png images.(default is True) Example . from odin.classes import ComparatorLocalization dataset_gt_param = \"path/to/gt/file.json\" task_type = TaskType.INSTANCE_SEGMENTATION # Models for the analyses ('model_name', 'predictions_path', [confidence_threshold]) models_proposals = [('model_A', \"path/to/model_A/predictions\", 0.35), ('model_B', \"path/to/model_B/predictions\", 0.65), ('model_C', \"path/to/model_C/predictions\")] my_comparator = ComparatorLocalization(dataset_gt_param, task_type, models_proposals) . ",
+    "url": "http://localhost:4000/odin-docs/comparator/#comparatorlocalization",
+    "relUrl": "/comparator/#comparatorlocalization"
+  },"48": {
+    "doc": "Comparator",
+    "title": "ComparatorCAMs",
+    "content": "The ComparatorCAMs class can be used to compare Class Activation Maps generated by different classification models. Parameters . dataset_gt_param strPath of the ground truth .json file. task_type TaskTypeProblem task type. It can be:TaskType.CLASSIFICATION_BINARY, TaskType.CLASSIFICATION_SINGLE_LABEL, TaskType.CLASSIFICATION_MULTI_LABEL. multiple_proposals_path list of listList of the models proposals path. For each model, it must be specified the model name and the model cams path directory; optionally can be specified also the predictions_path and the default confidence threshold.Example:multiple_proposals_path = [['model_a', ['model_a_cam_path', 'model_a_path'], 0.65], ['model_b', ['model_b_cam_path', 'model_b_path'], 0.45]] cam_thresh float, optionalCAM confidence threshold. All the pixels with a confidence value less than the threshold are ignored.(default is 0.5) cam_coverage_thresh float, optionalCAM coverage threshold. All the CAMs with a iou less than the threshold do not cover the annotation.(default is 0.5) annotation_type AnnotationType, optionalIndicates whether the annotation is a bounding box (AnnotationType.BBOX) or a segmentation mask (AnnotationType.SEGMENTATION)(default is AnnotationType.BBOX) result_saving_path str, optionalPath used to save results.(default is './results/') properties_file str, optionalThe name of the file used to store the names of and values of the properties and the names of the categories.(default is 'properties.json') use_normalization bool, optionalIndicates whether normalisation should be used.(default is False) norm_factor_categories float, optionalNormalisation factor for the categories. If not specified, the default value is 1/number_of_categories.(default is None) norm_factors_properties list of pair, optionalNormalization factor for the properties. Each pair (property_name, value) specifies the normalisation factor to be applied to a specific property. If not specified, for each property the default value is 1/number_of_property_values.(default is None) conf_thresh float, optionalConfidence threshold. All the predictions with a confidence value less than the threshold are ignored. If not specified, for single-label classification problems, the default value is 0.If not specified, for binary and multi-label classification problems the default value is 0.5.(default is None) metric Metrics, optionalThe evaluation metric that will be used as default.(default is Metrics.CAM_GLOBAL_IOU) similar_classes list of list, optionalList of groups of ids of categories which are similar to each other.(default is None) match_on_filename bool, optionalIndicates whether the predictions refer to the ground truth by file_name (set to True) or by id (set to False).(default is False) save_graphs_as_png bool, optionalIndicates whether plots should be saved as .png images.(default is True) Example . from odin.classes import ComparatorCAMs dataset_gt_param = \"path/to/gt/file.json\" classification_type = TaskType.CLASSIFICATION_MULTI_LABEL # Models for the analyses ('model_name', ['cams_path', ['predictions_path']], [confidence_threshold]) models_proposals = [('model_A', [\"path/to/model_A/predictions\"]), ('model_B', [\"path/to/model_A/predictions\"])] my_comparator = ComparatorCAMs(dataset_gt_param, classification_type, models_proposals) . ",
+    "url": "http://localhost:4000/odin-docs/comparator/#comparatorcams",
+    "relUrl": "/comparator/#comparatorcams"
+  },"49": {
+    "doc": "Precision",
+    "title": "Precision",
+    "content": "It represents the positive samples that are correctly predicted from the total predicted samples. It is defined as: . precision = tp/(tp + fp) . Example . from odin.classes import Metrics my_metric = Metrics.PRECISION_SCORE # use my_metric as 'metric' parameter in the analyses . Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | yes | yes | yes | yes | yes | . ",
+    "url": "http://localhost:4000/odin-docs/metrics_curves/precision.html",
+    "relUrl": "/metrics_curves/precision.html"
+  },"50": {
+    "doc": "Precision-Recall AUC",
+    "title": "Precision-Recall AUC",
+    "content": "It represents the Area Under the Curve (auc) of the Precision-Recall curve. Example . from odin.classes import Metrics my_metric = Metrics.PRECISION_RECALL_AUC # use my_metric as 'metric' parameter in the analyses . Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | yes | yes | yes | yes | yes | . ",
+    "url": "http://localhost:4000/odin-docs/metrics_curves/precision_recall_auc.html",
+    "relUrl": "/metrics_curves/precision_recall_auc.html"
+  },"51": {
+    "doc": "Precision-Recall Curve",
+    "title": "Precision-Recall Curve",
+    "content": "The Precision-Recall curve evaluates the model performances at different threshold values by considering two parameters, the precision and the recall. Example . from odin.classes import Curves my_curve = Curves.PRECISION_RECALL_CURVE # use my_curve as 'curve' parameter in the analyses . Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | yes | yes | yes | yes | yes | . ",
+    "url": "http://localhost:4000/odin-docs/metrics_curves/precision_recall_curve.html",
+    "relUrl": "/metrics_curves/precision_recall_curve.html"
+  },"52": {
+    "doc": "Recall",
+    "title": "Recall",
+    "content": "It represents the fraction of positive samples that are correctly predicted. It is defined as: . recall = tp/(tp + fn) . Example . from odin.classes import Metrics my_metric = Metrics.RECALL_SCORE # use my_metric as 'metric' parameter in the analyses . Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | yes | yes | yes | yes | yes | . ",
+    "url": "http://localhost:4000/odin-docs/metrics_curves/recall.html",
+    "relUrl": "/metrics_curves/recall.html"
+  },"53": {
+    "doc": "ROC AUC",
+    "title": "ROC AUC",
+    "content": "It represents the Area Under the Curve (auc) of the ROC curve. Example . from odin.classes import Metrics my_metric = Metrics.ROC_AUC # use my_metric as 'metric' parameter in the analyses . Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | yes | yes | yes | no | no | . ",
+    "url": "http://localhost:4000/odin-docs/metrics_curves/roc_auc.html",
+    "relUrl": "/metrics_curves/roc_auc.html"
+  },"54": {
+    "doc": "ROC Curve",
+    "title": "ROC Curve",
+    "content": "The Receiver Operating Characteristic (ROC) curve evaluates the model performances at different threshold values by considering two parameters, the true positive rate and the false positive rate, which are defined as: . true_positive_rate = tp/(tp + fn) = recallfalse_positive_rate = fp/(fp + tn) . Example . from odin.classes import Curves my_curve = Curves.ROC_CURVE # use my_curve as 'curve' parameter in the analyses . Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | yes | yes | yes | no | no | . ",
+    "url": "http://localhost:4000/odin-docs/metrics_curves/roc_curve.html",
+    "relUrl": "/metrics_curves/roc_curve.html"
+  },"55": {
+    "doc": "show_false_negative_distribution()",
+    "title": "show_false_negative_distribution()",
+    "content": "It provides the false negative distribution among the categories. Parameters . categories list, optionalList of categories to be included in the analysis. If not specified, all the categories are included.(default is None) show bool, optionalIndicates whether the plot should be shown or not. If False, returns the results as dict.(default is True) . Example . Classification . from odin.classes import AnalyzerClassification my_analyzer = AnalyzerClassification(\"my_classifier_name\", my_classification_dataset) my_analyzer.show_false_negative_distribution() . Localization . from odin.classes import AnalyzerLocalization my_analyzer = AnalyzerLocalization(\"my_detector_name\", my_localization_dataset) my_analyzer.show_false_negative_distribution() . Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | no | yes | yes | yes | yes | . ",
+    "url": "http://localhost:4000/odin-docs/analyzer/show_false_negative_distribution.html",
+    "relUrl": "/analyzer/show_false_negative_distribution.html"
+  },"56": {
+    "doc": "show_false_positive_distribution()",
+    "title": "show_false_positive_distribution()",
+    "content": "It provides the false positive distribution among the categories. Parameters . categories list, optionalList of categories to be included in the analysis. If not specified, all the categories are included.(default is None) show bool, optionalIndicates whether the plot should be shown or not. If False, returns the results as dict.(default is True) . Example . Classification . from odin.classes import AnalyzerClassification my_analyzer = AnalyzerClassification(\"my_classifier_name\", my_classification_dataset) my_analyzer.show_false_positive_distribution() . Localization . from odin.classes import AnalyzerLocalization my_analyzer = AnalyzerLocalization(\"my_detector_name\", my_localization_dataset) my_analyzer.show_false_positive_distribution() . Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | no | yes | yes | yes | yes | . ",
+    "url": "http://localhost:4000/odin-docs/analyzer/show_false_positive_distribution.html",
+    "relUrl": "/analyzer/show_false_positive_distribution.html"
+  },"57": {
+    "doc": "show_true_negative_distribution()",
+    "title": "show_true_negative_distribution()",
+    "content": "It provides the true negative distribution among the categories. Parameters . categories list, optionalList of categories to be included in the analysis. If not specified, all the categories are included.(default is None) show bool, optionalIndicates whether the plot should be shown or not. If False, returns the results as dict.(default is True) . Example . Classification . from odin.classes import AnalyzerClassification my_analyzer = AnalyzerClassification(\"my_classifier_name\", my_classification_dataset) my_analyzer.show_true_negative_distribution() . Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | no | yes | yes | no | no | . ",
+    "url": "http://localhost:4000/odin-docs/analyzer/show_true_negative_distribution.html",
+    "relUrl": "/analyzer/show_true_negative_distribution.html"
+  },"58": {
+    "doc": "show_true_positive_distribution()",
+    "title": "show_true_positive_distribution()",
+    "content": "It provides the true positive distribution among the categories. Parameters . categories list, optionalList of categories to be included in the analysis. If not specified, all the categories are included.(default is None) show bool, optionalIndicates whether the plot should be shown or not. If False, returns the results as dict.(default is True) . Example . Classification . from odin.classes import AnalyzerClassification my_analyzer = AnalyzerClassification(\"my_classifier_name\", my_classification_dataset) my_analyzer.show_true_positive_distribution() . Localization . from odin.classes import AnalyzerLocalization my_analyzer = AnalyzerLocalization(\"my_detector_name\", my_localization_dataset) my_analyzer.show_true_positive_distribution() . Tasks supported . | Binary Classification | Single-label Classification | Multi-label Classification | Object Detection | Instance Segmentation | . | no | yes | yes | yes | yes | . ",
+    "url": "http://localhost:4000/odin-docs/analyzer/show_true_positive_distribution.html",
+    "relUrl": "/analyzer/show_true_positive_distribution.html"
+  }
+}

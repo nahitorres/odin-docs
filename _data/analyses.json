@@ -1,0 +1,531 @@
+{
+  "analyze_property":
+  [
+    {
+        "name": "property_name",
+        "type": "str",
+        "description": "Name of the property to be analyzed."
+    },
+    {
+        "name": "possible_values",
+        "type": "list, optional",
+        "description": "Property values to be analyzed. If not specified, all the property values are considered.<br>(default is None)"
+    },
+    {
+        "name": "show",
+        "type": "bool, optional",
+        "description": "Indicates whether the plot should be shown or not. If False, returns the results as dict.<br>(default is True)"
+    },
+    {
+        "name": "metric",
+        "type": "Metrics or str, optional",
+        "description": "Evaluation metric used for the analysis. If not specified, the default one is used.<br>(default is None)"
+    },
+    {
+        "name": "split_by",
+        "type": "str, optional",
+        "description": "If there are too many values, the plot is divided into subplots. The split can be performed by <i>'categories'</i> or by <i>'meta-annotations'</i>.<br>(default is 'meta-annotations')"
+    }
+  ],
+
+  "analyze_properties":
+  [
+    {
+        "name": "properties",
+        "type": "list, optional",
+        "description": "List of properties to be included in the analysis. If not specified, all the properties are included.<br>(default is None)"
+    },
+    {
+        "name": "metric",
+        "type": "Metrics or str, optional",
+        "description": "Evaluation metric used for the analysis. If not specified, the default one is used.<br>(default is None)"
+    },
+    {
+        "name": "split_by",
+        "type": "str, optional",
+        "description": "If there are too many values, the plot is divided into subplots. The split can be performed by <i>'categories'</i> or by <i>'meta-annotations'</i>.<br>(default is 'meta-annotations')"
+    },
+    {
+        "name": "show",
+        "type": "bool, optional",
+        "description": "Indicates whether the plot should be shown or not. If False, returns the results as dict.<br>(default is True)"
+    }
+  ],
+
+  "analyze_sensitivity_impact_of_properties":
+  [
+    {
+        "name": "properties",
+        "type": "list, optional",
+        "description": "List of properties to be included in the analysis. If not specified, all the properties are included.<br>(default is None)"
+    },
+    {
+        "name": "metric",
+        "type": "Metrics or str, optional",
+        "description": "Evaluation metric used for the analysis. If not specified, the default one is used.<br>(default is None)"
+    },
+    {
+        "name": "show",
+        "type": "bool, optional",
+        "description": "Indicates whether the plot should be shown or not. If False, returns the results as dict.<br>(default is True)"
+    }
+  ],
+
+  "analyze_false_positive_errors":
+  [
+    {
+        "name": "categories",
+        "type": "list, optional",
+        "description": "List of categories to be included in the analysis. If not specified, all the categories are included.<br>(default is None)"
+    },
+    {
+        "name": "metric",
+        "type": "Metrics or str, optional",
+        "description": "Evaluation metric used for the analysis. If not specified, the default one is used.<br>(default is None)"
+    },
+    {
+        "name": "show",
+        "type": "bool, optional",
+        "description": "Indicates whether the plot should be shown or not. If False, returns the results as dict.<br>(default is True)"
+    }
+  ],
+
+  "analyze_false_positive_error_for_category":
+  [
+    {
+        "name": "category",
+        "type": "str",
+        "description": "Name of the category to be analyzed."
+    },
+    {
+        "name": "categories",
+        "type": "list, optional",
+        "description": "List of categories to be included in the analysis. If not specified, only the selected category is included.<br>(default is None)"
+    },
+    {
+        "name": "metric",
+        "type": "Metrics or str, optional",
+        "description": "Evaluation metric used for the analysis. If not specified, the default one is used.<br>(default is None)"
+    },
+    {
+        "name": "show",
+        "type": "bool, optional",
+        "description": "Indicates whether the plot should be shown or not. If False, returns the results as dict.<br>(default is True)"
+    }
+  ],
+
+  "analyze_curve":
+  [
+    {
+        "name": "curve",
+        "type": "Curves, optional",
+        "description": "Evaluation curve used for the analysis.<br>(default is Curves.PRECISION_RECALL_CURVE)"
+    },
+    {
+        "name": "average",
+        "type": "str, optional",
+        "description": "Indicates the averaging method. It can be <i>'macro'</i> or <i>'micro'</i>.<br>(default is 'macro')"
+    },
+    {
+        "name": "show",
+        "type": "bool, optional",
+        "description": "Indicates whether the plot should be shown or not. If False, returns the results as dict.<br>(default is True)"
+    }
+  ],
+
+  "analyze_curve_for_categories":
+  [
+    {
+        "name": "categories",
+        "type": "list, optional",
+        "description": "List of categories to be included in the analysis. If not specified, all the categories are included.<br>(default is None)"
+    },
+    {
+        "name": "curve",
+        "type": "Curves, optional",
+        "description": "Evaluation curve used for the analysis.<br>(default is Curves.PRECISION_RECALL_CURVE)"
+    },
+    {
+        "name": "show",
+        "type": "bool, optional",
+        "description": "Indicates whether the plot should be shown or not. If False, returns the results as dict.<br>(default is True)"
+    }
+  ],
+
+  "show_true_positive_distribution":
+  [
+    {
+        "name": "categories",
+        "type": "list, optional",
+        "description": "List of categories to be included in the analysis. If not specified, all the categories are included.<br>(default is None)"
+    },
+    {
+        "name": "show",
+        "type": "bool, optional",
+        "description": "Indicates whether the plot should be shown or not. If False, returns the results as dict.<br>(default is True)"
+    }
+  ],
+
+  "show_false_negative_distribution":
+  [
+    {
+        "name": "categories",
+        "type": "list, optional",
+        "description": "List of categories to be included in the analysis. If not specified, all the categories are included.<br>(default is None)"
+    },
+    {
+        "name": "show",
+        "type": "bool, optional",
+        "description": "Indicates whether the plot should be shown or not. If False, returns the results as dict.<br>(default is True)"
+    }
+  ],
+
+  "show_false_positive_distribution":
+  [
+    {
+        "name": "categories",
+        "type": "list, optional",
+        "description": "List of categories to be included in the analysis. If not specified, all the categories are included.<br>(default is None)"
+    },
+    {
+        "name": "show",
+        "type": "bool, optional",
+        "description": "Indicates whether the plot should be shown or not. If False, returns the results as dict.<br>(default is True)"
+    }
+  ],
+
+  "show_true_negative_distribution":
+  [
+    {
+        "name": "categories",
+        "type": "list, optional",
+        "description": "List of categories to be included in the analysis. If not specified, all the categories are included.<br>(default is None)"
+    },
+    {
+        "name": "show",
+        "type": "bool, optional",
+        "description": "Indicates whether the plot should be shown or not. If False, returns the results as dict.<br>(default is True)"
+    }
+  ],
+
+  "analyze_reliability":
+  [
+    {
+        "name": "categories",
+        "type": "list, optional",
+        "description": "If not specified, it performs the analysis on the entire data set, otherwise it performs a per-category analysis.<br>(default is None)"
+    },
+    {
+        "name": "bins",
+        "type": "int, optional",
+        "description": "The number of bins the confidence values are split into.<br>(default is 10)"
+    },
+    {
+        "name": "show",
+        "type": "bool, optional",
+        "description": "Indicates whether the plot should be shown or not. If False, returns the results as dict.<br>(default is True)"
+    }
+  ],
+
+  "base_report":
+  [
+    {
+        "name": "metrics",
+        "type": "list, optional",
+        "description": "List of evaluation metrics to be included in the analysis. If not specified, all the evaluation metrics are included.<br>(default is None)"
+    },
+    {
+        "name": "categories",
+        "type": "list, optional",
+        "description": "List of categories to be included in the analysis. If not specified, all the categories are included.<br>(default is None)"
+    },
+    {
+        "name": "properties",
+        "type": "bool, optional",
+        "description": "List of properties to be included in the analysis. If not specified, all the properties are included.<br>(default is None)"
+    },
+    {
+        "name": "show_categories",
+        "type": "bool, optional",
+        "description": "Indicates whether the categories should be included in the report.<br>(default is True)"
+    },
+    {
+        "name": "show_properties",
+        "type": "bool, optional",
+        "description": "Indicates whether the properties should be included in the report.<br>(default is True)"
+    }
+  ],
+
+  "analyze_top1_top5_error":
+  [
+    {
+        "name": "properties",
+        "type": "list, optional",
+        "description": "If not specified, it performs the analysis on the entire data set, otherwise it performs a per-property analysis.<br>(default is None)"
+    },
+    {
+        "name": "metric",
+        "type": "Metrics or str, optional",
+        "description": "Evaluation metric used for the analysis.<br>(default is Metrics.ERROR_RATE)"
+    },
+    {
+        "name": "show",
+        "type": "bool, optional",
+        "description": "Indicates whether the plot should be shown or not. If False, returns the results as dict.<br>(default is True)"
+    }
+  ],
+
+  "analyze_confusion_matrix":
+  [
+    {
+        "name": "categories",
+        "type": "list, optional",
+        "description": "List of categories to be included in the analysis. If not specified, all the categories are included.<br>(default is None)"
+    },
+    {
+        "name": "properties_names",
+        "type": "list, optional",
+        "description": "List of properties to be included in the analysis. If not specified, all the properties are included.<br>(default is None)"
+    },
+    {
+        "name": "properties_values",
+        "type": "list of list, optional",
+        "description": "Properties values to be considered in te analysis. If not specified, all the values are considered.<br>(default is None)<br>The index of the properties values must be the same of the properties names. Example:<br><i>properties_names=['name1', 'name2']<br>properties_values=[['value1_of_name1', 'value2_of_name1'], ['value1_of_name2']]</i>"
+    },
+    {
+        "name": "show",
+        "type": "bool, optional",
+        "description": "Indicates whether the plot should be shown or not. If False, returns the results as dict.<br>(default is True)"
+    }
+  ],
+
+  "analyze_intersection_over_union":
+  [
+    {
+        "name": "categories",
+        "type": "list, optional",
+        "description": "List of categories to be included in the analysis. If not specified, all the categories are included.<br>(default is None)"
+    },
+    {
+        "name": "metric",
+        "type": "Metrics or str, optional",
+        "description": "Evaluation metric used for the analysis. If not specified, the default one is used.<br>(default is None)"
+    },
+    {
+        "name": "show",
+        "type": "bool, optional",
+        "description": "Indicates whether the plot should be shown or not. If False, returns the results as dict.<br>(default is True)"
+    }
+  ],
+
+  "analyze_intersection_over_union_for_category":
+  [
+    {
+        "name": "category",
+        "type": "str",
+        "description": "Name of the category to be analyzed."
+    },
+    {
+        "name": "metric",
+        "type": "Metrics or str, optional",
+        "description": "Evaluation metric used for the analysis. If not specified, the default one is used.<br>(default is None)"
+    },
+    {
+        "name": "show",
+        "type": "bool, optional",
+        "description": "Indicates whether the plot should be shown or not. If False, returns the results as dict.<br>(default is True)"
+    }
+  ],
+
+  "analyze_cams_threshold":
+  [
+    {
+        "name": "categories",
+        "type": "list, optional",
+        "description": "List of categories to be included in the analysis. If not specified, all the categories are included.<br>(default is None)"
+    },
+    {
+        "name": "metric",
+        "type": "Metrics or str, optional",
+        "description": "Evaluation metric used for the analysis. If not specified, the default one is used.<br>(default is None)"
+    },
+    {
+        "name": "show",
+        "type": "bool, optional",
+        "description": "Indicates whether the plot should be shown or not. If False, returns the results as dict.<br>(default is True)"
+    }
+  ],
+
+  "evaluation_metric":
+  [
+    {
+        "name": "gt",
+        "type": "list or pandas.DataFrame",
+        "description": "For classification tasks, it is a list representing the ground truth categories.<br>For localization tasks, it is a pandas.DataFrame representing the ground truth."
+    },
+    {
+        "name": "detections",
+        "type": "list or pandas.DataFrame",
+        "description": "For classification tasks, it is a list representing the predictions scores.<br>For localization tasks, it is a pandas.DataFrame representing the predictions."
+    },
+    {
+        "name": "matching",
+        "type": "pandas.DataFrame",
+        "description": "For classification tasks, it is None.<br>For localization tasks, it represents the matching between the ground truth and the proposals. For each matching row, the following fields can be accessed:<br><i>confidence</i> (prediction confidence value)<br><i>difficult</i> (if it is difficult to predict the annotation)<br><i>iou</i> (intersection over union value)<br><i>det_id</i> (id of the detection)<br><i>ann_id</i> (id of the annotation)<br><i>category_det</i> (id of the category predicted)<br><i>category_ann</i> (id of the ground truth category)"
+    },
+    {
+        "name": "is_micro_required",
+        "type": "bool, optional",
+        "description": "Indicates whether the gt and detections represent a single category.<br>(default is False)"
+    }
+  ],
+
+  "compare_models_on_property":
+  [
+    {
+        "name": "property_name",
+        "type": "str",
+        "description": "Name of the property to be analyzed."
+    },
+    {
+        "name": "possible_values",
+        "type": "list, optional",
+        "description": "Property values to be analyzed. If not specified, all the property values are considered.<br>(default is None)"
+    },
+    {
+        "name": "metric",
+        "type": "Metrics or str, optional",
+        "description": "Evaluation metric used for the analysis. If not specified, the default one is used.<br>(default is None)"
+    }
+  ],
+
+  "compare_models_on_sensitivity_impact":
+  [
+    {
+        "name": "properties",
+        "type": "list, optional",
+        "description": "List of properties to be included in the analysis. If not specified, all the properties are included.<br>(default is None)"
+    },
+    {
+        "name": "metric",
+        "type": "Metrics or str, optional",
+        "description": "Evaluation metric used for the analysis. If not specified, the default one is used.<br>(default is None)"
+    }
+  ],
+
+  "compare_models_on_curve":
+  [
+    {
+        "name": "curve",
+        "type": "Curves, optional",
+        "description": "Evaluation curve used for the analysis.<br>(default is Curves.PRECISION_RECALL_CURVE)"
+    },
+    {
+        "name": "average",
+        "type": "str, optional",
+        "description": "Indicates the averaging method. It can be <i>'macro'</i> or <i>'micro'</i>.<br>(default is 'macro')"
+    }
+  ],
+
+  "compare_models_on_curve_for_categories":
+  [
+    {
+        "name": "categories",
+        "type": "list, optional",
+        "description": "List of categories to be included in the analysis. If not specified, all the categories are included.<br>(default is None)"
+    },
+    {
+        "name": "curve",
+        "type": "Curves, optional",
+        "description": "Evaluation curve used for the analysis.<br>(default is Curves.PRECISION_RECALL_CURVE)"
+    }
+  ],
+
+  "compare_models_on_errors_impact":
+  [
+    {
+        "name": "categories",
+        "type": "list, optional",
+        "description": "List of categories to be included in the analysis. If not specified, all the categories are included.<br>(default is None)"
+    },
+    {
+        "name": "metric",
+        "type": "Metrics or str, optional",
+        "description": "Evaluation metric used for the analysis. If not specified, the default one is used.<br>(default is None)"
+    }
+  ],
+
+  "compare_models_on_true_positive":
+  [
+    {
+        "name": "categories",
+        "type": "list, optional",
+        "description": "List of categories to be included in the analysis. If not specified, all the categories are included.<br>(default is None)"
+    }
+  ],
+
+  "compare_models_on_false_positive":
+  [
+    {
+        "name": "categories",
+        "type": "list, optional",
+        "description": "List of categories to be included in the analysis. If not specified, all the categories are included.<br>(default is None)"
+    }
+  ],
+
+  "compare_models_on_true_negative":
+  [
+    {
+        "name": "categories",
+        "type": "list, optional",
+        "description": "List of categories to be included in the analysis. If not specified, all the categories are included.<br>(default is None)"
+    }
+  ],
+
+  "compare_models_on_false_negative":
+  [
+    {
+        "name": "categories",
+        "type": "list, optional",
+        "description": "List of categories to be included in the analysis. If not specified, all the categories are included.<br>(default is None)"
+    }
+  ],
+
+  "compare_models_on_cams_threshold":
+  [
+    {
+        "name": "metric",
+        "type": "Metrics, optional",
+        "description": "Evaluation metric used for the analysis. If not specified, the default one is used.<br>(default is None)"
+    }
+  ],
+
+  "compare_models_base_report":
+  [
+    {
+        "name": "metrics",
+        "type": "list, optional",
+        "description": "List of evaluation metrics to be included in the analysis. If not specified, all the evaluation metrics are included.<br>(default is None)"
+    },
+    {
+        "name": "categories",
+        "type": "list, optional",
+        "description": "List of categories to be included in the analysis. If not specified, all the categories are included.<br>(default is None)"
+    },
+    {
+        "name": "properties",
+        "type": "bool, optional",
+        "description": "List of properties to be included in the analysis. If not specified, all the properties are included.<br>(default is None)"
+    },
+    {
+        "name": "show_categories",
+        "type": "bool, optional",
+        "description": "Indicates whether the categories should be included in the report.<br>(default is True)"
+    },
+    {
+        "name": "show_properties",
+        "type": "bool, optional",
+        "description": "Indicates whether the properties should be included in the report.<br>(default is True)"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "Accuracy":
+  {
+    "description": "It represents the ratio of correctly classified samples to the total number of samples. It is defined as:",
+    "formula": "`accuracy = (tp + tn)/(tp + tn + fp + fn)`"
+  },
+
+  "Error Rate":
+  {
+    "description": "It represents the ratio of misclassified samples to the total number of samples. It is the complement of the _accuracy_ and it is defined as:",
+    "formula": "`error_rate = (fp + fn)/(tp + tn + fp + fn)`"
+  },
+
+  "Precision":
+  {
+    "description": "It represents the positive samples that are correctly predicted from the total predicted samples. It is defined as:",
+    "formula": "`precision = tp/(tp + fp)`"
+  },
+
+  "Recall":
+  {
+    "description": "It represents the fraction of positive samples that are correctly predicted. It is defined as:",
+    "formula": "`recall = tp/(tp + fn)`"
+  },
+
+  "F1 Score":
+  {
+    "description": "It represents the harmonic mean of _precision_ and _recall_. It is defined as:",
+    "formula": "`f1_score = 2*(precision * recall)/(precision + recall)`"
+  },
+
+  "Average Precision":
+  {
+    "description": "It represents the weighted mean of precision achieved at each threshold, with the increase in recall from the previous threshold used as weight. It is defined as:",
+    "formula": "`ap = sum[(recall(n) - recall(n-1))*precision(n)]`"
+  },
+
+  "ROC AUC":
+  {
+    "description": "It represents the Area Under the Curve (auc) of the [ROC curve](./roc_curve)."
+  },
+
+  "Precision-Recall AUC":
+  {
+    "description": "It represents the Area Under the Curve (auc) of the [Precision-Recall curve](./precision_recall_curve)."
+  },
+
+  "F1 AUC":
+  {
+    "description": "It represents the Area Under the Curve (auc) of the [F1 curve](./f1_curve)."
+  },
+
+  "ROC Curve":
+  {
+    "description": "The <i>Receiver Operating Characteristic (ROC)</i> curve evaluates the model performances at different threshold values by considering two parameters, the <i>true positive rate</i> and the <i>false positive rate</i>, which are defined as:",
+    "formula": "`true_positive_rate = tp/(tp + fn) = recall`<br>`false_positive_rate = fp/(fp + tn)`"
+  },
+
+  "Precision-Recall Curve":
+  {
+    "description": "The <i>Precision-Recall</i> curve evaluates the model performances at different threshold values by considering two parameters, the <i>[precision](./precision)</i> and the <i>[recall](./recall)</i>."
+  },
+
+  "F1 Curve":
+  {
+    "description": "The <i>F1</i> curve evaluates the model performances at different threshold by considering the <i>[f1 score](./f1_score)</i>."
+  },
+
+  "CAM Component IoU":
+  {
+    "description": "It evaluates how much the class activation map focuses on multiple components of the same category. First, the class activation map foreground area is divided into connected components, i.e., groups of pixels connected to each other. The IoU value is calculated between each ground truth bounding box and the connected components that intersect it. Then, the average IoU across all the components is taken."
+  },
+
+  "CAM Global IoU":
+  {
+    "description": "It evaluates the IoU between the union of all the bounding boxes in the image and the entire foreground area of the class activation map given a threshold."
+  },
+
+  "CAM Bbox Coverage":
+  {
+    "description": "It evaluates how many bounding boxes are covered by each class activation map. This metrics considers that a bounding box is covered by the class activation map only if their intersection is greater than or equal to a <i>coverage threshold</i> of the bounding box area."
+  },
+
+  "CAM Irrelevant Attention":
+  {
+    "description": "It evaluates how much the class activation maps focus on irrelevant parts of the image. This metric corresponds to the percentage of CAM area outside any bounding box."
+  }
+
+}

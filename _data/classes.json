@@ -1,0 +1,390 @@
+{
+  "analyzerclassification":
+  [
+      {
+          "name": "classifier_name",
+          "type": "str",
+          "description": "Name of the classifier. It is used as folder to save results."
+      },
+      {
+          "name": "dataset",
+          "type": "DatasetClassification",
+          "description": "Dataset used to perform the analysis."
+      },
+      {
+          "name": "result_saving_path",
+          "type": "str, optional",
+          "description": "Path used to save results.<br>(default is './results/')"
+      },
+      {
+          "name": "use_normalization",
+          "type": "bool, optional",
+          "description": "Indicates whether normalisation should be used.<br>(default is False)"
+      },
+      {
+          "name": "norm_factor_categories",
+          "type": "float, optional",
+          "description": "Normalisation factor for the categories. If not specified, the default value is 1/number_of_categories.<br>(default is None)"
+      },
+      {
+          "name": "norm_factors_properties",
+          "type": "list of pair, optional",
+          "description": "Normalization factor for the properties. Each pair <i>(property_name, value)</i> specifies the normalisation factor to be applied to a specific property. If not specified, for each property the default value is 1/number_of_property_values.<br>(default is None)"
+      },
+      {
+          "name": "conf_thresh",
+          "type": "float, optional",
+          "description": "Confidence threshold. All the predictions with a confidence value less than the threshold are ignored. <br>If not specified, for <i>single-label</i> classification problems, the default value is 0.<br>If not specified, for <i>binary</i> and <i>multi-label</i> classification problems the default value is 0.5.<br>(default is None)"
+      },
+      {
+          "name": "metric",
+          "type": "Metrics, optional",
+          "description": "The evaluation metric that will be used as default.<br>(default is Metrics.F1_SCORE)"
+      },
+      {
+          "name": "save_graphs_as_png",
+          "type": "bool, optional",
+          "description": "Indicates whether plots should be saved as <i>.png</i> images.<br>(default is True)"
+      }
+  ],
+
+  "analyzerlocalization":
+  [
+    {
+        "name": "detector_name",
+        "type": "str",
+        "description": "Name of the detector. It is used as folder to save results."
+    },
+    {
+        "name": "dataset",
+        "type": "DatasetLocalization",
+        "description": "Dataset used to perform the analysis."
+    },
+    {
+        "name": "result_saving_path",
+        "type": "str, optional",
+        "description": "Path used to save results.<br>(default is './results/')"
+    },
+    {
+        "name": "use_normalization",
+        "type": "bool, optional",
+        "description": "Indicates whether normalisation should be used.<br>(default is False)"
+    },
+    {
+        "name": "norm_factor_categories",
+        "type": "float, optional",
+        "description": "Normalisation factor for the categories. If not specified, the default value is 1/number_of_categories.<br>(default is None)"
+    },
+    {
+        "name": "norm_factors_properties",
+        "type": "list of pair, optional",
+        "description": "Normalization factor for the properties. Each pair <i>(property_name, value)</i> specifies the normalisation factor to be applied to a specific property. If not specified, for each property the default value is 1/number_of_property_values.<br>(default is None)"
+    },
+    {
+        "name": "iou",
+        "type": "float, optional",
+        "description": "Intersection Over Union threshold. All the predictions with a iou value less than the threshold are considered False Positives. If not specified, the default value is 0.5.<br>(default is None)"
+    },
+    {
+        "name": "conf_thresh",
+        "type": "float, optional",
+        "description": "Confidence threshold. All the predictions with a confidence value less than the threshold are ignored. <br>If not specified, the default value is 0.5.<br>(default is None)"
+    },
+    {
+        "name": "metric",
+        "type": "Metrics, optional",
+        "description": "The evaluation metric that will be used as default.<br>(default is Metrics.Metrics.AVERAGE_PRECISION_SCORE)"
+    },
+    {
+        "name": "save_graphs_as_png",
+        "type": "bool, optional",
+        "description": "Indicates whether plots should be saved as <i>.png</i> images.<br>(default is True)"
+    }
+  ],
+
+  "analyzercams":
+  [
+    {
+        "name": "classifier_name",
+        "type": "str",
+        "description": "Name of the classifier. It is used as folder to save results."
+    },
+    {
+        "name": "dataset",
+        "type": "DatasetCAMs",
+        "description": "Dataset used to perform the analysis."
+    },
+    {
+        "name": "cam_thresh",
+        "type": "float, optional",
+        "description": "CAM confidence threshold. All the pixels with a confidence value less than the threshold are ignored. <br>(default is 0.5)"
+    },
+    {
+        "name": "cam_coverage_thresh",
+        "type": "float, optional",
+        "description": "CAM coverage threshold. All the CAMs with a iou less than the threshold do not cover the annotation. <br>(default is 0.5)"
+    },
+    {
+        "name": "result_saving_path",
+        "type": "str, optional",
+        "description": "Path used to save results.<br>(default is './results/')"
+    },
+    {
+        "name": "use_normalization",
+        "type": "bool, optional",
+        "description": "Indicates whether normalisation should be used.<br>(default is False)"
+    },
+    {
+        "name": "norm_factor_categories",
+        "type": "float, optional",
+        "description": "Normalisation factor for the categories. If not specified, the default value is 1/number_of_categories.<br>(default is None)"
+    },
+    {
+        "name": "norm_factors_properties",
+        "type": "list of pair, optional",
+        "description": "Normalization factor for the properties. Each pair <i>(property_name, value)</i> specifies the normalisation factor to be applied to a specific property. If not specified, for each property the default value is 1/number_of_property_values.<br>(default is None)"
+    },
+    {
+        "name": "conf_thresh",
+        "type": "float, optional",
+        "description": "Confidence threshold. All the predictions with a confidence value less than the threshold are ignored. <br>If not specified, the default value is 0.5.<br>(default is None)"
+    },
+    {
+        "name": "metric",
+        "type": "Metrics, optional",
+        "description": "The evaluation metric that will be used as default.<br>(default is Metrics.Metrics.CAM_GLOBAL_IOU)"
+    },
+    {
+        "name": "save_graphs_as_png",
+        "type": "bool, optional",
+        "description": "Indicates whether plots should be saved as <i>.png</i> images.<br>(default is True)"
+    }
+  ],
+
+  "comparatorclassification":
+  [
+    {
+        "name": "dataset_gt_param",
+        "type": "str",
+        "description": "Path of the ground truth .json file."
+    },
+    {
+        "name": "task_type",
+        "type": "TaskType",
+        "description": "Problem task type. It can be:<br><i>TaskType.CLASSIFICATION_BINARY</i>, <i>TaskType.CLASSIFICATION_SINGLE_LABEL</i>, <i>TaskType.CLASSIFICATION_MULTI_LABEL</i>."
+    },
+    {
+        "name": "multiple_proposals_path",
+        "type": "list of list",
+        "description": "List of the models proposals path. For each model, it must be specified the model name and the model proposals path directory; optionally can be specified also the default confidence threshold.<br>Example:<br><i>multiple_proposals_path = [['model_a', 'model_a_path', 0.65], ['model_b', 'model_b_path']]</i>"
+    },
+    {
+        "name": "result_saving_path",
+        "type": "str, optional",
+        "description": "Path used to save results.<br>(default is <i>'./results/'</i>)"
+    },
+    {
+        "name": "properties_file",
+        "type": "str, optional",
+        "description": "The name of the file used to store the names of and values of the properties and the names of the categories.<br>(default is <i>'properties.json'</i>)"
+    },
+    {
+        "name": "use_normalization",
+        "type": "bool, optional",
+        "description": "Indicates whether normalisation should be used.<br>(default is False)"
+    },
+    {
+        "name": "norm_factor_categories",
+        "type": "float, optional",
+        "description": "Normalisation factor for the categories. If not specified, the default value is 1/number_of_categories.<br>(default is None)"
+    },
+    {
+        "name": "norm_factors_properties",
+        "type": "list of pair, optional",
+        "description": "Normalization factor for the properties. Each pair <i>(property_name, value)</i> specifies the normalisation factor to be applied to a specific property. If not specified, for each property the default value is 1/number_of_property_values.<br>(default is None)"
+    },
+    {
+        "name": "conf_thresh",
+        "type": "float, optional",
+        "description": "Confidence threshold. All the predictions with a confidence value less than the threshold are ignored. <br>If not specified, for <i>single-label</i> classification problems, the default value is 0.<br>If not specified, for <i>binary</i> and <i>multi-label</i> classification problems the default value is 0.5.<br>(default is None)"
+    },
+    {
+        "name": "metric",
+        "type": "Metrics, optional",
+        "description": "The evaluation metric that will be used as default.<br>(default is Metrics.F1_SCORE)"
+    },
+    {
+        "name": "similar_classes",
+        "type": "list of list, optional",
+        "description": "List of groups of ids of categories which are similar to each other.<br>(default is None)"
+    },
+    {
+        "name": "match_on_filename",
+        "type": "bool, optional",
+        "description": "Indicates whether the predictions refer to the ground truth by <i>file_name</i> (set to True) or by <i>id</i> (set to False).<br>(default is False)"
+    },
+    {
+        "name": "save_graphs_as_png",
+        "type": "bool, optional",
+        "description": "Indicates whether plots should be saved as <i>.png</i> images.<br>(default is True)"
+    }
+  ],
+
+  "comparatorlocalization":
+  [
+    {
+        "name": "dataset_gt_param",
+        "type": "str",
+        "description": "Path of the ground truth .json file."
+    },
+    {
+        "name": "task_type",
+        "type": "TaskType",
+        "description": "Problem task type. It can be:<br><i>TaskType.OBJECT_DETECTION</i>, <i>TaskType.INSTANCE_SEGMENTATION</i>."
+    },
+    {
+        "name": "multiple_proposals_path",
+        "type": "list of list",
+        "description": "List of the models proposals path. For each model, it must be specified the model name and the model proposals path directory; optionally can be specified also the default confidence threshold.<br>Example:<br><i>multiple_proposals_path = [['model_a', 'model_a_path', 0.65], ['model_b', 'model_b_path']]</i>"
+    },
+    {
+        "name": "result_saving_path",
+        "type": "str, optional",
+        "description": "Path used to save results.<br>(default is <i>'./results/'</i>)"
+    },
+    {
+        "name": "properties_file",
+        "type": "str, optional",
+        "description": "The name of the file used to store the names of and values of the properties and the names of the categories.<br>(default is <i>'properties.json'</i>)"
+    },
+    {
+        "name": "use_normalization",
+        "type": "bool, optional",
+        "description": "Indicates whether normalisation should be used.<br>(default is False)"
+    },
+    {
+        "name": "norm_factor_categories",
+        "type": "float, optional",
+        "description": "Normalisation factor for the categories. If not specified, the default value is 1/number_of_categories.<br>(default is None)"
+    },
+    {
+        "name": "norm_factors_properties",
+        "type": "list of pair, optional",
+        "description": "Normalization factor for the properties. Each pair <i>(property_name, value)</i> specifies the normalisation factor to be applied to a specific property. If not specified, for each property the default value is 1/number_of_property_values.<br>(default is None)"
+    },
+    {
+        "name": "iou",
+        "type": "float, optional",
+        "description": "Intersection Over Union threshold. All the predictions with a iou value less than the threshold are considered False Positives. If not specified, the default value is 0.5.<br>(default is None)"
+    },
+    {
+        "name": "conf_thresh",
+        "type": "float, optional",
+        "description": "Confidence threshold. All the predictions with a confidence value less than the threshold are ignored. <br>If not specified, for <i>single-label</i> classification problems, the default value is 0.<br>If not specified, for <i>binary</i> and <i>multi-label</i> classification problems the default value is 0.5.<br>(default is None)"
+    },
+    {
+        "name": "metric",
+        "type": "Metrics, optional",
+        "description": "The evaluation metric that will be used as default.<br>(default is Metrics.AVERAGE_PRECISION_SCORE)"
+    },
+    {
+        "name": "similar_classes",
+        "type": "list of list, optional",
+        "description": "List of groups of ids of categories which are similar to each other.<br>(default is None)"
+    },
+    {
+        "name": "match_on_filename",
+        "type": "bool, optional",
+        "description": "Indicates whether the predictions refer to the ground truth by <i>file_name</i> (set to True) or by <i>id</i> (set to False).<br>(default is False)"
+    },
+    {
+        "name": "save_graphs_as_png",
+        "type": "bool, optional",
+        "description": "Indicates whether plots should be saved as <i>.png</i> images.<br>(default is True)"
+    }
+  ],
+
+  "comparatorcams":
+  [
+    {
+        "name": "dataset_gt_param",
+        "type": "str",
+        "description": "Path of the ground truth .json file."
+    },
+    {
+        "name": "task_type",
+        "type": "TaskType",
+        "description": "Problem task type. It can be:<br><i>TaskType.CLASSIFICATION_BINARY</i>, <i>TaskType.CLASSIFICATION_SINGLE_LABEL</i>, <i>TaskType.CLASSIFICATION_MULTI_LABEL</i>."
+    },
+    {
+        "name": "multiple_proposals_path",
+        "type": "list of list",
+        "description": "List of the models proposals path. For each model, it must be specified the model name and the model cams path directory; optionally can be specified also the predictions_path and the default confidence threshold.<br>Example:<br><i>multiple_proposals_path = [['model_a', ['model_a_cam_path', 'model_a_path'], 0.65], ['model_b', ['model_b_cam_path', 'model_b_path'], 0.45]]</i>"
+    },
+    {
+        "name": "cam_thresh",
+        "type": "float, optional",
+        "description": "CAM confidence threshold. All the pixels with a confidence value less than the threshold are ignored.<br>(default is 0.5)"
+    },
+    {
+        "name": "cam_coverage_thresh",
+        "type": "float, optional",
+        "description": "CAM coverage threshold. All the CAMs with a iou less than the threshold do not cover the annotation.<br>(default is 0.5)"
+    },
+    {
+        "name": "annotation_type",
+        "type": "AnnotationType, optional",
+        "description": "Indicates whether the annotation is a bounding box (AnnotationType.BBOX) or a segmentation mask (AnnotationType.SEGMENTATION)<br>(default is AnnotationType.BBOX)"
+    },
+    {
+        "name": "result_saving_path",
+        "type": "str, optional",
+        "description": "Path used to save results.<br>(default is <i>'./results/'</i>)"
+    },
+    {
+        "name": "properties_file",
+        "type": "str, optional",
+        "description": "The name of the file used to store the names of and values of the properties and the names of the categories.<br>(default is <i>'properties.json'</i>)"
+    },
+    {
+        "name": "use_normalization",
+        "type": "bool, optional",
+        "description": "Indicates whether normalisation should be used.<br>(default is False)"
+    },
+    {
+        "name": "norm_factor_categories",
+        "type": "float, optional",
+        "description": "Normalisation factor for the categories. If not specified, the default value is 1/number_of_categories.<br>(default is None)"
+    },
+    {
+        "name": "norm_factors_properties",
+        "type": "list of pair, optional",
+        "description": "Normalization factor for the properties. Each pair <i>(property_name, value)</i> specifies the normalisation factor to be applied to a specific property. If not specified, for each property the default value is 1/number_of_property_values.<br>(default is None)"
+    },
+    {
+        "name": "conf_thresh",
+        "type": "float, optional",
+        "description": "Confidence threshold. All the predictions with a confidence value less than the threshold are ignored. <br>If not specified, for <i>single-label</i> classification problems, the default value is 0.<br>If not specified, for <i>binary</i> and <i>multi-label</i> classification problems the default value is 0.5.<br>(default is None)"
+    },
+    {
+        "name": "metric",
+        "type": "Metrics, optional",
+        "description": "The evaluation metric that will be used as default.<br>(default is Metrics.CAM_GLOBAL_IOU)"
+    },
+    {
+        "name": "similar_classes",
+        "type": "list of list, optional",
+        "description": "List of groups of ids of categories which are similar to each other.<br>(default is None)"
+    },
+    {
+        "name": "match_on_filename",
+        "type": "bool, optional",
+        "description": "Indicates whether the predictions refer to the ground truth by <i>file_name</i> (set to True) or by <i>id</i> (set to False).<br>(default is False)"
+    },
+    {
+        "name": "save_graphs_as_png",
+        "type": "bool, optional",
+        "description": "Indicates whether plots should be saved as <i>.png</i> images.<br>(default is True)"
+    }
+  ],
+}
