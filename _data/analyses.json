@@ -1,4 +1,59 @@
 {
+  "show_distribution_of_categories":
+  [
+    {
+        "name": "show_avg_size",
+        "type": "bool, optional",
+        "description": "Indicates whether to calculate the average size of the area of the annotations. It is supported only for localization tasks.<br>(default is True)"
+    }
+  ],
+
+  "show_distribution_of_properties":
+  [
+    {
+        "name": "properties",
+        "type": "list, optional",
+        "description": "List of properties to be included in the analysis. If not specified, all the properties are included.<br>(default is None)"
+    }
+  ],
+
+  "show_distribution_of_property":
+  [
+    {
+        "name": "property_name",
+        "type": "str",
+        "description": "Name of the property to be analyzed."
+    }
+  ],
+
+  "show_distribution_of_property_for_categories":
+  [
+    {
+        "name": "property_name",
+        "type": "str",
+        "description": "Name of the property to be analyzed."
+    },
+    {
+        "name": "categories",
+        "type": "list, optional",
+        "description": "List of categories to be included in the analysis. If not specified, all the categories are included.<br>(default is None)"
+    }
+  ],
+
+  "show_distribution_of_property_for_category":
+  [
+    {
+        "name": "property_name",
+        "type": "str",
+        "description": "Name of the property to be analyzed."
+    },
+    {
+        "name": "category",
+        "type": "str",
+        "description": "Name of the category to be analyzed."
+    }
+  ],
+
   "analyze_property":
   [
     {

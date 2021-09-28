@@ -1,4 +1,191 @@
 {
+  "datasetclassification":
+  [
+    {
+        "name": "dataset_gt_param",
+        "type": "str",
+        "description": "Path of the ground truth .json file."
+    },
+    {
+        "name": "task_type",
+        "type": "TaskType",
+        "description": "Problem task type. It can be:<br><i>TaskType.CLASSIFICATION_BINARY</i>, <i>TaskType.CLASSIFICATION_SINGLE_LABEL</i>, <i>TaskType.CLASSIFICATION_MULTI_LABEL</i>."
+    },
+    {
+        "name": "proposals_path",
+        "type": "str, optional",
+        "description": "Path of the proposals directory.<br>(default is None)"
+    },
+    {
+        "name": "observations_set_name",
+        "type": "str, optional",
+        "description": "Name of the data set.<br>(default is <i>'test'</i>)"
+    },
+    {
+        "name": "observations_abs_path",
+        "type": "str, optional",
+        "description": "Path of the observation directory.<br>(default is None)"
+    },
+    {
+        "name": "result_saving_path",
+        "type": "str, optional",
+        "description": "Path used to save results.<br>(default is <i>'./results/'</i>)"
+    },
+    {
+        "name": "similar_classes",
+        "type": "list of list, optional",
+        "description": "List of groups of ids of categories which are similar to each other.<br>(default is None)"
+    },
+    {
+        "name": "properties_file",
+        "type": "str, optional",
+        "description": "The name of the file used to store the names of and values of the properties and the names of the categories.<br>(default is <i>'properties.json'</i>)"
+    },
+    {
+        "name": "for_analysis",
+        "type": "bool, optional",
+        "description": "Indicates whether the properties and the predictions have to be loaded. If False, only the ground truth is loaded.<br>(default is True)"
+    },
+    {
+        "name": "match_on_filename",
+        "type": "bool, optional",
+        "description": "Indicates whether the predictions refer to the ground truth by <i>file_name</i> (set to True) or by <i>id</i> (set to False).<br>(default is False)"
+    },
+    {
+        "name": "save_graphs_as_png",
+        "type": "bool, optional",
+        "description": "Indicates whether plots should be saved as <i>.png</i> images.<br>(default is True)"
+    }
+  ],
+
+  "datasetlocalization":
+  [
+    {
+        "name": "dataset_gt_param",
+        "type": "str",
+        "description": "Path of the ground truth .json file."
+    },
+    {
+        "name": "task_type",
+        "type": "TaskType",
+        "description": "Problem task type. It can be:<br><i>TaskType.OBJECT_DETECTION</i>, <i>TaskType.INSTANCE_SEGMENTATION</i>."
+    },
+    {
+        "name": "proposals_path",
+        "type": "str, optional",
+        "description": "Path of the proposals directory.<br>(default is None)"
+    },
+    {
+        "name": "images_set_name",
+        "type": "str, optional",
+        "description": "Name of the data set.<br>(default is <i>'test'</i>)"
+    },
+    {
+        "name": "images_abs_path",
+        "type": "str, optional",
+        "description": "Path of the images directory.<br>(default is None)"
+    },
+    {
+        "name": "result_saving_path",
+        "type": "str, optional",
+        "description": "Path used to save results.<br>(default is <i>'./results/'</i>)"
+    },
+    {
+        "name": "similar_classes",
+        "type": "list of list, optional",
+        "description": "List of groups of ids of categories which are similar to each other.<br>(default is None)"
+    },
+    {
+        "name": "properties_file",
+        "type": "str, optional",
+        "description": "The name of the file used to store the names of and values of the properties and the names of the categories.<br>(default is <i>'properties.json'</i>)"
+    },
+    {
+        "name": "for_analysis",
+        "type": "bool, optional",
+        "description": "Indicates whether the properties and the predictions have to be loaded. If False, only the ground truth is loaded.<br>(default is True)"
+    },
+    {
+        "name": "match_on_filename",
+        "type": "bool, optional",
+        "description": "Indicates whether the predictions refer to the ground truth by <i>file_name</i> (set to True) or by <i>id</i> (set to False).<br>(default is False)"
+    },
+    {
+        "name": "save_graphs_as_png",
+        "type": "bool, optional",
+        "description": "Indicates whether plots should be saved as <i>.png</i> images.<br>(default is True)"
+    }
+  ],
+
+  "datasetcams":
+  [
+    {
+        "name": "dataset_gt_param",
+        "type": "str",
+        "description": "Path of the ground truth .json file."
+    },
+    {
+        "name": "task_type",
+        "type": "TaskType",
+        "description": "Problem task type. It can be:<br><i>TaskType.CLASSIFICATION_BINARY</i>, <i>TaskType.CLASSIFICATION_SINGLE_LABEL</i>, <i>TaskType.CLASSIFICATION_MULTI_LABEL</i>."
+    },
+    {
+        "name": "cams_path",
+        "type": "str, optional",
+        "description": "Path of the CAMs directory.<br>(default is None)"
+    },
+    {
+        "name": "annotation_type",
+        "type": "AnnotationType, optional",
+        "description": "Indicates whether the annotation is a bounding box (AnnotationType.BBOX) or a segmentation mask (AnnotationType.SEGMENTATION)<br>(default is AnnotationType.BBOX)"
+    },
+    {
+        "name": "proposals_path",
+        "type": "str, optional",
+        "description": "Path of the proposals directory.<br>(default is None)"
+    },
+    {
+        "name": "observations_set_name",
+        "type": "str, optional",
+        "description": "Name of the data set.<br>(default is <i>'test'</i>)"
+    },
+    {
+        "name": "observations_abs_path",
+        "type": "str, optional",
+        "description": "Path of the observation directory.<br>(default is None)"
+    },
+    {
+        "name": "result_saving_path",
+        "type": "str, optional",
+        "description": "Path used to save results.<br>(default is <i>'./results/'</i>)"
+    },
+    {
+        "name": "similar_classes",
+        "type": "list of list, optional",
+        "description": "List of groups of ids of categories which are similar to each other.<br>(default is None)"
+    },
+    {
+        "name": "properties_file",
+        "type": "str, optional",
+        "description": "The name of the file used to store the names of and values of the properties and the names of the categories.<br>(default is <i>'properties.json'</i>)"
+    },
+    {
+        "name": "for_analysis",
+        "type": "bool, optional",
+        "description": "Indicates whether the properties and the predictions have to be loaded. If False, only the ground truth is loaded.<br>(default is True)"
+    },
+    {
+        "name": "match_on_filename",
+        "type": "bool, optional",
+        "description": "Indicates whether the predictions refer to the ground truth by <i>file_name</i> (set to True) or by <i>id</i> (set to False).<br>(default is False)"
+    },
+    {
+        "name": "save_graphs_as_png",
+        "type": "bool, optional",
+        "description": "Indicates whether plots should be saved as <i>.png</i> images.<br>(default is True)"
+    }
+  ],
+
   "analyzerclassification":
   [
       {

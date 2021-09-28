@@ -24,7 +24,7 @@ It provides a per-category analysis of the model CAMs at different thresholds.
 <hr>
 
 ### Example
-#### Localization
+#### Classification
 ```py
 from odin.classes import AnalyzerCAMs
 
