@@ -1,6 +1,6 @@
 ---
 layout: default
-title: analyze_confusion_matrix()
+title: show_confusion_matrix()
 parent: Analyzer
 nav_order: 11
 ---
@@ -8,11 +8,11 @@ nav_order: 11
 # {{ page.title }}
 {: .mb-6}
 
-It analyzes the confusion matrix of the model. The analysis can be performed for the entire data set or for a subset with a specific property value.
+It shows the confusion matrix of the model. The confusion matrix can be performed for the entire data set or for a subset with a specific property value.
 
 #### Parameters
 <dl>
-  {% for param in site.data.analyses.analyze_confusion_matrix %}
+  {% for param in site.data.analyses.show_confusion_matrix %}
 
   <dt><strong>{{ param.name }}</strong></dt>
   <dd><br><b><i>{{ param.type }}</i></b></dd><dd>{{ param.description }}</dd>
@@ -28,7 +28,7 @@ It analyzes the confusion matrix of the model. The analysis can be performed for
 from odin.classes import AnalyzerClassification
 
 my_analyzer = AnalyzerClassification("my_classifier_name", my_classification_dataset)
-my_analyzer.analyze_confusion_matrix()
+my_analyzer.show_confusion_matrix()
 ```
 
 ![analyze_cm_output_a](../img/analyzer/cm_catA.png){:class="img-responsive" width="60%"}

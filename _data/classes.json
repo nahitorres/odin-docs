@@ -467,7 +467,7 @@
     {
         "name": "conf_thresh",
         "type": "float, optional",
-        "description": "Confidence threshold. All the predictions with a confidence value less than the threshold are ignored. <br>If not specified, for <i>single-label</i> classification problems, the default value is 0.<br>If not specified, for <i>binary</i> and <i>multi-label</i> classification problems the default value is 0.5.<br>(default is None)"
+        "description": "Confidence threshold. All the predictions with a confidence value less than the threshold are ignored. <br>If not specified the default value is 0.5.<br>(default is None)"
     },
     {
         "name": "metric",
