@@ -20,7 +20,7 @@ nav_order: 4
     - [show_false_negative_distribution()](../analyzer/analyses/distributions.html#models-comparison-2)
     - [show_true_negative_distribution()](../analyzer/analyses/distributions.html#models-comparison-3)
 - Curves
-    - [analyze_curve()](../analyzer/analyses/curves.html#compare-models)
-    - [analyze_curve_for_categories()](../analyzer/analyses/curves.html#compare-models-1)
+    - [analyze_curve()](../analyzer/analyses/curves.html#models-comparison)
+    - [analyze_curve_for_categories()](../analyzer/analyses/curves.html#models-comparison-1)
 - CAMs
-    - [analyze_cams_threshold()](../analyzer/analyses/cams.html#compare-models)
+    - [analyze_cams_threshold()](../analyzer/analyses/cams.html#models-comparison)
