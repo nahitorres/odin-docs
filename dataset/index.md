@@ -13,14 +13,6 @@ has_toc: false
 The Dataset component stores the ground truth and the predictions of the model.
 <br>
 It provides different distribution analyses in order to identify possible bias in the data set.
-<br>
-Depending on the model task, it is mandatory to instantiate a specific class of the Dataset. Odin supports three different Dataset classes:
-
-
-- [DatasetClassification](#datasetclassification)
-- [DatasetLocalization](#datasetlocalization)
-- [DatasetCAMs](#datasetrcams)
-
 
 <hr>
 

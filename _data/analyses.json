@@ -657,5 +657,24 @@
         "type": "bool, optional",
         "description": "Indicates whether the properties should be included in the report.<br>(default is True)"
     }
+  ],
+
+  "visualizeannotations":
+  [
+    {
+        "name": "categories",
+        "type": "list, optional",
+        "description": "List of categories to be included in the visualization. If not specified, all the categories are included.<br>(default is None)"
+    },
+    {
+        "name": "show_predictions",
+        "type": "bool, optional",
+        "description": "Indicates whether to visualize also the predictions<br>(default is False)"
+    },
+    {
+        "name": "model",
+        "type": "str, optional",
+        "description": "Name of the model used for the default visualization. If not specified, the first in the list is considered.<br>(default is None)"
+    },
   ]
 }

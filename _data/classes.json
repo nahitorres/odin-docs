@@ -574,4 +574,185 @@
         "description": "Indicates whether plots should be saved as <i>.png</i> images.<br>(default is True)"
     }
   ],
+
+  "visualizerclassification":
+  [
+    {
+        "name": "models",
+        "type": "dict",
+        "description": "Represents the dataset or the analyzer of the models to be used in the visualization.<br>Example: {'model_a':{'dataset': my_dataset}} or {'model_a':{'analyzer': my_analyzer}} to be able to filter the output by analyses"
+    },
+    {
+        "name": "is_image",
+        "type": "bool, optional",
+        "description": "Indicates whether the data set represent images or not.<br>(default is True)"
+    },
+    {
+        "name": "custom_display_function",
+        "type": "function, optional",
+        "description": "User custom display function.If not specified, it is used the default one.<br>(default is None)"
+    },
+  ],
+
+  "visualizerlocalization":
+  [
+    {
+        "name": "models",
+        "type": "dict",
+        "description": "Represents the dataset or the analyzer of the models to be used in the visualization.<br>Example: {'model_a':{'dataset': my_dataset}} or {'model_a':{'analyzer': my_analyzer}} to be able to filter the output by analyses"
+    }
+  ],
+
+  "annotatorclassification":
+  [
+    {
+        "name": "dataset",
+        "type": "DatasetClassification",
+        "description": "Dataset to be modified with annotations. If not specified, a new one is created.<br>(default is None)"
+    },
+    {
+        "name": "task_type",
+        "type": "TaskType, optional",
+        "description": "Problem task_type. If the dataset is not specified, it is a mandatory parameter.<br>(default is None)"
+    },
+    {
+        "name": "observations",
+        "type": "list, optional",
+        "description": "List of observations path. If the dataset is not specified, it is a mandatory parameter.<br>(default is None)"
+    },
+    {
+        "name": "classes_to_annotate",
+        "type": "list, optional",
+        "description": "List of categories to be annotated. If the dataset is not specified, it is a mandatory parameter.<br>(default is None)"
+    },
+    {
+        "name": "output_path",
+        "type": "str, optional",
+        "description": "The path where the annotated data set will be saved. If the dataset is not specified, it is a mandatory parameter.<br>(default is None)"
+    },
+    {
+        "name": "ds_name",
+        "type": "str, optional",
+        "description": "Name of the data set. If the dataset is not specified, it is a mandatory parameter.<br>(default is None)"
+    },
+    {
+        "name": "properties_and_values",
+        "type": "dict, optional",
+        "description": "Meta-annotations and corresponding values used to annotate the data set. If not specified, only the categeories will be annotated..<br>(default is None)Example: {'property_name': (property_type, ['value1', 'value2', '...', 'valuen'])}<br>The meta-annotations can be of the following types: MetaPropertiesType.UNIQUE, MetaPropertiesType.TEXT, MetaPropertiesType.CONTINUE"
+    },
+    {
+        "name": "show_name",
+        "type": "bool, optional",
+        "description": "Indicates whether to show the name of the file.<br>(default is True)"
+    },
+    {
+        "name": "show_axis",
+        "type": "bool, optional",
+        "description": "Indicates wheter to show the axis of the plot.<br>(default is False)"
+    },
+    {
+        "name": "fig_size",
+        "type": "pair, optional",
+        "description": "Indicates the size of the figure visualized during the annotation process.<br>(default is (10, 10))"
+    },
+    {
+        "name": "buttons_vertical",
+        "type": "bool, optional",
+        "description": "Indicates whether to display the buttons vertically.<br>(default is False)"
+    },
+    {
+        "name": "custom_display_function",
+        "type": "function, optional",
+        "description": "User custom display visualization.<br>(default is None)"
+    },
+    {
+        "name": "validate_function",
+        "type": "function, optional",
+        "description": "Annotation process validation function.<br>(default is None)"
+    },
+    {
+        "name": "show_reset",
+        "type": "bool, optional",
+        "description": "Indicates whether to show the <i>'reset annotation'</i> button.<br>(default is True)"
+    },
+    {
+        "name": "is_image",
+        "type": "bool, optional",
+        "description": "Indicates whether the observations represent images. If False, the <i>'custom_display_function'</i> parameter is mandatory.<br>(default is True)"
+    }
+  ],
+
+  "annotatorlocalization":
+  [
+    {
+        "name": "dataset",
+        "type": "DatasetLocalization",
+        "description": "Dataset to be modified with annotations. If not specified, a new one is created.<br>(default is None)"
+    },
+    {
+        "name": "task_type",
+        "type": "TaskType, optional",
+        "description": "Problem task_type. If the dataset is not specified, it is a mandatory parameter.<br>(default is None)"
+    },
+    {
+        "name": "images",
+        "type": "list, optional",
+        "description": "List of images path. If the dataset is not specified, it is a mandatory parameter.<br>(default is None)"
+    },
+    {
+        "name": "classes_to_annotate",
+        "type": "list, optional",
+        "description": "List of categories to be annotated. If the dataset is not specified, it is a mandatory parameter.<br>(default is None)"
+    },
+    {
+        "name": "output_path",
+        "type": "str, optional",
+        "description": "The path where the annotated data set will be saved. If the dataset is not specified, it is a mandatory parameter.<br>(default is None)"
+    },
+    {
+        "name": "ds_name",
+        "type": "str, optional",
+        "description": "Name of the data set. If the dataset is not specified, it is a mandatory parameter.<br>(default is None)"
+    },
+    {
+        "name": "properties_and_values",
+        "type": "dict, optional",
+        "description": "Meta-annotations and corresponding values used to annotate the data set. If not specified, only the categeories will be annotated..<br>(default is None)Example: {'property_name': (property_type, ['value1', 'value2', '...', 'valuen'])}<br>The meta-annotations can be of the following types: MetaPropertiesType.UNIQUE, MetaPropertiesType.TEXT, MetaPropertiesType.CONTINUE"
+    },
+    {
+        "name": "show_name",
+        "type": "bool, optional",
+        "description": "Indicates whether to show the name of the file.<br>(default is True)"
+    },
+    {
+        "name": "show_axis",
+        "type": "bool, optional",
+        "description": "Indicates wheter to show the axis of the plot.<br>(default is False)"
+    },
+    {
+        "name": "fig_size",
+        "type": "pair, optional",
+        "description": "Indicates the size of the figure visualized during the annotation process.<br>(default is (10, 10))"
+    },
+    {
+        "name": "buttons_vertical",
+        "type": "bool, optional",
+        "description": "Indicates whether to display the buttons vertically.<br>(default is False)"
+    },
+    {
+        "name": "custom_display_function",
+        "type": "function, optional",
+        "description": "User custom display visualization.<br>(default is None)"
+    },
+    {
+        "name": "validate_function",
+        "type": "function, optional",
+        "description": "Annotation process validation function.<br>(default is None)"
+    },
+    {
+        "name": "show_reset",
+        "type": "bool, optional",
+        "description": "Indicates whether to show the <i>'reset annotation'</i> button.<br>(default is True)"
+    }
+  ]
 }

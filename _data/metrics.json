@@ -37,17 +37,17 @@
 
   "ROC AUC":
   {
-    "description": "It represents the Area Under the Curve (auc) of the [ROC curve](./roc_curve)."
+    "description": "It represents the Area Under the Curve (auc) of the [ROC curve](../curves/roc_curve)."
   },
 
   "Precision-Recall AUC":
   {
-    "description": "It represents the Area Under the Curve (auc) of the [Precision-Recall curve](./precision_recall_curve)."
+    "description": "It represents the Area Under the Curve (auc) of the [Precision-Recall curve](../curves/precision_recall_curve)."
   },
 
   "F1 AUC":
   {
-    "description": "It represents the Area Under the Curve (auc) of the [F1 curve](./f1_curve)."
+    "description": "It represents the Area Under the Curve (auc) of the [F1 curve](../curves/f1_curve)."
   },
 
   "ROC Curve":
@@ -58,12 +58,12 @@
 
   "Precision-Recall Curve":
   {
-    "description": "The <i>Precision-Recall</i> curve evaluates the model performances at different threshold values by considering two parameters, the <i>[precision](./precision)</i> and the <i>[recall](./recall)</i>."
+    "description": "The <i>Precision-Recall</i> curve evaluates the model performances at different threshold values by considering two parameters, the <i>[precision](../standard_evaluation_metrics/precision)</i> and the <i>[recall](../standard_evaluation_metrics/recall)</i>."
   },
 
   "F1 Curve":
   {
-    "description": "The <i>F1</i> curve evaluates the model performances at different threshold by considering the <i>[f1 score](./f1_score)</i>."
+    "description": "The <i>F1</i> curve evaluates the model performances at different threshold by considering the <i>[f1 score](../standard_evaluation_metrics/f1_score)</i>."
   },
 
   "CAM Component IoU":

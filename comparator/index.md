@@ -12,14 +12,6 @@ has_toc: false
 The Comparator component provides the possibility to compare the performances of different models on the same data set.
 <br>
 All the comparison analyses provided are based on the [Analyzer](../analyzer) analyses.
-<br>
-Depending on the models task, it is mandatory to instantiate a specific class of the Comparator. Odin supports three different Comparator classes:
-
-
-- [ComparatorClassification](#comparatorclassification)
-- [ComparatorLocalization](#comparatorlocalization)
-- [ComparatorCAMs](#comparatorcams)
-
 
 <hr>
 

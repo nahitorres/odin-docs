@@ -12,14 +12,6 @@ has_toc: false
 The Analyzer component provides multiple analyses and metrics in order to evaluate the performances of the model.
 <br>
 It is possible to evaluate the model on the whole data set or only on a subset, splitting the evaluation for each category or for each meta-annotation value.
-<br>
-Depending on the model task, it is mandatory to instantiate a specific class of the Analyzer. Odin supports three different Analyzer classes:
-
-
-- [AnalyzerClassification](#analyzerclassification)
-- [AnalyzerLocalization](#analyzerlocalization)
-- [AnalyzerCAMs](#analyzercams)
-
 
 <hr>
 
