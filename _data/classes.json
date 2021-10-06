@@ -590,7 +590,7 @@
     {
         "name": "custom_display_function",
         "type": "function, optional",
-        "description": "User custom display function.If not specified, it is used the default one.<br>(default is None)"
+        "description": "User custom display function. If not specified, it is used the default one.<br>(default is None)"
     },
   ],
 
@@ -606,7 +606,7 @@
   "annotatorclassification":
   [
     {
-        "name": "dataset",
+        "name": "dataset, optional",
         "type": "DatasetClassification",
         "description": "Dataset to be modified with annotations. If not specified, a new one is created.<br>(default is None)"
     },
@@ -638,7 +638,7 @@
     {
         "name": "properties_and_values",
         "type": "dict, optional",
-        "description": "Meta-annotations and corresponding values used to annotate the data set. If not specified, only the categeories will be annotated..<br>(default is None)Example: {'property_name': (property_type, ['value1', 'value2', '...', 'valuen'])}<br>The meta-annotations can be of the following types: MetaPropertiesType.UNIQUE, MetaPropertiesType.TEXT, MetaPropertiesType.CONTINUE"
+        "description": "Meta-annotations and corresponding values used to annotate the data set. If not specified, only the categeories will be annotated.<br>(default is None)Example: {'property_name': (property_type, ['value1', 'value2', '...', 'valuen'])}<br>The meta-annotations can be of the following types: MetaPropertiesType.UNIQUE, MetaPropertiesType.TEXT, MetaPropertiesType.CONTINUE"
     },
     {
         "name": "show_name",
@@ -648,7 +648,7 @@
     {
         "name": "show_axis",
         "type": "bool, optional",
-        "description": "Indicates wheter to show the axis of the plot.<br>(default is False)"
+        "description": "Indicates whether to show the axis of the plot.<br>(default is False)"
     },
     {
         "name": "fig_size",
@@ -685,7 +685,7 @@
   "annotatorlocalization":
   [
     {
-        "name": "dataset",
+        "name": "dataset, optional",
         "type": "DatasetLocalization",
         "description": "Dataset to be modified with annotations. If not specified, a new one is created.<br>(default is None)"
     },
@@ -727,7 +727,7 @@
     {
         "name": "show_axis",
         "type": "bool, optional",
-        "description": "Indicates wheter to show the axis of the plot.<br>(default is False)"
+        "description": "Indicates whether to show the axis of the plot.<br>(default is False)"
     },
     {
         "name": "fig_size",

@@ -74,8 +74,7 @@ my_annotator = AnnotatorClassification(dataset=my_dataset,
 
 my_annotator.start_classification()
 ```
-![Example gif](../gifs/example.gif){:class="img-responsive;" width="75%"}
-{: .text-center}
+--- ADD GIF ---
 
 #### Annotate a new data set with categories labels and meta-annotations
 ```py
@@ -96,8 +95,7 @@ my_annotator = AnnotatorClassification(task_type=task_type,
                                        properties_and_values=meta_annotations)
 my_annotator.start_classification()
 ```
-![Example gif](../gifs/example.gif){:class="img-responsive;" width="75%"}
-{: .text-center}
+--- ADD GIF ---
 
 <hr>
 
@@ -133,8 +131,7 @@ my_annotator = AnnotatorLocalization(task_type=task_type,
                                      ds_name=dataset_name)
 my_annotator.start_annotation()
 ```
-![Example gif](../gifs/example.gif){:class="img-responsive;" width="75%"}
-{: .text-center}
+--- ADD GIF ---
 
 #### Annotate an existing data set with only meta-annotations
 ```py
@@ -161,8 +158,7 @@ my_annotator = AnnotatorLocalization(dataset=my_dataset,
 
 my_annotator.start_annotation()
 ```
-![Example gif](../gifs/example.gif){:class="img-responsive;" width="75%"}
-{: .text-center}
+--- ADD GIF ---
 
 #### Annotate a new data set with categories labels and meta-annotations
 ```py
@@ -183,5 +179,4 @@ my_annotator = AnnotatorLocalization(task_type=task_type,
                                      properties_and_values=meta_annotations)
 my_annotator.start_annotation()
 ```
-![Example gif](../gifs/example.gif){:class="img-responsive;" width="75%"}
-{: .text-center}
+--- ADD GIF ---

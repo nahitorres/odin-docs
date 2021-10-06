@@ -659,7 +659,7 @@
     }
   ],
 
-  "visualizeannotations":
+  "visualize_annotations":
   [
     {
         "name": "categories",
@@ -669,12 +669,159 @@
     {
         "name": "show_predictions",
         "type": "bool, optional",
+        "description": "Indicates whether to visualize also the predictions.<br>(default is False)"
+    }
+  ],
+
+  "visualize_annotations_for_property":
+  [
+    {
+        "name": "meta_annotation",
+        "type": "str",
+        "description": "Name of the property to be visualized."
+    },
+    {
+        "name": "meta_annotation_value",
+        "type": "str or float",
+        "description": "Value of the property to be visualized."
+    },
+    {
+        "name": "show_predictions",
+        "type": "bool, optional",
+        "description": "Indicates whether to visualize also the predictions.<br>(default is False)"
+    }
+  ],
+
+  "visualize_annotations_for_class_for_property":
+  [
+    {
+        "name": "category",
+        "type": "str",
+        "description": "Name of the category to be visualized."
+    },
+    {
+        "name": "meta_annotation",
+        "type": "str",
+        "description": "Name of the property to be visualized."
+    },
+    {
+        "name": "meta_annotation_value",
+        "type": "str or float",
+        "description": "Value of the property to be visualized."
+    },
+    {
+        "name": "show_predictions",
+        "type": "bool, optional",
         "description": "Indicates whether to visualize also the predictions<br>(default is False)"
+    }
+  ],
+
+  "visualize_annotations_for_true_positive":
+  [
+    {
+        "name": "categories",
+        "type": "list, optional",
+        "description": "List of categories to be included in the visualization. If not specified, all the categories are included.<br>(default is None)"
     },
     {
         "name": "model",
         "type": "str, optional",
-        "description": "Name of the model used for the default visualization. If not specified, the first in the list is considered.<br>(default is None)"
+        "description": "Name of the model used for the analysis. If not specified, it is considered the first provided.<br>(default is None)"
+    }
+  ],
+
+  "visualize_annotations_for_false_positive":
+  [
+    {
+        "name": "categories",
+        "type": "list, optional",
+        "description": "List of categories to be included in the visualization. If not specified, all the categories are included.<br>(default is None)"
     },
+    {
+        "name": "model",
+        "type": "str, optional",
+        "description": "Name of the model used for the analysis. If not specified, it is considered the first provided.<br>(default is None)"
+    }
+  ],
+
+  "visualize_annotations_for_false_negative":
+  [
+    {
+        "name": "categories",
+        "type": "list, optional",
+        "description": "List of categories to be included in the visualization. If not specified, all the categories are included.<br>(default is None)"
+    },
+    {
+        "name": "model",
+        "type": "str, optional",
+        "description": "Name of the model used for the analysis. If not specified, it is considered the first provided.<br>(default is None)"
+    }
+  ],
+
+  "visualize_annotations_for_true_negative":
+  [
+    {
+        "name": "model",
+        "type": "str, optional",
+        "description": "Name of the model used for the analysis. If not specified, it is considered the first provided.<br>(default is None)"
+    }
+  ],
+
+  "visualize_annotations_for_error_type":
+  [
+    {
+        "name": "error_type",
+        "type": "ErrorType",
+        "description": "Error type to be included in the analysis. The types of error supported are: ErrorType.BACKGROUND, ErrorType.LOCALIZATION (only for localization tasks), ErrorType.SIMILAR_CLASSES, ErrorType.OTHER."
+    },
+    {
+        "name": "categories",
+        "type": "list, optional",
+        "description": "List of categories to be included in the visualization. If not specified, all the categories are included.<br>(default is None)"
+    },
+    {
+        "name": "model",
+        "type": "str, optional",
+        "description": "Name of the model used for the analysis. If not specified, it is considered the first provided.<br>(default is None)"
+    }
+  ],
+
+  "visualize_cams":
+  [
+    {
+        "name": "categories",
+        "type": "list, optional",
+        "description": "List of categories to be included in the visualization. If not specified, all the categories are included.<br>(default is None)"
+    },
+    {
+        "name": "cams_categories",
+        "type": "list, optional",
+        "description": "List of CAMs categories to be included in the visualization. If not specified, all the categories are included.<br>(default is None)"
+    },
+    {
+        "name": "heatmap",
+        "type": "bool, optional",
+        "description": "Indicates whether to visualize the CAMs in heatmap mode or not.<br>(default is True)"
+    },
+    {
+        "name": "threshold",
+        "type": "float, optional",
+        "description": "Threshold used for the CAMs visualization.<br>(default is 0.5)"
+    },
+    {
+        "name": "show_predictions",
+        "type": "bool, optional",
+        "description": "Indicates whether to visualize also the predictions.<br>(default is False)"
+    },
+    {
+        "name": "show_only_gt_cams",
+        "type": "bool, optional",
+        "description": "If <i>cams_categories</i> is not specified, indicates whether to show all the CAMs or only the ones related to the ground truth labels.<br>(default is False)"
+    },
+    {
+        "name": "model",
+        "type": "str, optional",
+        "description": "Name of the model used for the visualization. If not specified, it is considered the first provided.<br>(default is None)"
+    }
   ]
 }
