@@ -35,6 +35,11 @@
         "description": "Name of the property to be analyzed."
     },
     {
+        "name": "property_values",
+        "type": "list, optional",
+        "description": "List of categories to be included in the analysis. If not specified, all the categories are included.<br>(default is None)"
+    },
+    {
         "name": "show",
         "type": "bool, optional",
         "description": "Indicates whether the plot should be shown or not. If False, returns the results as dict.<br>(default is True)"
@@ -47,6 +52,11 @@
         "name": "property_name",
         "type": "str",
         "description": "Name of the property to be analyzed."
+    },
+    {
+        "name": "property_values",
+        "type": "list, optional",
+        "description": "List of categories to be included in the analysis. If not specified, all the categories are included.<br>(default is None)"
     },
     {
         "name": "categories",
@@ -71,6 +81,11 @@
         "name": "category",
         "type": "str",
         "description": "Name of the category to be analyzed."
+    },
+    {
+        "name": "property_values",
+        "type": "list, optional",
+        "description": "List of categories to be included in the analysis. If not specified, all the categories are included.<br>(default is None)"
     },
     {
         "name": "show",
@@ -105,6 +120,11 @@
         "name": "split_by",
         "type": "str, optional",
         "description": "If there are too many values, the plot is divided into subplots. The split can be performed by <i>'categories'</i> or by <i>'meta-annotations'</i>.<br>(default is 'meta-annotations')"
+    },
+    {
+        "name": "sort",
+        "type": "bool, optional",
+        "description": "Indicates whether the property values should be sorted by the score achieved.<br>(default is True)"
     }
   ],
 
@@ -129,6 +149,11 @@
         "name": "show",
         "type": "bool, optional",
         "description": "Indicates whether the plot should be shown or not. If False, returns the results as dict.<br>(default is True)"
+    },
+    {
+        "name": "sort",
+        "type": "bool, optional",
+        "description": "Indicates whether the property values should be sorted by the score achieved.<br>(default is True)"
     }
   ],
 
@@ -148,6 +173,11 @@
         "name": "show",
         "type": "bool, optional",
         "description": "Indicates whether the plot should be shown or not. If False, returns the results as dict.<br>(default is True)"
+    },
+    {
+        "name": "sort",
+        "type": "bool, optional",
+        "description": "Indicates whether the properties should be sorted by the model sensitivity.<br>(default is True)"
     }
   ],
 
@@ -276,6 +306,102 @@
 
   "show_true_negative_distribution":
   [
+    {
+        "name": "categories",
+        "type": "list, optional",
+        "description": "List of categories to be included in the analysis. If not specified, all the categories are included.<br>(default is None)"
+    },
+    {
+        "name": "show",
+        "type": "bool, optional",
+        "description": "Indicates whether the plot should be shown or not. If False, returns the results as dict.<br>(default is True)"
+    }
+  ],
+
+  "show_true_positive_distribution_for_categories_for_property":
+  [
+    {
+        "name": "property_name",
+        "type": "str",
+        "description": "Name of the property to be analyzed."
+    },
+    {
+        "name": "property_values",
+        "type": "list, optional",
+        "description": "List of the property values to be included in the analysis. If not specified, all the values are included.<br>(default is None)"
+    },
+    {
+        "name": "categories",
+        "type": "list, optional",
+        "description": "List of categories to be included in the analysis. If not specified, all the categories are included.<br>(default is None)"
+    },
+    {
+        "name": "show",
+        "type": "bool, optional",
+        "description": "Indicates whether the plot should be shown or not. If False, returns the results as dict.<br>(default is True)"
+    }
+  ],
+
+  "show_false_negative_distribution_for_categories_for_property":
+  [
+    {
+        "name": "property_name",
+        "type": "str",
+        "description": "Name of the property to be analyzed."
+    },
+    {
+        "name": "property_values",
+        "type": "list, optional",
+        "description": "List of the property values to be included in the analysis. If not specified, all the values are included.<br>(default is None)"
+    },
+    {
+        "name": "categories",
+        "type": "list, optional",
+        "description": "List of categories to be included in the analysis. If not specified, all the categories are included.<br>(default is None)"
+    },
+    {
+        "name": "show",
+        "type": "bool, optional",
+        "description": "Indicates whether the plot should be shown or not. If False, returns the results as dict.<br>(default is True)"
+    }
+  ],
+
+  "show_false_positive_distribution_for_categories_for_property":
+  [
+    {
+        "name": "property_name",
+        "type": "str",
+        "description": "Name of the property to be analyzed."
+    },
+    {
+        "name": "property_values",
+        "type": "list, optional",
+        "description": "List of the property values to be included in the analysis. If not specified, all the values are included.<br>(default is None)"
+    },
+    {
+        "name": "categories",
+        "type": "list, optional",
+        "description": "List of categories to be included in the analysis. If not specified, all the categories are included.<br>(default is None)"
+    },
+    {
+        "name": "show",
+        "type": "bool, optional",
+        "description": "Indicates whether the plot should be shown or not. If False, returns the results as dict.<br>(default is True)"
+    }
+  ],
+
+  "show_true_negative_distribution_for_categories_for_property":
+  [
+    {
+        "name": "property_name",
+        "type": "str",
+        "description": "Name of the property to be analyzed."
+    },
+    {
+        "name": "property_values",
+        "type": "list, optional",
+        "description": "List of the property values to be included in the analysis. If not specified, all the values are included.<br>(default is None)"
+    },
     {
         "name": "categories",
         "type": "list, optional",
