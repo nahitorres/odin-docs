@@ -65,7 +65,7 @@ my_analyzer.analyze_cams_threshold()
 from odin.classes import ComparatorCAMs
 
 my_comparator = ComparatorCAMs(dataset_gt_param, classification_type, models_proposals)
-my_comparator.compare_models_on_cams_threshold()
+my_comparator.analyze_cams_threshold()
 ```
 
 ![compare_models_on_cams_threshold_output](../../img/comparator/comparison_cams.png){:class="img-responsive" width="75%"}

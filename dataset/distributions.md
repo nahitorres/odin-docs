@@ -19,6 +19,74 @@ nav_order: 4
 
 <hr>
 
+# show_co_occurrence_matrix()
+{: .mb-6}
+
+It provides the co-occurrence matrix of the categories.
+
+#### Parameters
+{: .no_toc}
+<dl>
+  {% for param in site.data.analyses.show_co_occurrence_matrix %}
+
+  <dt><strong>{{ param.name }}</strong></dt>
+  <dd><br><b><i>{{ param.type }}</i></b></dd><dd>{{ param.description }}</dd>
+
+  {% endfor %}
+</dl>
+
+<hr>
+
+### Example
+{: .no_toc}
+#### Classification
+{: .no_toc}
+```py
+from odin.classes import DatasetClassification
+
+my_dataset = DatasetClassification(dataset_gt_param, classification_type)
+my_dataset.show_co_occurrence_matrix()
+```
+#### Localization
+{: .no_toc}
+```py
+from odin.classes import DatasetLocalization
+
+my_dataset = DatasetLocalization(dataset_gt_param, localization_type)
+my_dataset.show_co_occurrence_matrix()
+```
+
+![show_co_occurrence_matrix_output](../img/dataset/co_matrix.png){:class="img-responsive" width="75%"}
+{: .text-center}
+
+<hr>
+
+### Tasks supported
+{: .no_toc}
+<table>
+  <thead>
+    <tr class="header">
+      <th>Binary Classification</th>
+      <th>Single-label Classification</th>
+      <th>Multi-label Classification</th>
+      <th>Object Detection</th>
+      <th>Instance Segmentation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="text-align:center;">
+      <td style="background:lightcoral;">no</td>
+      <td style="background:lightcoral;">no</td>
+      <td style="background:lightgreen;">yes</td>
+      <td style="background:lightgreen;">yes</td>
+      <td style="background:lightgreen;">yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+
+
 # show_distribution_of_property()
 {: .mb-6}
 

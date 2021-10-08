@@ -11,14 +11,13 @@ permalink: /
 **_Odin_**  is an open source diagnosis framework for generic machine learning **classification** tasks and for computer vision **object detection** and **instance segmentation** tasks that lets developers add meta-annotations to their data sets, compute performance metrics split by meta-annotation values, and visualize diagnosis reports.
 <br>
 **_Odin_**  is agnostic to the training platform and input formats and can be extended with application- and domain-specific meta-annotations and metrics with almost no coding.
-<br>
 
-<hr>
 
-#### [Odin on GitHub](//github.com/rnt-pmi/odin){:target="_blank"}{:rel="noopener noreferrer"}
-{: .text-center}
+<span class="fs-4">
+[Odin on GitHub](//github.com/rnt-pmi/odin){:target="_blank"}{:rel="noopener noreferrer"}{: .btn .btn-outline }
+</span>
+{: .text-center .mb-6 .mt-6}
 
-<hr>
 
 <p align="center">
 <iframe width="420" height="315" src="https://www.youtube.com/embed/lM4EMaZSbVk" allowfullscreen></iframe>

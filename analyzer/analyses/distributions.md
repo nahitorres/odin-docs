@@ -138,7 +138,7 @@ my_analyzer.show_true_positive_distribution()
 from odin.classes import ComparatorClassification
 
 my_comparator = ComparatorClassification(dataset_gt_param, classification_type, models_proposals)
-my_comparator.compare_models_on_true_positive()
+my_comparator.show_true_positive_distribution()
 ```
 
 #### Localization
@@ -147,7 +147,7 @@ my_comparator.compare_models_on_true_positive()
 from odin.classes import ComparatorLocalization
 
 my_comparator = ComparatorLocalization(dataset_gt_param, task_type, models_proposals)
-my_comparator.compare_models_on_true_positive()
+my_comparator.show_true_positive_distribution()
 ```
 
 ![comparator_tp_distribution](../../img/comparator/comparison_tp.png){:class="img-responsive" width="75%"}
@@ -232,7 +232,7 @@ my_analyzer.show_false_positive_distribution()
 from odin.classes import ComparatorClassification
 
 my_comparator = ComparatorClassification(dataset_gt_param, classification_type, models_proposals)
-my_comparator.compare_models_on_false_positive()
+my_comparator.show_false_positive_distribution()
 ```
 
 #### Localization
@@ -241,7 +241,7 @@ my_comparator.compare_models_on_false_positive()
 from odin.classes import ComparatorLocalization
 
 my_comparator = ComparatorLocalization(dataset_gt_param, task_type, models_proposals)
-my_comparator.compare_models_on_false_positive()
+my_comparator.show_false_positive_distribution()
 ```
 
 ![comparator_fp_distribution](../../img/comparator/comparison_fp.png){:class="img-responsive" width="75%"}
@@ -327,7 +327,7 @@ my_analyzer.show_false_negative_distribution()
 from odin.classes import ComparatorClassification
 
 my_comparator = ComparatorClassification(dataset_gt_param, classification_type, models_proposals)
-my_comparator.compare_models_on_false_negative()
+my_comparator.show_false_negative_distribution()
 ```
 
 #### Localization
@@ -336,7 +336,7 @@ my_comparator.compare_models_on_false_negative()
 from odin.classes import ComparatorLocalization
 
 my_comparator = ComparatorLocalization(dataset_gt_param, task_type, models_proposals)
-my_comparator.compare_models_on_false_negative()
+my_comparator.show_false_negative_distribution()
 ```
 
 ![comparator_fn_distribution](../../img/comparator/comparison_fn.png){:class="img-responsive" width="75%"}
@@ -413,7 +413,7 @@ my_analyzer.show_true_negative_distribution()
 from odin.classes import ComparatorClassification
 
 my_comparator = ComparatorClassification(dataset_gt_param, classification_type, models_proposals)
-my_comparator.compare_models_on_true_negative()
+my_comparator.show_true_negative_distribution()
 ```
 
 ![comparator_tn_distribution](../../img/comparator/comparison_tn.png){:class="img-responsive" width="75%"}

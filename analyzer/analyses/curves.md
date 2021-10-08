@@ -73,7 +73,7 @@ my_analyzer.analyze_curve()
 from odin.classes import ComparatorClassification
 
 my_comparator = ComparatorClassification(dataset_gt_param, classification_type, models_proposals)
-my_comparator.compare_models_on_curve()
+my_comparator.analyze_curve()
 ```
 
 #### Localization
@@ -82,7 +82,7 @@ my_comparator.compare_models_on_curve()
 from odin.classes import ComparatorLocalization
 
 my_comparator = ComparatorLocalization(dataset_gt_param, task_type, models_proposals)
-my_comparator.compare_models_on_curve()
+my_comparator.analyze_curve()
 ```
 
 ![compare_models_on_curve_output](../../img/comparator/comparison_curve.png){:class="img-responsive" width="75%"}
@@ -168,7 +168,7 @@ my_analyzer.analyze_curve_for_categories()
 from odin.classes import ComparatorClassification
 
 my_comparator = ComparatorClassification(dataset_gt_param, classification_type, models_proposals)
-my_comparator.compare_models_on_curve_for_categories()
+my_comparator.analyze_curve_for_categories()
 ```
 
 #### Localization
@@ -177,7 +177,7 @@ my_comparator.compare_models_on_curve_for_categories()
 from odin.classes import ComparatorLocalization
 
 my_comparator = ComparatorLocalization(dataset_gt_param, task_type, models_proposals)
-my_comparator.compare_models_on_curve_for_categories()
+my_comparator.analyze_curve_for_categories()
 ```
 
 ![compare_models_on_curve_output](../../img/comparator/comparison_curve_cat.png){:class="img-responsive" width="75%"}

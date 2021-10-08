@@ -36,10 +36,13 @@ class MyEvaluationMetric(CustomMetric):
             # implement your micro evaluation
             return my_score, my_standard_error
 
-my_evaluation_metric = MyEvaluationMetric("my_metric_name")
+my_evaluation_metric = MyEvaluationMetric("my metric name")
 my_analyzer.add_custom_metric(my_evaluation_metric)
 
-# use my_metric_name as 'metric' parameter in the analyses
+# use Metrics.MY_METRIC_NAME as 'metric' parameter in the analyses
+# N.B. the member added to the Metrics enum is equal to the name of the
+# custom metric provided in uppercase and with the white spaces replaced with
+# the underscore
 ```
 
 ### Tasks supported

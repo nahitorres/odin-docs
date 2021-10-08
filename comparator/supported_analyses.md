@@ -19,6 +19,10 @@ nav_order: 4
     - [show_false_positive_distribution()](../analyzer/analyses/distributions.html#models-comparison-1)
     - [show_false_negative_distribution()](../analyzer/analyses/distributions.html#models-comparison-2)
     - [show_true_negative_distribution()](../analyzer/analyses/distributions.html#models-comparison-3)
+    - [show_true_positive_distribution_for_categories_for_property()](../analyzer/analyses/distributions.html#models-comparison-4)
+    - [show_false_positive_distribution_for_categories_for_property()](../analyzer/analyses/distributions.html#models-comparison-5)
+    - [show_false_negative_distribution_for_categories_for_property()](../analyzer/analyses/distributions.html#models-comparison-6)
+    - [show_true_negative_distribution_for_categories_for_property()](../analyzer/analyses/distributions.html#models-comparison-7)
 - Curves
     - [analyze_curve()](../analyzer/analyses/curves.html#models-comparison)
     - [analyze_curve_for_categories()](../analyzer/analyses/curves.html#models-comparison-1)

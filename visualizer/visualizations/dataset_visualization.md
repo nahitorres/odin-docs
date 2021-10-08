@@ -19,6 +19,21 @@ nav_order: 1
 </details>
 
 <hr>
+**Classification**
+{: .text-center}
+![Example gif](../../gifs/visualizer_CL.gif){:class="img-responsive;" width="75%"}
+{: .text-center}
+**Localization**
+{: .text-center}
+![Example gif](../../gifs/visualizer_LOC.gif){:class="img-responsive;" width="75%"}
+{: .text-center}
+
+
+
+
+
+
+<hr>
 
 # visualize_annotations()
 {: .mb-6}
@@ -49,8 +64,6 @@ my_visualizer = VisualizerClassification(models)
 my_visualizer.visualize_annotations(show_predictions=True)
 ```
 
------ ADD GIF ----
-
 #### Localization
 {: .no_toc}
 ```py
@@ -60,7 +73,6 @@ my_visualizer = VisualizerLocalization(models)
 my_visualizer.visualize_annotations(show_predictions=True)
 ```
 
------ ADD GIF ----
 
 <hr>
 
@@ -121,7 +133,6 @@ my_visualizer.visualize_annotations_for_property('property_name',
                                                  show_predictions=True)
 ```
 
------ ADD GIF ----
 
 #### Localization
 {: .no_toc}
@@ -134,7 +145,6 @@ my_visualizer.visualize_annotations_for_property('property_name',
                                                  show_predictions=True)
 ```
 
------ ADD GIF ----
 
 <hr>
 
@@ -195,7 +205,6 @@ my_visualizer.visualize_annotations_for_class_for_property('category_name',
                                                            show_predictions=True)
 ```
 
------ ADD GIF ----
 
 #### Localization
 {: .no_toc}
@@ -209,7 +218,6 @@ my_visualizer.visualize_annotations_for_class_for_property('category_name',
                                                            show_predictions=True)
 ```
 
------ ADD GIF ----
 
 <hr>
 
@@ -235,3 +243,5 @@ my_visualizer.visualize_annotations_for_class_for_property('category_name',
     </tr>
   </tbody>
 </table>
+
+<hr>

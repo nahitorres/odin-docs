@@ -75,7 +75,7 @@ N.B. For localization models, the Accuracy and Error Rate evaluation metrics are
 from odin.classes import ComparatorClassification
 
 my_comparator = ComparatorClassification(dataset_gt_param, classification_type, models_proposals)
-my_comparator.compare_models_base_report()
+my_comparator.base_report()
 ```
 
 #### Localization
@@ -84,7 +84,7 @@ my_comparator.compare_models_base_report()
 from odin.classes import ComparatorLocalization
 
 my_comparator = ComparatorLocalization(dataset_gt_param, task_type, models_proposals)
-my_comparator.compare_models_base_report()
+my_comparator.base_report()
 ```
 
 ![compare_models_base_report_output](../../img/comparator/comparison_base_report.png){:class="img-responsive" width="100%"}

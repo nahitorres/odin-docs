@@ -20,6 +20,11 @@ nav_order: 3
 
 <hr>
 
+![Example gif](../../gifs/visualizer_CAMs.gif){:class="img-responsive;" width="75%"}
+{: .text-center}
+
+<hr>
+
 # visualize_cams()
 {: .mb-6}
 
@@ -48,9 +53,6 @@ from odin.classes import VisualizerClassification
 my_visualizer = VisualizerClassification(models)
 my_visualizer.visualize_cams()
 ```
-
------ ADD GIF ----
-
 
 <hr>
 

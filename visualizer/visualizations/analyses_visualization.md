@@ -20,6 +20,17 @@ nav_order: 2
 
 <hr>
 
+**Classification**
+{: .text-center}
+![Example gif](../../gifs/visualizer_tp_CL.gif){:class="img-responsive;" width="75%"}
+{: .text-center}
+**Localization**
+{: .text-center}
+![Example gif](../../gifs/visualizer_tp_LOC.gif){:class="img-responsive;" width="75%"}
+{: .text-center}
+
+<hr>
+
 # visualize_annotations_for_true_positive()
 {: .mb-6}
 
@@ -49,7 +60,6 @@ my_visualizer = VisualizerClassification(models)
 my_visualizer.visualize_annotations_for_true_positive()
 ```
 
------ ADD GIF ----
 
 #### Localization
 {: .no_toc}
@@ -60,7 +70,6 @@ my_visualizer = VisualizerLocalization(models)
 my_visualizer.visualize_annotations_for_true_positive()
 ```
 
------ ADD GIF ----
 
 <hr>
 
@@ -118,7 +127,6 @@ my_visualizer = VisualizerClassification(models)
 my_visualizer.visualize_annotations_for_false_positive()
 ```
 
------ ADD GIF ----
 
 #### Localization
 {: .no_toc}
@@ -129,7 +137,6 @@ my_visualizer = VisualizerLocalization(models)
 my_visualizer.visualize_annotations_for_false_positive()
 ```
 
------ ADD GIF ----
 
 <hr>
 
@@ -187,7 +194,6 @@ my_visualizer = VisualizerClassification(models)
 my_visualizer.visualize_annotations_for_false_negative()
 ```
 
------ ADD GIF ----
 
 #### Localization
 {: .no_toc}
@@ -198,7 +204,6 @@ my_visualizer = VisualizerLocalization(models)
 my_visualizer.visualize_annotations_for_false_negative()
 ```
 
------ ADD GIF ----
 
 <hr>
 
@@ -256,7 +261,6 @@ my_visualizer = VisualizerClassification(models)
 my_visualizer.visualize_annotations_for_true_negative()
 ```
 
------ ADD GIF ----
 
 <hr>
 
@@ -314,7 +318,6 @@ my_visualizer = VisualizerClassification(models)
 my_visualizer.visualize_annotations_for_error_type(ErrorType.SIMILAR_CLASSES)
 ```
 
------ ADD GIF ----
 
 #### Localization
 {: .no_toc}
@@ -325,7 +328,6 @@ my_visualizer = VisualizerLocalization(models)
 my_visualizer.visualize_annotations_for_error_type(ErrorType.LOCALIZATION)
 ```
 
------ ADD GIF ----
 
 <hr>
 

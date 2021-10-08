@@ -75,7 +75,7 @@ my_analyzer.analyze_property('prop1')
 from odin.classes import ComparatorClassification
 
 my_comparator = ComparatorClassification(dataset_gt_param, classification_type, models_proposals)
-my_comparator.compare_models_on_property('prop1')
+my_comparator.analyze_property('prop1')
 ```
 
 #### Localization
@@ -84,7 +84,7 @@ my_comparator.compare_models_on_property('prop1')
 from odin.classes import ComparatorLocalization
 
 my_comparator = ComparatorLocalization(dataset_gt_param, task_type, models_proposals)
-my_comparator.compare_models_on_property('prop1')
+my_comparator.analyze_property('prop1')
 ```
 
 ![comparison_property_a_output](../../img/comparator/comparison_prop1_a.png){:class="img-responsive" width="75%"}
@@ -247,7 +247,7 @@ my_analyzer.analyze_sensitivity_impact_of_properties()
 from odin.classes import ComparatorClassification
 
 my_comparator = ComparatorClassification(dataset_gt_param, classification_type, models_proposals)
-my_comparator.compare_models_on_sensitivity_impact()
+my_comparator.analyze_sensitivity_impact_of_properties()
 ```
 
 #### Localization
@@ -256,7 +256,7 @@ my_comparator.compare_models_on_sensitivity_impact()
 from odin.classes import ComparatorLocalization
 
 my_comparator = ComparatorLocalization(dataset_gt_param, task_type, models_proposals)
-my_comparator.compare_models_on_sensitivity_impact()
+my_comparator.analyze_sensitivity_impact_of_properties()
 ```
 
 ![compare_models_on_sensitivity_impact_output](../../img/comparator/comparison_sens_impact.png){:class="img-responsive" width="75%"}

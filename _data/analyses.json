@@ -1,4 +1,13 @@
 {
+  "show_co_occurrence_matrix":
+  [
+    {
+        "name": "show",
+        "type": "bool, optional",
+        "description": "Indicates whether the plot should be shown or not. If False, returns the matrix.<br>(default is True)"
+    }
+  ],
+
   "show_distribution_of_categories":
   [
     {
@@ -124,7 +133,7 @@
     {
         "name": "sort",
         "type": "bool, optional",
-        "description": "Indicates whether the property values should be sorted by the score achieved.<br>(default is True)"
+        "description": "Indicates whether the property values should be sorted by the score achieved. Not supported for models comparisons.<br>(default is True)"
     }
   ],
 
@@ -153,7 +162,7 @@
     {
         "name": "sort",
         "type": "bool, optional",
-        "description": "Indicates whether the property values should be sorted by the score achieved.<br>(default is True)"
+        "description": "Indicates whether the property values should be sorted by the score achieved. Not supported for models comparisons.<br>(default is True)"
     }
   ],
 
@@ -177,7 +186,7 @@
     {
         "name": "sort",
         "type": "bool, optional",
-        "description": "Indicates whether the properties should be sorted by the model sensitivity.<br>(default is True)"
+        "description": "Indicates whether the properties should be sorted by the model sensitivity. Not supported for models comparisons.<br>(default is True)"
     }
   ],
 

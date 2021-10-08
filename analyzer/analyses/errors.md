@@ -160,7 +160,7 @@ from odin.classes import ComparatorClassification
 similar_categories = [[1, 3], [2, 3]]
 
 my_comparator = ComparatorClassification(dataset_gt_param, classification_type, models_proposals, similar_classes=similar_categories)
-my_comparator.compare_models_on_errors_impact()
+my_comparator.analyze_false_positive_errors()
 ```
 
 #### Localization
@@ -169,7 +169,7 @@ my_comparator.compare_models_on_errors_impact()
 from odin.classes import ComparatorLocalization
 
 my_comparator = ComparatorLocalization(dataset_gt_param, task_type, models_proposals, similar_classes=similar_categories)
-my_comparator.compare_models_on_errors_impact()
+my_comparator.analyze_false_positive_errors()
 ```
 
 ![compare_models_on_error_output](../../img/comparator/comparison_errors_a.png){:class="img-responsive" width="75%"}
