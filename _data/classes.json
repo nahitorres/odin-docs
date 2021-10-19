@@ -47,6 +47,11 @@
         "description": "Indicates whether the properties and the predictions have to be loaded. If False, only the ground truth is loaded.<br>(default is True)"
     },
     {
+        "name": "load_properties",
+        "type": "bool, optional",
+        "description": "Indicates whether the properties should be loaded.<br>(default is True)"
+    },
+    {
         "name": "match_on_filename",
         "type": "bool, optional",
         "description": "Indicates whether the predictions refer to the ground truth by <i>file_name</i> (set to True) or by <i>id</i> (set to False).<br>(default is False)"
@@ -104,6 +109,11 @@
         "name": "for_analysis",
         "type": "bool, optional",
         "description": "Indicates whether the properties and the predictions have to be loaded. If False, only the ground truth is loaded.<br>(default is True)"
+    },
+    {
+        "name": "load_properties",
+        "type": "bool, optional",
+        "description": "Indicates whether the properties should be loaded.<br>(default is True)"
     },
     {
         "name": "match_on_filename",
@@ -406,6 +416,11 @@
         "description": "List of groups of ids of categories which are similar to each other.<br>(default is None)"
     },
     {
+        "name": "load_properties",
+        "type": "bool, optional",
+        "description": "Indicates whether the properties should be loaded.<br>(default is True)"
+    },
+    {
         "name": "match_on_filename",
         "type": "bool, optional",
         "description": "Indicates whether the predictions refer to the ground truth by <i>file_name</i> (set to True) or by <i>id</i> (set to False).<br>(default is False)"
@@ -478,6 +493,11 @@
         "name": "similar_classes",
         "type": "list of list, optional",
         "description": "List of groups of ids of categories which are similar to each other.<br>(default is None)"
+    },
+    {
+        "name": "load_properties",
+        "type": "bool, optional",
+        "description": "Indicates whether the properties should be loaded.<br>(default is True)"
     },
     {
         "name": "match_on_filename",
@@ -562,6 +582,11 @@
         "name": "similar_classes",
         "type": "list of list, optional",
         "description": "List of groups of ids of categories which are similar to each other.<br>(default is None)"
+    },
+    {
+        "name": "load_properties",
+        "type": "bool, optional",
+        "description": "Indicates whether the properties should be loaded.<br>(default is True)"
     },
     {
         "name": "match_on_filename",

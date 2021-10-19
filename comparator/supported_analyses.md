@@ -27,4 +27,4 @@ nav_order: 4
     - [analyze_curve()](../analyzer/analyses/curves.html#models-comparison)
     - [analyze_curve_for_categories()](../analyzer/analyses/curves.html#models-comparison-1)
 - CAMs
-    - [analyze_cams_threshold()](../analyzer/analyses/cams.html#models-comparison)
+    - [analyze_cams()](../analyzer/analyses/cams.html#models-comparison)

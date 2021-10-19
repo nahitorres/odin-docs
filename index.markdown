@@ -22,3 +22,114 @@ permalink: /
 <p align="center">
 <iframe width="420" height="315" src="https://www.youtube.com/embed/lM4EMaZSbVk" allowfullscreen></iframe>
 </p>
+
+<hr>
+
+## Supported Tasks
+_Odin_ provides different diagnosis methods for machine learning models which address one of the following tasks:
+
+<dl>
+  <dt><b>Classification</b></dt>
+  <dd>requires an algorithm to categorize the input data into categories</dd>
+  <dt><b>Object Detection</b></dt>
+  <dd>requires an algorithm to determine which objects are present in an image and to localize their position using bounding boxes</dd>
+  <dt><b>Instance Segmentation</b></dt>
+  <dd>requires an algorithm to determine which objects are present in an image and to localize their position using a pixel-level segmentation mask</dd>
+</dl>
+
+
+## Supported Diagnosis Methods
+The following tables summarize the evaluation metrics and diagnosis methods supported in _Odin_.
+
+### Evaluation Metrics
+
+<table>
+  <thead>
+    <tr class="header">
+      <th colspan=2>Metrics</th>
+      <th>Binary Classification</th>
+      <th>Single-label Classification</th>
+      <th>Multi-label Classification</th>
+      <th>Object Detection</th>
+      <th>Instance Segmentation</th>
+    </tr>
+  </thead>
+  <tbody  style="text-align:center;">
+    {% for param in site.data.tables.metrics %}
+    <tr>
+      {% if param.rowspan > 0 %}
+        <td rowspan={{param.rowspan}}><b>{{param.category}}</b></td>
+      {% endif %}
+      <td style="border-left: 0px;">{{param.name}}</td>
+      <td >{{param.bin_supp}}</td>
+      <td >{{param.sl_supp}}</td>
+      <td >{{param.ml_supp}}</td>
+      <td >{{param.od_supp}}</td>
+      <td >{{param.is_supp}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+### Dataset Exploration
+
+<table>
+  <thead>
+    <tr class="header">
+      <th colspan=2>Analysis</th>
+      <th>Binary Classification</th>
+      <th>Single-label Classification</th>
+      <th>Multi-label Classification</th>
+      <th>Object Detection</th>
+      <th>Instance Segmentation</th>
+    </tr>
+  </thead>
+  <tbody  style="text-align:center;">
+    {% for param in site.data.tables.dataset %}
+    <tr>
+    {% if param.rowspan > 0 %}
+      <td rowspan={{param.rowspan}}><b>{{param.name}}</b></td>
+    {% endif %}
+      <td style="border-left: 0px;">{{param.specs}}</td>
+      <td >{{param.bin_supp}}</td>
+      <td >{{param.sl_supp}}</td>
+      <td >{{param.ml_supp}}</td>
+      <td >{{param.od_supp}}</td>
+      <td >{{param.is_supp}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+### Model Analyses
+
+<table>
+  <thead>
+    <tr class="header">
+      <th colspan=2>Analysis</th>
+      <th>Models Comparison</th>
+      <th>Binary Classification</th>
+      <th>Single-label Classification</th>
+      <th>Multi-label Classification</th>
+      <th>Object Detection</th>
+      <th>Instance Segmentation</th>
+    </tr>
+  </thead>
+  <tbody  style="text-align:center;">
+    {% for param in site.data.tables.analyses %}
+    <tr>
+    {% if param.rowspan > 0 %}
+      <td rowspan={{param.rowspan}}><b>{{param.name}}</b></td>
+    {% endif %}
+
+      <td style="border-left: 0px;">{{param.specs}}</td>
+      <td >{{param.comp_supp}}</td>
+      <td >{{param.bin_supp}}</td>
+      <td >{{param.sl_supp}}</td>
+      <td >{{param.ml_supp}}</td>
+      <td >{{param.od_supp}}</td>
+      <td >{{param.is_supp}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
