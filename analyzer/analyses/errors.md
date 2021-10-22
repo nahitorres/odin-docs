@@ -48,9 +48,9 @@ my_analyzer = AnalyzerClassification("my_classifier_name", my_classification_dat
 my_analyzer.analyze_false_positive_error_for_category('catA')
 ```
 
-![analyze_false_positive_error_for_cat_cl_output_a](../../img/analyzer/false_positive_category_distribution_cl.png){:class="img-responsive" width="75%"}
+![analyze_false_positive_error_for_cat_cl_output_a](../../img/analyzer/false_positive_category_distribution_cl.png){:class="img-responsive" width="60%"}
 {: .text-center}
-![analyze_false_positive_error_for_cat_cl_output_b](../../img/analyzer/false_positive_category_gain_cl.png){:class="img-responsive" width="75%"}
+![analyze_false_positive_error_for_cat_cl_output_b](../../img/analyzer/false_positive_category_gain_cl.png){:class="img-responsive" width="60%"}
 {: .text-center}
 
 #### Localization
@@ -62,9 +62,9 @@ my_analyzer = AnalyzerLocalization("my_detector_name", my_localization_dataset)
 my_analyzer.analyze_false_positive_error_for_category('catA')
 ```
 
-![analyze_false_positive_error_for_cat_loc_output_a](../../img/analyzer/false_positive_category_distribution_loc.png){:class="img-responsive" width="75%"}
+![analyze_false_positive_error_for_cat_loc_output_a](../../img/analyzer/false_positive_category_distribution_loc.png){:class="img-responsive" width="60%"}
 {: .text-center}
-![analyze_false_positive_error_for_cat_loc_output_b](../../img/analyzer/false_positive_category_gain_loc.png){:class="img-responsive" width="75%"}
+![analyze_false_positive_error_for_cat_loc_output_b](../../img/analyzer/false_positive_category_gain_loc.png){:class="img-responsive" width="60%"}
 {: .text-center}
 
 <hr>
@@ -120,9 +120,9 @@ from odin.classes import AnalyzerClassification
 my_analyzer = AnalyzerClassification("my_classifier_name", my_classification_dataset)
 my_analyzer.analyze_false_positive_errors()
 ```
-![analyze_false_positive_errors_cl_output_a](../../img/analyzer/false_positive_category_distribution_cl.png){:class="img-responsive" width="75%"}
+![analyze_false_positive_errors_cl_output_a](../../img/analyzer/false_positive_category_distribution_cl.png){:class="img-responsive" width="60%"}
 {: .text-center}
-![analyze_false_positive_errors_cl_output_b](../../img/analyzer/false_positive_category_gain_cl.png){:class="img-responsive" width="75%"}
+![analyze_false_positive_errors_cl_output_b](../../img/analyzer/false_positive_category_gain_cl.png){:class="img-responsive" width="60%"}
 {: .text-center}
 
 <p style="font-size: 10px; text-align: right;">N.B. As example, it is shown only the output of a single category, but the analysis is performed for all the categories selected.</p>
@@ -137,9 +137,9 @@ my_analyzer.analyze_false_positive_errors()
 
 ```
 
-![analyze_false_positive_errors_loc_output_a](../../img/analyzer/false_positive_category_distribution_loc.png){:class="img-responsive" width="75%"}
+![analyze_false_positive_errors_loc_output_a](../../img/analyzer/false_positive_category_distribution_loc.png){:class="img-responsive" width="60%"}
 {: .text-center}
-![analyze_false_positive_errors_loc_output_b](../../img/analyzer/false_positive_category_gain_loc.png){:class="img-responsive" width="75%"}
+![analyze_false_positive_errors_loc_output_b](../../img/analyzer/false_positive_category_gain_loc.png){:class="img-responsive" width="60%"}
 {: .text-center}
 
 N.B. As example, it is shown only the output of a single category, but the analysis is performed for all the categories selected.

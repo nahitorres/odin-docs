@@ -149,5 +149,3 @@ models = {"my_model": {"analyzer": my_analyzer}}
 
 my_visualizer = VisualizerLocalization(models)
 ```
-
-<hr>

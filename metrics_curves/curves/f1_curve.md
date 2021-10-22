@@ -14,7 +14,7 @@ nav_order: 3
 {{ site.data.metrics[page.title].formula }}
 {: .text-center}
 
-![f1_curve](../../img/metrics/f1_curve.png){:class="img-responsive;" width="75%"}
+![f1_curve](../../img/metrics/f1_curve.png){:class="img-responsive;" width="60%"}
 {: .text-center}
 
 ### Example

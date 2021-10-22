@@ -50,7 +50,7 @@ my_analyzer = AnalyzerLocalization("my_detector_name", my_localization_dataset)
 my_analyzer.analyze_intersection_over_union()
 ```
 
-![analyze_iou_output](../../img/analyzer/iou_analysis.png){:class="img-responsive"}
+![analyze_iou_output](../../img/analyzer/iou_analysis.png){:class="img-responsive" width="75%"}
 {: .text-center}
 
 <hr>
@@ -109,7 +109,7 @@ my_analyzer = AnalyzerLocalization("my_detector_name", my_localization_dataset)
 my_analyzer.analyze_intersection_over_union_for_category('catA')
 ```
 
-![analyze_iou_cat_output](../../img/analyzer/iou_analysis_cat.png){:class="img-responsive"}
+![analyze_iou_cat_output](../../img/analyzer/iou_analysis_cat.png){:class="img-responsive" width="75%"}
 {: .text-center}
 
 <hr>

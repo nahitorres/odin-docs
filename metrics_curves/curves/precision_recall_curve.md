@@ -14,7 +14,7 @@ nav_order: 2
 {{ site.data.metrics[page.title].formula }}
 {: .text-center}
 
-![pr_curve](../../img/metrics/precision_recall_curve.png){:class="img-responsive;" width="75%"}
+![pr_curve](../../img/metrics/precision_recall_curve.png){:class="img-responsive;" width="60%"}
 {: .text-center}
 
 ### Example

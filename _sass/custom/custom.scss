@@ -1,0 +1,32 @@
+@media (min-width: 66.5rem){
+  .side-bar {
+      width: 264px;
+  }
+  .main {
+      max-width: 100%;
+      margin-left: 284px;
+  }
+  .main-content-wrap {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+@media (min-width: 50rem){
+  .side-bar {
+      width: 248px;
+    }
+  .main {
+      max-width: 100%;
+      margin-left: 268px;
+  }
+  .main-content-wrap {
+      margin-left: 5%;
+      margin-right: 5%;
+  }
+}
+
+.table-wrapper {
+    max-width: 75%;
+    margin: auto;
+}

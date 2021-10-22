@@ -18,9 +18,10 @@ permalink: /
 </span>
 {: .text-center .mb-6 .mt-6}
 
+<hr>
 
 <p align="center">
-<iframe width="420" height="315" src="https://www.youtube.com/embed/lM4EMaZSbVk" allowfullscreen></iframe>
+<iframe width="720" height="315" src="https://www.youtube.com/embed/lM4EMaZSbVk" allowfullscreen></iframe>
 </p>
 
 <hr>
@@ -133,3 +134,10 @@ The following tables summarize the evaluation metrics and diagnosis methods supp
     {% endfor %}
   </tbody>
 </table>
+
+<style>
+    .table-wrapper {
+      max-width: 100%;
+      margin: auto;
+    }
+</style>

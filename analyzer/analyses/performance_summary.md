@@ -58,7 +58,7 @@ my_analyzer = AnalyzerLocalization("my_detector_name", my_localization_dataset)
 my_analyzer.base_report()
 ```
 
-![base_report_output](../../img/analyzer/base_report.png){:class="img-responsive" width="75%"}
+![base_report_output](../../img/analyzer/base_report.png){:class="img-responsive" width="50%"}
 {: .text-center}
 
 N.B. For localization models, the Accuracy and Error Rate evaluation metrics are not supported.
@@ -87,7 +87,7 @@ my_comparator = ComparatorLocalization(dataset_gt_param, task_type, models_propo
 my_comparator.base_report()
 ```
 
-![compare_models_base_report_output](../../img/comparator/comparison_base_report.png){:class="img-responsive" width="100%"}
+![compare_models_base_report_output](../../img/comparator/comparison_base_report.png){:class="img-responsive" width="75%"}
 {: .text-center}
 
 N.B. For localization models, the Accuracy and Error Rate evaluation metrics are not supported.

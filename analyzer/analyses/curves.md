@@ -58,7 +58,7 @@ my_analyzer = AnalyzerLocalization("my_detector_name", my_localization_dataset)
 my_analyzer.analyze_curve()
 ```
 
-![analyze_curve_output](../../img/analyzer/pr_curve.png){:class="img-responsive"}
+![analyze_curve_output](../../img/analyzer/pr_curve.png){:class="img-responsive" width="75%"}
 {: .text-center}
 
 <hr>
@@ -153,7 +153,7 @@ my_analyzer = AnalyzerLocalization("my_detector_name", my_localization_dataset)
 my_analyzer.analyze_curve_for_categories()
 ```
 
-![analyze_curve_for_categories_output](../../img/analyzer/pr_curve_categories.png){:class="img-responsive"}
+![analyze_curve_for_categories_output](../../img/analyzer/pr_curve_categories.png){:class="img-responsive" width="75%"}
 {: .text-center}
 
 <hr>
