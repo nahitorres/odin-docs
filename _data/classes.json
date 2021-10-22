@@ -779,5 +779,24 @@
         "type": "bool, optional",
         "description": "Indicates whether to show the <i>'reset annotation'</i> button.<br>(default is True)"
     }
+  ],
+
+  "metapropertiesextractor":
+  [
+    {
+        "name": "dataset",
+        "type": "DatasetClassification",
+        "description": "Dataset used to perform the meta-annotations extraction."
+    },
+    {
+        "name": "properties",
+        "type": "MetaProperties",
+        "description": "List of the meta-annotations to be included in the extraction"
+    },
+    {
+        "name": "output_path",
+        "type": "str, optional",
+        "description": "Path used to save the new generated annotated data set. If not provided, it is saved in the same location of the old data set.<br>(default is None)"
+    }
   ]
 }
