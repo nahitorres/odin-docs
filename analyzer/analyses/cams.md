@@ -50,7 +50,7 @@ my_analyzer = AnalyzerCAMs("my_classifier_name", my_CAMs_dataset)
 my_analyzer.analyze_cams()
 ```
 
-![analyze_cams_output](../../img/analyzer/cams_total_analysis.png){:class="img-responsive;" width="75%"}
+![analyze_cams_output](../../img/analyzer/cams_total_analysis.png){:class="img-responsive;" style="max-width:800px"}
 {: .text-center}
 
 <hr>
@@ -68,7 +68,7 @@ my_comparator = ComparatorCAMs(dataset_gt_param, classification_type, models_pro
 my_comparator.analyze_cams()
 ```
 
-![compare_models_on_cams_threshold_output](../../img/comparator/comparison_cams.png){:class="img-responsive" width="75%"}
+![compare_models_on_cams_threshold_output](../../img/comparator/comparison_cams.png){:class="img-responsive" style="max-width:800px"}
 {: .text-center}
 
 <hr>
@@ -126,7 +126,7 @@ my_analyzer = AnalyzerCAMs("my_classifier_name", my_CAMs_dataset)
 my_analyzer.analyze_cams_for_categories()
 ```
 
-![analyze_cams_output](../../img/analyzer/cams_cats_analysis.png){:class="img-responsive;" width="75%"}
+![analyze_cams_output](../../img/analyzer/cams_cats_analysis.png){:class="img-responsive;" style="max-width:800px"}
 {: .text-center}
 
 <hr>

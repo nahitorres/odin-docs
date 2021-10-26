@@ -5,7 +5,7 @@ nav_order: 1
 permalink: /
 ---
 
-# Odin
+# **Odin**
 {: .mb-6}
 
 **_Odin_**  is an open source diagnosis framework for generic machine learning **classification** tasks and for computer vision **object detection** and **instance segmentation** tasks that lets developers add meta-annotations to their data sets, compute performance metrics split by meta-annotation values, and visualize diagnosis reports.
@@ -20,9 +20,9 @@ permalink: /
 
 <hr>
 
-<p align="center">
-<iframe width="720" height="315" src="https://www.youtube.com/embed/lM4EMaZSbVk" allowfullscreen></iframe>
-</p>
+<div class="container-iframe">
+<iframe src="https://www.youtube.com/embed/lM4EMaZSbVk" frameborder="0" allowfullscreen class="responsive-iframe"></iframe>
+</div>
 
 <hr>
 
@@ -139,5 +139,21 @@ The following tables summarize the evaluation metrics and diagnosis methods supp
     .table-wrapper {
       max-width: 100%;
       margin: auto;
+    }
+
+    .container-iframe {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    }
+    .responsive-iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
     }
 </style>

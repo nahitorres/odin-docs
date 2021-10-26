@@ -22,11 +22,11 @@ nav_order: 2
 
 **Classification**
 {: .text-center}
-![Example gif](../../gifs/visualizer_tp_CL.gif){:class="img-responsive;" width="75%"}
+![Example gif](../../gifs/visualizer_tp_CL.gif){:class="img-responsive" style="max-width:800px"}
 {: .text-center}
 **Localization**
 {: .text-center}
-![Example gif](../../gifs/visualizer_tp_LOC.gif){:class="img-responsive;" width="75%"}
+![Example gif](../../gifs/visualizer_tp_LOC.gif){:class="img-responsive" style="max-width:800px"}
 {: .text-center}
 
 <hr>

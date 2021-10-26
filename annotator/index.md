@@ -46,7 +46,7 @@ my_annotator = AnnotatorClassification(task_type=task_type,
                                        ds_name=dataset_name)
 my_annotator.start_classification()
 ```
-![Example gif](../gifs/example.gif){:class="img-responsive;" width="75%"}
+![Annotator labels CL](../gifs/annotator_cats_CL.gif){:class="img-responsive" style="max-width:800px"}
 {: .text-center}
 
 #### Annotate an existing data set with only meta-annotations
@@ -74,7 +74,8 @@ my_annotator = AnnotatorClassification(dataset=my_dataset,
 
 my_annotator.start_classification()
 ```
---- ADD GIF ---
+![Annotator meta-annotations CL](../gifs/annotator_prop_CL.gif){:class="img-responsive" style="max-width:800px"}
+{: .text-center}
 
 #### Annotate a new data set with categories labels and meta-annotations
 ```py
@@ -95,7 +96,8 @@ my_annotator = AnnotatorClassification(task_type=task_type,
                                        properties_and_values=meta_annotations)
 my_annotator.start_classification()
 ```
---- ADD GIF ---
+![Annotator CL](../gifs/annotator_CL.gif){:class="img-responsive" style="max-width:800px"}
+{: .text-center}
 
 <hr>
 
@@ -131,7 +133,8 @@ my_annotator = AnnotatorLocalization(task_type=task_type,
                                      ds_name=dataset_name)
 my_annotator.start_annotation()
 ```
---- ADD GIF ---
+![Annotator labels LOC](../gifs/annotator_cats_LOC.gif){:class="img-responsive" style="max-width:800px"}
+{: .text-center}
 
 #### Annotate an existing data set with only meta-annotations
 ```py
@@ -158,7 +161,8 @@ my_annotator = AnnotatorLocalization(dataset=my_dataset,
 
 my_annotator.start_annotation()
 ```
---- ADD GIF ---
+![Annotator meta-annotations LOC](../gifs/annotator_prop_LOC.gif){:class="img-responsive" style="max-width:800px"}
+{: .text-center}
 
 #### Annotate a new data set with categories labels and meta-annotations
 ```py
@@ -179,4 +183,5 @@ my_annotator = AnnotatorLocalization(task_type=task_type,
                                      properties_and_values=meta_annotations)
 my_annotator.start_annotation()
 ```
---- ADD GIF ---
+![Annotator LOC](../gifs/annotator_LOC.gif){:class="img-responsive" style="max-width:800px"}
+{: .text-center}

@@ -58,7 +58,7 @@ my_analyzer = AnalyzerLocalization("my_detector_name", my_localization_dataset)
 my_analyzer.analyze_curve()
 ```
 
-![analyze_curve_output](../../img/analyzer/pr_curve.png){:class="img-responsive" width="75%"}
+![analyze_curve_output](../../img/analyzer/pr_curve.png){:class="img-responsive" style="max-width:800px"}
 {: .text-center}
 
 <hr>
@@ -85,7 +85,7 @@ my_comparator = ComparatorLocalization(dataset_gt_param, task_type, models_propo
 my_comparator.analyze_curve()
 ```
 
-![compare_models_on_curve_output](../../img/comparator/comparison_curve.png){:class="img-responsive" width="75%"}
+![compare_models_on_curve_output](../../img/comparator/comparison_curve.png){:class="img-responsive" style="max-width:800px"}
 {: .text-center}
 
 <hr>
@@ -153,7 +153,7 @@ my_analyzer = AnalyzerLocalization("my_detector_name", my_localization_dataset)
 my_analyzer.analyze_curve_for_categories()
 ```
 
-![analyze_curve_for_categories_output](../../img/analyzer/pr_curve_categories.png){:class="img-responsive" width="75%"}
+![analyze_curve_for_categories_output](../../img/analyzer/pr_curve_categories.png){:class="img-responsive" style="max-width:800px"}
 {: .text-center}
 
 <hr>
@@ -180,7 +180,7 @@ my_comparator = ComparatorLocalization(dataset_gt_param, task_type, models_propo
 my_comparator.analyze_curve_for_categories()
 ```
 
-![compare_models_on_curve_output](../../img/comparator/comparison_curve_cat.png){:class="img-responsive" width="75%"}
+![compare_models_on_curve_output](../../img/comparator/comparison_curve_cat.png){:class="img-responsive" style="max-width:800px"}
 {: .text-center}
 
 <hr>

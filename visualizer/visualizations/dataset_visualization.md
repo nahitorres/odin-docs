@@ -21,11 +21,11 @@ nav_order: 1
 <hr>
 **Classification**
 {: .text-center}
-![Example gif](../../gifs/visualizer_CL.gif){:class="img-responsive;" width="75%"}
+![Example gif](../../gifs/visualizer_CL.gif){:class="img-responsive" style="max-width:800px"}
 {: .text-center}
 **Localization**
 {: .text-center}
-![Example gif](../../gifs/visualizer_LOC.gif){:class="img-responsive;" width="75%"}
+![Example gif](../../gifs/visualizer_LOC.gif){:class="img-responsive" style="max-width:800px"}
 {: .text-center}
 
 

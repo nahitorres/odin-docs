@@ -568,6 +568,23 @@
     {
       "name": "FP Categorization and Impact",
       "rowspan": 1,
+      "specs": "<a href='./analyzer/analyses/errors.html#analyse_false_positive_errors'>Per-category</a>",
+      "comp_color": "lightgrey",
+      "comp_supp": "<strong>yes</strong>",
+      "bin_color": "darkgrey",
+      "bin_supp": "no",
+      "sl_color": "lightgrey",
+      "sl_supp": "<strong>yes</strong>",
+      "ml_color": "lightgrey",
+      "ml_supp": "<strong>yes</strong>",
+      "od_color": "lightgrey",
+      "od_supp": "<strong>yes</strong>",
+      "is_color": "lightgrey",
+      "is_supp": "<strong>yes</strong>"
+    },
+    {
+      "name": "FN Categorization",
+      "rowspan": 1,
       "specs": "<a href='./analyzer/analyses/errors.html'>Per-category</a>",
       "comp_color": "lightgrey",
       "comp_supp": "<strong>yes</strong>",

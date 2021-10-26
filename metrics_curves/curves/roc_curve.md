@@ -14,7 +14,7 @@ nav_order: 1
 {{ site.data.metrics[page.title].formula }}
 {: .text-center}
 
-![roc_curve](../../img/metrics/roc_curve.png){:class="img-responsive;" width="60%"}
+![roc_curve](../../img/metrics/roc_curve.png){:class="img-responsive" style="max-width:600px"}
 {: .text-center}
 
 ### Example

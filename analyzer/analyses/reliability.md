@@ -50,7 +50,7 @@ from odin.classes import AnalyzerClassification
 my_analyzer = AnalyzerClassification("my_classifier_name", my_classification_dataset)
 my_analyzer.analyze_reliability()
 ```
-![analyze_reliability_cl_output](../../img/analyzer/reliability_analysis_cl.png){:class="img-responsive" width="100%"}
+![analyze_reliability_cl_output](../../img/analyzer/reliability_analysis_cl.png){:class="img-responsive" style="max-width:900px"}
 {: .text-center}
 
 #### Localization
@@ -62,7 +62,7 @@ my_analyzer = AnalyzerLocalization("my_detector_name", my_localization_dataset)
 my_analyzer.analyze_reliability()
 ```
 
-![analyze_reliability_loc_output](../../img/analyzer/reliability_analysis_loc.png){:class="img-responsive" width="100%"}
+![analyze_reliability_loc_output](../../img/analyzer/reliability_analysis_loc.png){:class="img-responsive" style="max-width:900px"}
 {: .text-center}
 
 <hr>

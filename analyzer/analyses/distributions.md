@@ -48,12 +48,12 @@ my_analyzer = AnalyzerClassification("my_classifier_name", my_classification_dat
 my_analyzer.show_confusion_matrix()
 ```
 
-![analyze_cm_output_a](../../img/analyzer/cm_catA.png){:class="img-responsive" width="50%"}
+![analyze_cm_output_a](../../img/analyzer/cm_catA.png){:class="img-responsive" style="max-width:500px"}
 {: .text-center}
 
 <p style="font-size: 10px; text-align: right;">N.B. As example, it is shown only the output of a single category, but the analysis is performed for all the categories selected.</p>
 
-![analyze_cm_output_b](../../img/analyzer/cm_sl.png){:class="img-responsive" width="65%"}
+![analyze_cm_output_b](../../img/analyzer/cm_sl.png){:class="img-responsive" style="max-width:600px"}
 {: .text-center}
 
 N.B. The confusion matrix among the categories is supported only for single-label classification task.
@@ -123,7 +123,7 @@ my_analyzer = AnalyzerLocalization("my_detector_name", my_localization_dataset)
 my_analyzer.show_true_positive_distribution()
 ```
 
-![show_true_positive_distribution_output](../../img/analyzer/tp_cat_distribution.png){:class="img-responsive" width="60%"}
+![show_true_positive_distribution_output](../../img/analyzer/tp_cat_distribution.png){:class="img-responsive" style="max-width:600px"}
 {: .text-center}
 
 <hr>
@@ -150,7 +150,7 @@ my_comparator = ComparatorLocalization(dataset_gt_param, task_type, models_propo
 my_comparator.show_true_positive_distribution()
 ```
 
-![comparator_tp_distribution](../../img/comparator/comparison_tp.png){:class="img-responsive" width="75%"}
+![comparator_tp_distribution](../../img/comparator/comparison_tp.png){:class="img-responsive" style="max-width:800px"}
 {: .text-center}
 
 <hr>
@@ -217,7 +217,7 @@ my_analyzer = AnalyzerLocalization("my_detector_name", my_localization_dataset)
 my_analyzer.show_false_positive_distribution()
 ```
 
-![show_false_positive_distribution_output](../../img/analyzer/fp_cat_distribution.png){:class="img-responsive" width="60%"}
+![show_false_positive_distribution_output](../../img/analyzer/fp_cat_distribution.png){:class="img-responsive" style="max-width:600px"}
 {: .text-center}
 
 <hr>
@@ -244,7 +244,7 @@ my_comparator = ComparatorLocalization(dataset_gt_param, task_type, models_propo
 my_comparator.show_false_positive_distribution()
 ```
 
-![comparator_fp_distribution](../../img/comparator/comparison_fp.png){:class="img-responsive" width="75%"}
+![comparator_fp_distribution](../../img/comparator/comparison_fp.png){:class="img-responsive" style="max-width:800px"}
 {: .text-center}
 
 <hr>
@@ -312,7 +312,7 @@ my_analyzer = AnalyzerLocalization("my_detector_name", my_localization_dataset)
 my_analyzer.show_false_negative_distribution()
 ```
 
-![show_false_negative_distribution_output](../../img/analyzer/fn_cat_distribution.png){:class="img-responsive" width="60%"}
+![show_false_negative_distribution_output](../../img/analyzer/fn_cat_distribution.png){:class="img-responsive" style="max-width:600px"}
 {: .text-center}
 
 <hr>
@@ -339,7 +339,7 @@ my_comparator = ComparatorLocalization(dataset_gt_param, task_type, models_propo
 my_comparator.show_false_negative_distribution()
 ```
 
-![comparator_fn_distribution](../../img/comparator/comparison_fn.png){:class="img-responsive" width="60%"}
+![comparator_fn_distribution](../../img/comparator/comparison_fn.png){:class="img-responsive" style="max-width:800px"}
 {: .text-center}
 
 <hr>
@@ -398,7 +398,7 @@ my_analyzer = AnalyzerClassification("my_classifier_name", my_classification_dat
 my_analyzer.show_true_negative_distribution()
 ```
 
-![show_true_negative_distribution_output](../../img/analyzer/tn_cat_distribution.png){:class="img-responsive" width="60%"}
+![show_true_negative_distribution_output](../../img/analyzer/tn_cat_distribution.png){:class="img-responsive" style="max-width:600px"}
 {: .text-center}
 
 <hr>
@@ -416,7 +416,7 @@ my_comparator = ComparatorClassification(dataset_gt_param, classification_type, 
 my_comparator.show_true_negative_distribution()
 ```
 
-![comparator_tn_distribution](../../img/comparator/comparison_tn.png){:class="img-responsive" width="75%"}
+![comparator_tn_distribution](../../img/comparator/comparison_tn.png){:class="img-responsive" style="max-width:800px"}
 {: .text-center}
 
 <hr>
@@ -484,10 +484,10 @@ my_analyzer = AnalyzerLocalization("my_detector_name", my_localization_dataset)
 my_analyzer.show_true_positive_distribution_for_categories_for_property("property_name")
 ```
 
-![show_true_positive_distribution_for_categories_for_property_output](../../img/analyzer/tp_distribution_prop_a.png){:class="img-responsive" width="60%"}
+![show_true_positive_distribution_for_categories_for_property_output](../../img/analyzer/tp_distribution_prop_a.png){:class="img-responsive" style="max-width:600px"}
 {: .text-center}
 
-![show_true_positive_distribution_for_categories_for_property_output_b](../../img/analyzer/tp_distribution_prop_b.png){:class="img-responsive" width="60%"}
+![show_true_positive_distribution_for_categories_for_property_output_b](../../img/analyzer/tp_distribution_prop_b.png){:class="img-responsive" style="max-width:600px"}
 {: .text-center}
 
 <hr>
@@ -514,10 +514,10 @@ my_comparator = ComparatorLocalization(dataset_gt_param, task_type, models_propo
 my_comparator.show_true_positive_distribution_for_categories_for_property("property_name")
 ```
 
-![comparator_show_true_positive_distribution_for_categories_for_property_output](../../img/comparator/comparison_tp_prop_a.png){:class="img-responsive" width="75%"}
+![comparator_show_true_positive_distribution_for_categories_for_property_output](../../img/comparator/comparison_tp_prop_a.png){:class="img-responsive" style="max-width:800px"}
 {: .text-center}
 
-![comparator_show_true_positive_distribution_for_categories_for_property_output_b](../../img/comparator/comparison_tp_prop_b.png){:class="img-responsive" width="75%"}
+![comparator_show_true_positive_distribution_for_categories_for_property_output_b](../../img/comparator/comparison_tp_prop_b.png){:class="img-responsive" style="max-width:800px"}
 {: .text-center}
 
 <hr>
@@ -578,10 +578,10 @@ my_analyzer = AnalyzerClassification("my_classifier_name", my_classification_dat
 my_analyzer.show_false_positive_distribution_for_categories_for_property("property_name")
 ```
 
-![show_false_positive_distribution_for_categories_for_property_output](../../img/analyzer/fp_distribution_prop_a.png){:class="img-responsive" width="60%"}
+![show_false_positive_distribution_for_categories_for_property_output](../../img/analyzer/fp_distribution_prop_a.png){:class="img-responsive" style="max-width:600px"}
 {: .text-center}
 
-![show_false_positive_distribution_for_categories_for_property_output_b](../../img/analyzer/fp_distribution_prop_b.png){:class="img-responsive" width="60%"}
+![show_false_positive_distribution_for_categories_for_property_output_b](../../img/analyzer/fp_distribution_prop_b.png){:class="img-responsive" style="max-width:600px"}
 {: .text-center}
 
 <hr>
@@ -599,10 +599,10 @@ my_comparator = ComparatorClassification(dataset_gt_param, classification_type, 
 my_comparator.show_false_positive_distribution_for_categories_for_property("property_name")
 ```
 
-![comparator_show_false_positive_distribution_for_categories_for_property_output](../../img/comparator/comparison_fp_prop_a.png){:class="img-responsive" width="75%"}
+![comparator_show_false_positive_distribution_for_categories_for_property_output](../../img/comparator/comparison_fp_prop_a.png){:class="img-responsive" style="max-width:800px"}
 {: .text-center}
 
-![comparator_show_false_positive_distribution_for_categories_for_property_output_b](../../img/comparator/comparison_fp_prop_b.png){:class="img-responsive" width="75%"}
+![comparator_show_false_positive_distribution_for_categories_for_property_output_b](../../img/comparator/comparison_fp_prop_b.png){:class="img-responsive" style="max-width:800px"}
 {: .text-center}
 
 <hr>
@@ -670,10 +670,10 @@ my_analyzer = AnalyzerLocalization("my_detector_name", my_localization_dataset)
 my_analyzer.show_false_negative_distribution_for_categories_for_property("property_name")
 ```
 
-![show_false_negative_distribution_for_categories_for_property_output](../../img/analyzer/fn_distribution_prop_a.png){:class="img-responsive" width="60%"}
+![show_false_negative_distribution_for_categories_for_property_output](../../img/analyzer/fn_distribution_prop_a.png){:class="img-responsive" style="max-width:600px"}
 {: .text-center}
 
-![show_false_negative_distribution_for_categories_for_property_output_b](../../img/analyzer/fn_distribution_prop_b.png){:class="img-responsive" width="60%"}
+![show_false_negative_distribution_for_categories_for_property_output_b](../../img/analyzer/fn_distribution_prop_b.png){:class="img-responsive" style="max-width:600px"}
 {: .text-center}
 
 <hr>
@@ -700,10 +700,10 @@ my_comparator = ComparatorLocalization(dataset_gt_param, task_type, models_propo
 my_comparator.show_false_negative_distribution_for_categories_for_property("property_name")
 ```
 
-![comparator_show_false_negative_distribution_for_categories_for_property_output](../../img/comparator/comparison_fn_prop_a.png){:class="img-responsive" width="75%"}
+![comparator_show_false_negative_distribution_for_categories_for_property_output](../../img/comparator/comparison_fn_prop_a.png){:class="img-responsive" style="max-width:800px"}
 {: .text-center}
 
-![comparator_show_false_negative_distribution_for_categories_for_property_output_b](../../img/comparator/comparison_fn_prop_b.png){:class="img-responsive" width="75%"}
+![comparator_show_false_negative_distribution_for_categories_for_property_output_b](../../img/comparator/comparison_fn_prop_b.png){:class="img-responsive" style="max-width:800px"}
 {: .text-center}
 
 <hr>
@@ -772,10 +772,10 @@ my_analyzer = AnalyzerLocalization("my_detector_name", my_localization_dataset)
 my_analyzer.show_true_negative_distribution_for_categories_for_property("property_name")
 ```
 
-![show_true_negative_distribution_for_categories_for_property_output](../../img/analyzer/tn_distribution_prop_a.png){:class="img-responsive" width="60%"}
+![show_true_negative_distribution_for_categories_for_property_output](../../img/analyzer/tn_distribution_prop_a.png){:class="img-responsive" style="max-width:600px"}
 {: .text-center}
 
-![show_true_negative_distribution_for_categories_for_property_output_b](../../img/analyzer/tn_distribution_prop_b.png){:class="img-responsive" width="60%"}
+![show_true_negative_distribution_for_categories_for_property_output_b](../../img/analyzer/tn_distribution_prop_b.png){:class="img-responsive" style="max-width:600px"}
 {: .text-center}
 
 <hr>
@@ -793,10 +793,10 @@ my_comparator = ComparatorClassification(dataset_gt_param, classification_type, 
 my_comparator.show_true_negative_distribution_for_categories_for_property("property_name")
 ```
 
-![comparator_show_true_negative_distribution_for_categories_for_property_output](../../img/comparator/comparison_tn_prop_a.png){:class="img-responsive" width="75%"}
+![comparator_show_true_negative_distribution_for_categories_for_property_output](../../img/comparator/comparison_tn_prop_a.png){:class="img-responsive" style="max-width:800px"}
 {: .text-center}
 
-![comparator_show_true_negative_distribution_for_categories_for_property_output_b](../../img/comparator/comparison_tn_prop_b.png){:class="img-responsive" width="75%"}
+![comparator_show_true_negative_distribution_for_categories_for_property_output_b](../../img/comparator/comparison_tn_prop_b.png){:class="img-responsive" style="max-width:800px"}
 {: .text-center}
 
 <hr>

@@ -20,7 +20,7 @@ nav_order: 3
 
 <hr>
 
-![Example gif](../../gifs/visualizer_CAMs.gif){:class="img-responsive;" width="75%"}
+![Example gif](../../gifs/visualizer_CAMs.gif){:class="img-responsive" style="max-width:800px"}
 {: .text-center}
 
 <hr>

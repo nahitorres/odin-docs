@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Top-1 Top-5
+title: Cross Validation
 parent: Analyses
 grand_parent: Analyzer
-nav_order: 8
+nav_order: 11
 ---
 
 # {{page.title}}
@@ -20,17 +20,17 @@ nav_order: 8
 
 <hr>
 
-# analyze_top1_top5_error()
+# cross_validation_analysis()
 {: .mb-6}
 
 
-It analyzes the model performances by considering the top-1 and the top-5 classification predictions. The analysis can be performed for the entire data set or for a subset with a specific property value.
+It evaluates the model performances for different subsets of the data set.
 
 
 #### Parameters
 {: .no_toc}
 <dl>
-  {% for param in site.data.analyses.analyze_top1_top5_error %}
+  {% for param in site.data.analyses.cross_validation_analysis %}
 
   <dt><strong>{{ param.name }}</strong></dt>
   <dd><br><b><i>{{ param.type }}</i></b></dd><dd>{{ param.description }}</dd>
@@ -48,20 +48,19 @@ It analyzes the model performances by considering the top-1 and the top-5 classi
 from odin.classes import AnalyzerClassification
 
 my_analyzer = AnalyzerClassification("my_classifier_name", my_classification_dataset)
-my_analyzer.analyze_top1_top5_error()
+my_analyzer.cross_validation_analysis()
 ```
 
-![analyze_top_output_a](../../img/analyzer/top_analysis.png){:class="img-responsive" style="max-width:800px"}
-{: .text-center}
-
+#### Localization
+{: .no_toc}
 ```py
-from odin.classes import AnalyzerClassification
+from odin.classes import AnalyzerLocalization
 
-my_analyzer = AnalyzerClassification("my_classifier_name", my_classification_dataset)
-my_analyzer.analyze_top1_top5_error(properties=['prop1'])
+my_analyzer = AnalyzerLocalization("my_detector_name", my_localization_dataset)
+my_analyzer.cross_validation_analysis()
 ```
 
-![analyze_top_output_b](../../img/analyzer/top_analysis_prop.png){:class="img-responsive" style="max-width:800px"}
+![cross_validation_analysis_output](../../img/analyzer/cross_validation.png){:class="img-responsive" style="max-width:800px"}
 {: .text-center}
 
 <hr>
@@ -80,11 +79,11 @@ my_analyzer.analyze_top1_top5_error(properties=['prop1'])
   </thead>
   <tbody>
     <tr style="text-align:center;">
-      <td style="background:lightcoral;">no</td>
       <td style="background:lightgreen;">yes</td>
-      <td style="background:lightcoral;">no</td>
-      <td style="background:lightcoral;">no</td>
-      <td style="background:lightcoral;">no</td>
+      <td style="background:lightgreen;">yes</td>
+      <td style="background:lightgreen;">yes</td>
+      <td style="background:lightgreen;">yes</td>
+      <td style="background:lightgreen;">yes</td>
     </tr>
   </tbody>
 </table>

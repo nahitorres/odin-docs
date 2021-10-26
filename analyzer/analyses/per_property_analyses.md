@@ -60,7 +60,7 @@ my_analyzer = AnalyzerLocalization("my_detector_name", my_localization_dataset)
 my_analyzer.analyze_property('prop1')
 ```
 
-![analyze_property_output](../../img/analyzer/Analysis_of_prop1_property.png){:class="img-responsive" width="75%"}
+![analyze_property_output](../../img/analyzer/Analysis_of_prop1_property.png){:class="img-responsive" style="max-width:600px"}
 {: .text-center}
 
 <hr>
@@ -87,13 +87,13 @@ my_comparator = ComparatorLocalization(dataset_gt_param, task_type, models_propo
 my_comparator.analyze_property('prop1')
 ```
 
-![comparison_property_a_output](../../img/comparator/comparison_prop1_a.png){:class="img-responsive" width="75%"}
+![comparison_property_a_output](../../img/comparator/comparison_prop1_a.png){:class="img-responsive" style="max-width:600px"}
 {: .text-center}
 
-![comparison_property_b_output](../../img/comparator/comparison_prop1_b.png){:class="img-responsive" width="75%"}
+![comparison_property_b_output](../../img/comparator/comparison_prop1_b.png){:class="img-responsive" style="max-width:600px"}
 {: .text-center}
 
-![comparison_property_c_output](../../img/comparator/comparison_prop1_c.png){:class="img-responsive" width="75%"}
+![comparison_property_c_output](../../img/comparator/comparison_prop1_c.png){:class="img-responsive" style="max-width:600px"}
 {: .text-center}
 
 <hr>
@@ -162,9 +162,9 @@ my_analyzer = AnalyzerLocalization("my_detector_name", my_localization_dataset)
 my_analyzer.analyze_properties()
 ```
 
-![analyze_properties_output_a](../../img/analyzer/Analysis_of_prop1_property.png){:class="img-responsive" width="75%"}
+![analyze_properties_output_a](../../img/analyzer/Analysis_of_prop1_property.png){:class="img-responsive" style="max-width:600px"}
 {: .text-center}
-![analyze_properties_output_b](../../img/analyzer/Analysis_of_prop2_property.png){:class="img-responsive" width="75%"}
+![analyze_properties_output_b](../../img/analyzer/Analysis_of_prop2_property.png){:class="img-responsive" style="max-width:600px"}
 {: .text-center}
 
 <hr>
@@ -232,7 +232,7 @@ my_analyzer = AnalyzerLocalization("my_detector_name", my_localization_dataset)
 my_analyzer.analyze_sensitivity_impact_of_properties()
 ```
 
-![analyze_sensitivity_impact_of_properties_output](../../img/analyzer/sensitivity_impact.png){:class="img-responsive" width="75%"}
+![analyze_sensitivity_impact_of_properties_output](../../img/analyzer/sensitivity_impact.png){:class="img-responsive" style="max-width:600px"}
 {: .text-center}
 
 <hr>
@@ -259,7 +259,7 @@ my_comparator = ComparatorLocalization(dataset_gt_param, task_type, models_propo
 my_comparator.analyze_sensitivity_impact_of_properties()
 ```
 
-![compare_models_on_sensitivity_impact_output](../../img/comparator/comparison_sens_impact.png){:class="img-responsive" width="75%"}
+![compare_models_on_sensitivity_impact_output](../../img/comparator/comparison_sens_impact.png){:class="img-responsive" style="max-width:600px"}
 {: .text-center}
 
 <hr>
