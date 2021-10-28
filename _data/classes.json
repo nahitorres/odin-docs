@@ -12,9 +12,9 @@
         "description": "Problem task type. It can be:<br><i>TaskType.CLASSIFICATION_BINARY</i>, <i>TaskType.CLASSIFICATION_SINGLE_LABEL</i>, <i>TaskType.CLASSIFICATION_MULTI_LABEL</i>."
     },
     {
-        "name": "proposals_path",
-        "type": "str, optional",
-        "description": "Path of the proposals directory.<br>(default is None)"
+        "name": "proposals_paths",
+        "type": "list of tuple, optional",
+        "description": "List of couples. Each couple contains the model name and the corresponding proposals path.<br>(default is None)"
     },
     {
         "name": "observations_set_name",
@@ -77,8 +77,8 @@
     },
     {
         "name": "proposals_path",
-        "type": "str, optional",
-        "description": "Path of the proposals directory.<br>(default is None)"
+        "type": "list of tuple, optional",
+        "description": "List of couples. Each couple contains the model name and the corresponding proposals path.<br>(default is None)"
     },
     {
         "name": "images_set_name",
@@ -140,9 +140,9 @@
         "description": "Problem task type. It can be:<br><i>TaskType.CLASSIFICATION_BINARY</i>, <i>TaskType.CLASSIFICATION_SINGLE_LABEL</i>, <i>TaskType.CLASSIFICATION_MULTI_LABEL</i>."
     },
     {
-        "name": "cams_path",
-        "type": "str, optional",
-        "description": "Path of the CAMs directory.<br>(default is None)"
+        "name": "cams_paths",
+        "type": "list of tuple, optional",
+        "description": "List of couples. Each couple contains the model name and the corresponding CAMs path.<br>(default is None)"
     },
     {
         "name": "annotation_type",
@@ -150,9 +150,9 @@
         "description": "Indicates whether the annotation is a bounding box (AnnotationType.BBOX) or a segmentation mask (AnnotationType.SEGMENTATION)<br>(default is AnnotationType.BBOX)"
     },
     {
-        "name": "proposals_path",
-        "type": "str, optional",
-        "description": "Path of the proposals directory.<br>(default is None)"
+        "name": "proposals_paths",
+        "type": "list of tuple, optional",
+        "description": "List of couples. Each couple contains the model name and the corresponding proposals path.<br>(default is None)"
     },
     {
         "name": "observations_set_name",
@@ -603,9 +603,14 @@
   "visualizerclassification":
   [
     {
-        "name": "models",
-        "type": "dict",
-        "description": "Represents the dataset or the analyzer of the models to be used in the visualization.<br>Example: {'model_a':{'dataset': my_dataset}} or {'model_a':{'analyzer': my_analyzer}} to be able to filter the output by analyses"
+        "name": "dataset",
+        "type": "DatasetClassification or DatasetCAMs",
+        "description": "Data set used for the visualization"
+    },
+    {
+        "name": "analyzers",
+        "type": "list, optional",
+        "description": "List of the analyzers of different models.<br>(default is None)"
     },
     {
         "name": "is_image",
@@ -622,10 +627,15 @@
   "visualizerlocalization":
   [
     {
-        "name": "models",
-        "type": "dict",
-        "description": "Represents the dataset or the analyzer of the models to be used in the visualization.<br>Example: {'model_a':{'dataset': my_dataset}} or {'model_a':{'analyzer': my_analyzer}} to be able to filter the output by analyses"
-    }
+        "name": "dataset",
+        "type": "DatasetLocalization",
+        "description": "Data set used for the visualization"
+    },
+    {
+        "name": "analyzers",
+        "type": "list, optional",
+        "description": "List of the analyzers of different models.<br>(default is None)"
+    },
   ],
 
   "annotatorclassification":

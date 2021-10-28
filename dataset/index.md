@@ -69,12 +69,12 @@ from odin.classes import DatasetClassification
 # define the path of the GT .json file
 dataset_gt_param = "/path/to/gt/file.json"
 
-# define the path of the folder which contains the predictions .txt files
-path_to_detections = "/path/to/predictions"
+# define the paths of the folders which contains the predictions .txt files for each model
+path_to_detections = [("my_classifier_name", "/path/to/predictions")]
 
 classification_type = TaskType.CLASSIFICATION_MULTI_LABEL
 
-my_dataset = DatasetClassification(dataset_gt_param, classification_type, proposal_path=path_to_detections)
+my_dataset = DatasetClassification(dataset_gt_param, classification_type, proposals_paths=path_to_detections)
 ```
 
 
@@ -147,12 +147,12 @@ from odin.classes import DatasetLocalization
 # define the path of the GT .json file
 dataset_gt_param = "/path/to/gt/file.json"
 
-# define the path of the folder which contains the predictions .txt files
-path_to_detections = "/path/to/predictions"
+# define the paths of the folders which contains the predictions .txt files for each model
+path_to_detections = [("my_detector_name", "/path/to/predictions")]
 
 localization_type = TaskType.OBJECT_DETECTION
 
-my_dataset = DatasetLocalization(dataset_gt_param, localization_type, proposal_path=path_to_detections)
+my_dataset = DatasetLocalization(dataset_gt_param, localization_type, proposals_paths=path_to_detections)
 ```
 
 <hr>
@@ -214,10 +214,10 @@ from odin.classes import DatasetCAMs
 # define the path of the GT .json file
 dataset_gt_param = "/path/to/gt/file.json"
 
-# define the path of the CAMs
-path_to_cams_detections = "/path/to/cams/predictions"
+# define the paths of the CAMs for each model
+path_to_cams_detections = [("my_classifier_name", "/path/to/cams/predictions")]
 
 classification_type = TaskType.CLASSIFICATION_MULTI_LABEL
 
-my_dataset = DatasetCAMs(dataset_gt_param, classification_type, cams_path=path_to_cams_detections)
+my_dataset = DatasetCAMs(dataset_gt_param, classification_type, cams_paths=path_to_cams_detections)
 ```

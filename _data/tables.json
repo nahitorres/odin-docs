@@ -343,6 +343,23 @@
   "analyses":
   [
     {
+      "name": "Cross Validation",
+      "rowspan": 1,
+      "specs": "<a href='./analyzer/analyses/cross_validation.html'>Total</a>",
+      "comp_color": "lightgrey",
+      "comp_supp": "<strong>yes</strong>",
+      "bin_color": "lightgrey",
+      "bin_supp": "<strong>yes</strong>",
+      "sl_color": "lightgrey",
+      "sl_supp": "<strong>yes</strong>",
+      "ml_color": "lightgrey",
+      "ml_supp": "<strong>yes</strong>",
+      "od_color": "lightgrey",
+      "od_supp": "<strong>yes</strong>",
+      "is_color": "lightgrey",
+      "is_supp": "<strong>yes</strong>"
+    },
+    {
       "name": "Performance Analysis",
       "rowspan": 1,
       "specs": "<a href='./analyzer/analyses/per_property_analyses.html#analyze_property'>Per-property</a>",
@@ -568,7 +585,7 @@
     {
       "name": "FP Categorization and Impact",
       "rowspan": 1,
-      "specs": "<a href='./analyzer/analyses/errors.html#analyse_false_positive_errors'>Per-category</a>",
+      "specs": "<a href='./analyzer/analyses/errors.html#analyze_false_positive_errors'>Per-category</a>",
       "comp_color": "lightgrey",
       "comp_supp": "<strong>yes</strong>",
       "bin_color": "darkgrey",
@@ -585,7 +602,7 @@
     {
       "name": "FN Categorization",
       "rowspan": 1,
-      "specs": "<a href='./analyzer/analyses/errors.html'>Per-category</a>",
+      "specs": "<a href='./analyzer/analyses/errors.html#analyze_false_negative_errors'>Per-category</a>",
       "comp_color": "lightgrey",
       "comp_supp": "<strong>yes</strong>",
       "bin_color": "darkgrey",

@@ -276,7 +276,7 @@
     {
         "name": "show",
         "type": "bool, optional",
-        "description": "Indicates whether the plot should be shown or not. If False, returns the results as dict.<br>(default is True)"
+        "description": "Indicates whether the plot should be shown or not. If False, returns the results.<br>(default is True)"
     }
   ],
 

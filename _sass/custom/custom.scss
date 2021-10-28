@@ -1,7 +1,8 @@
-body{
-  word-break: break-all;
+@media (max-width: 500px){
+  body{
+    word-break: break-all;
+  }
 }
-
 
 @media (min-width: 66.5rem){
   .side-bar {

@@ -33,6 +33,8 @@ The AnalyzerClassification class can be used to perform diagnostics for classifi
 ```py
 from odin.classes import AnalyzerClassification
 
+# N.B. The classifier name must be the same of one of the models names provided
+#      with the predictions when my_classification_dataset has been created
 my_analyzer = AnalyzerClassification("my_classifier_name", my_classification_dataset)
 ```
 
@@ -56,6 +58,8 @@ The AnalyzerLocalization class can be used to perform diagnostics for localizati
 ```py
 from odin.classes import AnalyzerLocalization
 
+# N.B. The detector name must be the same of one of the models names provided
+#      with the predictions when my_localization_dataset has been created
 my_analyzer = AnalyzerLocalization("my_detector_name", my_localization_dataset)
 ```
 
@@ -79,5 +83,7 @@ The AnalyzerCAMs class can be used to diagnose Class Activation Maps generated b
 ```py
 from odin.classes import AnalyzerCAMs
 
+# N.B. The classifier name must be the same of one of the models names provided
+#      with the CAMs when my_cams_dataset has been created
 my_analyzer = AnalyzerCAMs("my_classifier_name", my_cams_dataset)
 ```

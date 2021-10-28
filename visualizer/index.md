@@ -41,9 +41,8 @@ classification_type = TaskType.CLASSIFICATION_MULTI_LABEL
 
 my_dataset = DatasetClassification(dataset_gt_param, classification_type,
                                    observations_abs_path=images_path)
-models = {"my_model": {"dataset": my_dataset}}
 
-my_visualizer = VisualizerClassification(models)
+my_visualizer = VisualizerClassification(my_dataset)
 ```
 
 #### For ground truth and predictions visualization
@@ -52,25 +51,26 @@ from odin.classes import DatasetClassification, VisualizerClassification
 
 dataset_gt_param = "/path/to/gt/file.json"
 images_path = "/path/to/gt/images"
-path_to_detections = "/path/to/predictions"
+path_to_detections = [("model_a", "/path/to/predictions_a"),
+                      ("model_b", "/path/to/predictions_b")]
 classification_type = TaskType.CLASSIFICATION_MULTI_LABEL
 
 my_dataset = DatasetClassification(dataset_gt_param, classification_type,
-                                   proposal_path=path_to_detections,
+                                   proposals_paths=path_to_detections,
                                    observations_abs_path=images_path)
-models = {"my_model": {"dataset": my_dataset}}
 
-my_visualizer = VisualizerClassification(models)
+my_visualizer = VisualizerClassification(my_dataset)
 ```
 
 #### For ground truth, predictions and analyses visualization
 ```py
 from odin.classes import AnalyzerClassification, VisualizerClassification
 
-my_analyzer = AnalyzerClassification("my_classifier_name", my_classification_dataset)
-models = {"my_model": {"analyzer": my_analyzer}}
+my_analyzer_a = AnalyzerClassification("model_a", my_dataset)
+my_analyzer_b = AnalyzerClassification("model_b", my_dataset)
 
-my_visualizer = VisualizerClassification(models)
+my_visualizer = VisualizerClassification(my_dataset,
+                                         analyzers=[my_analyzer_a, my_analyzer_b])
 ```
 
 #### For CAMs visualization
@@ -79,17 +79,17 @@ from odin.classes import DatasetCAMs, VisualizerClassification
 
 dataset_gt_param = "/path/to/gt/file.json" # Your file gt file goes here
 images_path = "/path/to/gt/images" # Your images folder goes here
-path_to_cams_detections = "/path/to/cams/predictions"
+path_to_cams_detections = [("model_a", "/path/to/cams/predictions_a"),
+                           ("model_b", "/path/to/cams/predictions_b")]
 classification_type = TaskType.CLASSIFICATION_MULTI_LABEL
 
 
 my_dataset = DatasetCAMs(dataset_gt_param, classification_type,
-                         cams_path=path_to_cams_detections,
+                         cams_paths=path_to_cams_detections,
                          observations_abs_path=images_path,
                          for_analysis=True)
-models = {"my_model": {"dataset": my_dataset}}
 
-my_visualizer = VisualizerClassification(models)
+my_visualizer = VisualizerClassification(my_dataset)
 ```
 
 <hr>
@@ -118,9 +118,8 @@ localization_type = TaskType.OBJECT_DETECTION
 
 my_dataset = DatasetLocalization(dataset_gt_param, localization_type,
                                  images_abs_path=images_path)
-models = {"my_model": {"dataset": my_dataset}}
 
-my_visualizer = VisualizerLocalization(models)
+my_visualizer = VisualizerLocalization(my_dataset)
 ```
 
 #### For ground truth and predictions visualization
@@ -129,23 +128,24 @@ from odin.classes import DatasetLocalization, VisualizerLocalization
 
 dataset_gt_param = "/path/to/gt/file.json"
 images_path = "/path/to/gt/images"
-path_to_detections = "/path/to/predictions"
+path_to_detections = [("model_a", "/path/to/predictions_a"),
+                      ("model_b", "/path/to/predictions_b")]
 localization_type = TaskType.OBJECT_DETECTION
 
 my_dataset = DatasetLocalization(dataset_gt_param, localization_type,
-                                 proposal_path=path_to_detections,
+                                 proposals_paths=path_to_detections,
                                  images_abs_path=images_path)
-models = {"my_model": {"dataset": my_dataset}}
 
-my_visualizer = VisualizerLocalization(models)
+my_visualizer = VisualizerLocalization(my_dataset)
 ```
 
 #### For ground truth, predictions and analyses visualization
 ```py
 from odin.classes import AnalyzerLocalization, VisualizerLocalization
 
-my_analyzer = AnalyzerClassification("my_detector_name", my_localization_dataset)
-models = {"my_model": {"analyzer": my_analyzer}}
+my_analyzer_a = AnalyzerLocalization("model_a", my_dataset)
+my_analyzer_b = AnalyzerLocalization("model_b", my_dataset)
 
-my_visualizer = VisualizerLocalization(models)
+my_visualizer = VisualizerLocalization(my_dataset,
+                                       analyzers=[my_analyzer_a, my_analyzer_b])
 ```
