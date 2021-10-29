@@ -49,14 +49,10 @@ my_analyzer.show_confusion_matrix()
 ```
 
 ![analyze_cm_output_a](../../img/analyzer/cm_catA.png){:class="img-responsive" style="max-width:500px"}
-{: .text-center}
-
-<p style="font-size: 10px; text-align: right;">N.B. As example, it is shown only the output of a single category, but the analysis is performed for all the categories selected.</p>
-
 ![analyze_cm_output_b](../../img/analyzer/cm_sl.png){:class="img-responsive" style="max-width:600px"}
 {: .text-center}
 
-N.B. The confusion matrix among the categories is supported only for single-label classification task.
+N.B. As example, it is shown only the output of a single category, but the analysis is performed for all the categories selected. The confusion matrix among the categories is supported only for single-label classification task.
 {: .text-right .fs-1}
 
 <hr>
@@ -485,8 +481,6 @@ my_analyzer.show_true_positive_distribution_for_categories_for_property("propert
 ```
 
 ![show_true_positive_distribution_for_categories_for_property_output](../../img/analyzer/tp_distribution_prop_a.png){:class="img-responsive" style="max-width:600px"}
-{: .text-center}
-
 ![show_true_positive_distribution_for_categories_for_property_output_b](../../img/analyzer/tp_distribution_prop_b.png){:class="img-responsive" style="max-width:600px"}
 {: .text-center}
 
@@ -515,8 +509,6 @@ my_comparator.show_true_positive_distribution_for_categories_for_property("prope
 ```
 
 ![comparator_show_true_positive_distribution_for_categories_for_property_output](../../img/comparator/comparison_tp_prop_a.png){:class="img-responsive" style="max-width:800px"}
-{: .text-center}
-
 ![comparator_show_true_positive_distribution_for_categories_for_property_output_b](../../img/comparator/comparison_tp_prop_b.png){:class="img-responsive" style="max-width:800px"}
 {: .text-center}
 
@@ -579,8 +571,6 @@ my_analyzer.show_false_positive_distribution_for_categories_for_property("proper
 ```
 
 ![show_false_positive_distribution_for_categories_for_property_output](../../img/analyzer/fp_distribution_prop_a.png){:class="img-responsive" style="max-width:600px"}
-{: .text-center}
-
 ![show_false_positive_distribution_for_categories_for_property_output_b](../../img/analyzer/fp_distribution_prop_b.png){:class="img-responsive" style="max-width:600px"}
 {: .text-center}
 
@@ -600,8 +590,6 @@ my_comparator.show_false_positive_distribution_for_categories_for_property("prop
 ```
 
 ![comparator_show_false_positive_distribution_for_categories_for_property_output](../../img/comparator/comparison_fp_prop_a.png){:class="img-responsive" style="max-width:800px"}
-{: .text-center}
-
 ![comparator_show_false_positive_distribution_for_categories_for_property_output_b](../../img/comparator/comparison_fp_prop_b.png){:class="img-responsive" style="max-width:800px"}
 {: .text-center}
 
@@ -671,8 +659,6 @@ my_analyzer.show_false_negative_distribution_for_categories_for_property("proper
 ```
 
 ![show_false_negative_distribution_for_categories_for_property_output](../../img/analyzer/fn_distribution_prop_a.png){:class="img-responsive" style="max-width:600px"}
-{: .text-center}
-
 ![show_false_negative_distribution_for_categories_for_property_output_b](../../img/analyzer/fn_distribution_prop_b.png){:class="img-responsive" style="max-width:600px"}
 {: .text-center}
 
@@ -701,8 +687,6 @@ my_comparator.show_false_negative_distribution_for_categories_for_property("prop
 ```
 
 ![comparator_show_false_negative_distribution_for_categories_for_property_output](../../img/comparator/comparison_fn_prop_a.png){:class="img-responsive" style="max-width:800px"}
-{: .text-center}
-
 ![comparator_show_false_negative_distribution_for_categories_for_property_output_b](../../img/comparator/comparison_fn_prop_b.png){:class="img-responsive" style="max-width:800px"}
 {: .text-center}
 
@@ -773,8 +757,6 @@ my_analyzer.show_true_negative_distribution_for_categories_for_property("propert
 ```
 
 ![show_true_negative_distribution_for_categories_for_property_output](../../img/analyzer/tn_distribution_prop_a.png){:class="img-responsive" style="max-width:600px"}
-{: .text-center}
-
 ![show_true_negative_distribution_for_categories_for_property_output_b](../../img/analyzer/tn_distribution_prop_b.png){:class="img-responsive" style="max-width:600px"}
 {: .text-center}
 
@@ -794,8 +776,6 @@ my_comparator.show_true_negative_distribution_for_categories_for_property("prope
 ```
 
 ![comparator_show_true_negative_distribution_for_categories_for_property_output](../../img/comparator/comparison_tn_prop_a.png){:class="img-responsive" style="max-width:800px"}
-{: .text-center}
-
 ![comparator_show_true_negative_distribution_for_categories_for_property_output_b](../../img/comparator/comparison_tn_prop_b.png){:class="img-responsive" style="max-width:800px"}
 {: .text-center}
 

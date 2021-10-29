@@ -19,18 +19,39 @@ nav_order: 1
 </details>
 
 <hr>
-**Classification**
-{: .text-center}
-![Example gif](../../gifs/visualizer_CL.gif){:class="img-responsive" style="max-width:800px"}
-{: .text-center}
-**Localization**
-{: .text-center}
-![Example gif](../../gifs/visualizer_LOC.gif){:class="img-responsive" style="max-width:800px"}
-{: .text-center}
 
+<div class="row">
+  <div class="column">
+    <b>Classification Example</b>
+    <img class="img-responsive" src="../../gifs/visualizer_CL.gif" alt="Example CL gif" />
+  </div>
+  <div class="column">
+    <b>Localization Example</b>
+    <img class="img-responsive" src="../../gifs/visualizer_LOC.gif" alt="Example LOC gif" />
+  </div>
+</div>
 
+<style>
+  .row {
+  display: flex;
+  }
 
+  .column {
+    text-align: center;
+    flex: 50%;
+    margin: 0 auto;
+    max-width: 600px;
+  }
 
+  @media (max-width: 1400px) {
+    .row {
+      display: block;
+    }
+    .column {
+      flex: 100%;
+    }
+}
+</style>
 
 
 <hr>

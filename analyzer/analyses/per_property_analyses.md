@@ -88,11 +88,7 @@ my_comparator.analyze_property('prop1')
 ```
 
 ![comparison_property_a_output](../../img/comparator/comparison_prop1_a.png){:class="img-responsive" style="max-width:600px"}
-{: .text-center}
-
 ![comparison_property_b_output](../../img/comparator/comparison_prop1_b.png){:class="img-responsive" style="max-width:600px"}
-{: .text-center}
-
 ![comparison_property_c_output](../../img/comparator/comparison_prop1_c.png){:class="img-responsive" style="max-width:600px"}
 {: .text-center}
 
@@ -163,7 +159,6 @@ my_analyzer.analyze_properties()
 ```
 
 ![analyze_properties_output_a](../../img/analyzer/Analysis_of_prop1_property.png){:class="img-responsive" style="max-width:600px"}
-{: .text-center}
 ![analyze_properties_output_b](../../img/analyzer/Analysis_of_prop2_property.png){:class="img-responsive" style="max-width:600px"}
 {: .text-center}
 

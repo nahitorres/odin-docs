@@ -19,8 +19,9 @@ nav_order: 3
 </details>
 
 <hr>
-
-![Example gif](../../gifs/visualizer_CAMs.gif){:class="img-responsive" style="max-width:800px"}
+**CAMs Example**
+{: .text-center}
+![Example gif](../../gifs/visualizer_CAMs.gif){:class="img-responsive" style="max-width:600px"}
 {: .text-center}
 
 <hr>

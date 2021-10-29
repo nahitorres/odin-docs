@@ -50,7 +50,7 @@ my_analyzer = AnalyzerCAMs("my_classifier_name", my_CAMs_dataset)
 my_analyzer.analyze_cams()
 ```
 
-![analyze_cams_output](../../img/analyzer/cams_total_analysis.png){:class="img-responsive;" style="max-width:800px"}
+![analyze_cams_output](../../img/analyzer/cams_total_analysis.png){:class="img-responsive" style="max-width:800px"}
 {: .text-center}
 
 <hr>
@@ -126,7 +126,7 @@ my_analyzer = AnalyzerCAMs("my_classifier_name", my_CAMs_dataset)
 my_analyzer.analyze_cams_for_categories()
 ```
 
-![analyze_cams_output](../../img/analyzer/cams_cats_analysis.png){:class="img-responsive;" style="max-width:800px"}
+![analyze_cams_output](../../img/analyzer/cams_cats_analysis.png){:class="img-responsive" style="max-width:800px"}
 {: .text-center}
 
 <hr>

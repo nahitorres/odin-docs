@@ -49,7 +49,6 @@ my_analyzer.analyze_false_positive_errors_for_category('catA')
 ```
 
 ![analyze_false_positive_error_for_cat_cl_output_a](../../img/analyzer/false_positive_category_distribution_cl.png){:class="img-responsive" style="max-width:600px"}
-{: .text-center}
 ![analyze_false_positive_error_for_cat_cl_output_b](../../img/analyzer/false_positive_category_gain_cl.png){:class="img-responsive" style="max-width:600px"}
 {: .text-center}
 
@@ -63,7 +62,6 @@ my_analyzer.analyze_false_positive_errors_for_category('catA')
 ```
 
 ![analyze_false_positive_error_for_cat_loc_output_a](../../img/analyzer/false_positive_category_distribution_loc.png){:class="img-responsive" style="max-width:600px"}
-{: .text-center}
 ![analyze_false_positive_error_for_cat_loc_output_b](../../img/analyzer/false_positive_category_gain_loc.png){:class="img-responsive" style="max-width:600px"}
 {: .text-center}
 
@@ -121,7 +119,6 @@ my_analyzer = AnalyzerClassification("my_classifier_name", my_classification_dat
 my_analyzer.analyze_false_positive_errors()
 ```
 ![analyze_false_positive_errors_cl_output_a](../../img/analyzer/false_positive_category_distribution_cl.png){:class="img-responsive" style="max-width:600px"}
-{: .text-center}
 ![analyze_false_positive_errors_cl_output_b](../../img/analyzer/false_positive_category_gain_cl.png){:class="img-responsive" style="max-width:600px"}
 {: .text-center}
 
@@ -138,7 +135,6 @@ my_analyzer.analyze_false_positive_errors()
 ```
 
 ![analyze_false_positive_errors_loc_output_a](../../img/analyzer/false_positive_category_distribution_loc.png){:class="img-responsive" style="max-width:600px"}
-{: .text-center}
 ![analyze_false_positive_errors_loc_output_b](../../img/analyzer/false_positive_category_gain_loc.png){:class="img-responsive" style="max-width:600px"}
 {: .text-center}
 
@@ -173,11 +169,7 @@ my_comparator.analyze_false_positive_errors()
 ```
 
 ![compare_models_on_error_output](../../img/comparator/comparison_errors_a.png){:class="img-responsive" style="max-width:800px"}
-{: .text-center}
-
 ![compare_models_on_error_output](../../img/comparator/comparison_errors_b.png){:class="img-responsive" style="max-width:800px"}
-{: .text-center}
-
 ![compare_models_on_error_output](../../img/comparator/comparison_errors_c.png){:class="img-responsive" style="max-width:800px"}
 {: .text-center}
 
@@ -352,11 +344,7 @@ my_comparator.analyze_false_negative_errors()
 ```
 
 ![compare_models_on_fn_error_output](../../img/comparator/comparison_fn_errors_a.png){:class="img-responsive" style="max-width:800px"}
-{: .text-center}
-
 ![compare_models_on_fn_error_output](../../img/comparator/comparison_fn_errors_b.png){:class="img-responsive" style="max-width:800px"}
-{: .text-center}
-
 ![compare_models_on_fn_error_output](../../img/comparator/comparison_fn_errors_c.png){:class="img-responsive" style="max-width:800px"}
 {: .text-center}
 
