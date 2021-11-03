@@ -6,7 +6,7 @@ grand_parent: Examples
 nav_order: 1
 ---
 
-[[Notebook example]](https://github.com/rnt-pmi/odin/tree/master/examples)
+[[Notebook example]](https://github.com/rnt-pmi/odin/tree/master/examples){:target="_blank"}
 {: .text-right .fs-2}
 
 # {{ page.title }}
@@ -20,7 +20,7 @@ from odin.classes import TaskType, Metrics, Curves, CustomMetric, DatasetClassif
 dataset_gt_param = "../../test-data/classification-ml/gt_art.json"
 
 # define the path of the folder that contains the predictions .txt files for each model
-path_to_detections = [("my_model", "../../test-data/classification-ml/predictions")]
+path_to_detections = "../../test-data/classification-ml/predictions"
 
 # define the task type
 classification_type = TaskType.CLASSIFICATION_MULTI_LABEL
@@ -73,13 +73,6 @@ my_analyzer = AnalyzerClassification('my_model',
                                      metric=Metrics.F1_SCORE,
                                      save_graphs_as_png=False)
 ```
-
-#### Cross Validation
-```py
-my_analyzer.cross_validation_analysis()
-```
-![cross_validation](../../img/examples/artdl/cross_validation.png){:class="img-responsive" style="max-width:600px"}
-{: .text-center}
 
 #### Properties analysis
 ```py

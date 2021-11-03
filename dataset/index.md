@@ -70,7 +70,7 @@ from odin.classes import DatasetClassification
 dataset_gt_param = "/path/to/gt/file.json"
 
 # define the paths of the folders which contains the predictions .txt files for each model
-path_to_detections = [("my_classifier_name", "/path/to/predictions")]
+path_to_detections = "/path/to/predictions"
 
 classification_type = TaskType.CLASSIFICATION_MULTI_LABEL
 
@@ -148,7 +148,7 @@ from odin.classes import DatasetLocalization
 dataset_gt_param = "/path/to/gt/file.json"
 
 # define the paths of the folders which contains the predictions .txt files for each model
-path_to_detections = [("my_detector_name", "/path/to/predictions")]
+path_to_detections = "/path/to/predictions"
 
 localization_type = TaskType.OBJECT_DETECTION
 
@@ -215,7 +215,7 @@ from odin.classes import DatasetCAMs
 dataset_gt_param = "/path/to/gt/file.json"
 
 # define the paths of the CAMs for each model
-path_to_cams_detections = [("my_classifier_name", "/path/to/cams/predictions")]
+path_to_cams_detections = "/path/to/cams/predictions"
 
 classification_type = TaskType.CLASSIFICATION_MULTI_LABEL
 

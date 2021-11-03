@@ -13,8 +13,8 @@
     },
     {
         "name": "proposals_paths",
-        "type": "list of tuple, optional",
-        "description": "List of couples. Each couple contains the model name and the corresponding proposals path.<br>(default is None)"
+        "type": "str or list of tuple, optional",
+        "description": "Path of the proposals of a single model or list of couples. Each couple contains the model name and the corresponding proposals path.<br>(default is None)"
     },
     {
         "name": "observations_set_name",
@@ -77,8 +77,8 @@
     },
     {
         "name": "proposals_path",
-        "type": "list of tuple, optional",
-        "description": "List of couples. Each couple contains the model name and the corresponding proposals path.<br>(default is None)"
+        "type": "str or list of tuple, optional",
+        "description": "Path of the proposals of a single model or list of couples. Each couple contains the model name and the corresponding proposals path.<br>(default is None)"
     },
     {
         "name": "images_set_name",
@@ -141,8 +141,8 @@
     },
     {
         "name": "cams_paths",
-        "type": "list of tuple, optional",
-        "description": "List of couples. Each couple contains the model name and the corresponding CAMs path.<br>(default is None)"
+        "type": "str or list of tuple, optional",
+        "description": "Path of the CAMs of a single model or list of couples. Each couple contains the model name and the corresponding CAMs path.<br>(default is None)"
     },
     {
         "name": "annotation_type",
@@ -151,8 +151,8 @@
     },
     {
         "name": "proposals_paths",
-        "type": "list of tuple, optional",
-        "description": "List of couples. Each couple contains the model name and the corresponding proposals path.<br>(default is None)"
+        "type": "str or list of tuple, optional",
+        "description": "Path of the proposals of a single model  or list of couples. Each couple contains the model name and the corresponding proposals path.<br>(default is None)"
     },
     {
         "name": "observations_set_name",

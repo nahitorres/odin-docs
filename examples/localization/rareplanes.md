@@ -6,7 +6,7 @@ grand_parent: Examples
 nav_order: 1
 ---
 
-[[Notebook example]](https://github.com/rnt-pmi/odin/tree/master/examples)
+[[Notebook example]](https://github.com/rnt-pmi/odin/tree/master/examples){:target="_blank"}
 {: .text-right .fs-2}
 
 # {{ page.title }}
@@ -20,7 +20,7 @@ from odin.classes import DatasetLocalization, AnalyzerLocalization, Metrics, Tas
 dataset_gt_param = "../../test-data/localization/gt.json"
 
 # define the path of the folder that contains the predictions .txt files for each model
-path_to_detections = [("my_model", "../../test-data/localization/predictions-segmentation/")]
+path_to_detections = "../../test-data/localization/predictions-segmentation/"
 
 # define the problem task
 task_type = TaskType.INSTANCE_SEGMENTATION

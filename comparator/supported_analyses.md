@@ -14,6 +14,7 @@ nav_order: 4
     - [analyze_sensitivity_impact_of_properties()](../analyzer/analyses/per_property_analyses.html#models-comparison-1)
 - Errors
     - [analyze_false_positive_errors()](../analyzer/analyses/errors.html#models-comparison)
+    - [analyze_false_negative_errors()](../analyzer/analyses/errors.html#models-comparison-1)
 - Distributions
     - [show_true_positive_distribution()](../analyzer/analyses/distributions.html#models-comparison)
     - [show_false_positive_distribution()](../analyzer/analyses/distributions.html#models-comparison-1)
