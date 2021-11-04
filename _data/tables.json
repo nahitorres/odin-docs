@@ -441,9 +441,9 @@
       "ml_color": "lightgrey",
       "ml_supp": "<strong>yes</strong>",
       "od_color": "lightgrey",
-      "od_supp": "<strong>yes</strong>",
+      "od_supp": "n/a",
       "is_color": "lightgrey",
-      "is_supp": "<strong>yes</strong>"
+      "is_supp": "n/a"
     },
     {
       "name": "Distribution of FN",
@@ -566,7 +566,7 @@
       "is_supp": "n/a"
     },
     {
-      "name": "FP Categorization and Impact",
+      "name": "FP Categorization and Impact*",
       "rowspan": 1,
       "specs": "<a href='./analyzer/analyses/errors.html#analyze_false_positive_errors'>Per-category</a>",
       "comp_color": "lightgrey",

@@ -158,6 +158,9 @@ The following tables summarize the evaluation metrics and diagnosis methods supp
   </tbody>
 </table>
 
+*From the previous version, we have modified the counting of the background errors ​for localization problems. For more information, click [here](./correction/fp_background_error.html)
+{: .fs-1}
+
 <hr>
 
 ## Contributors
