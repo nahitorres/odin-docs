@@ -43,10 +43,8 @@ permalink: /
 
 <hr>
 
-<div class="container-iframe">
-<iframe src="https://www.youtube.com/embed/lM4EMaZSbVk" frameborder="0" allowfullscreen class="responsive-iframe"></iframe>
-</div>
-
+![architecture](./img/architecture.png){:class="img-responsive" style="max-width:800px"}
+{: .text-center}
 <hr>
 
 ## Supported Tasks
