@@ -638,7 +638,7 @@
     {
       "name": "Reliability Analysis",
       "rowspan": 2,
-      "specs": "<a href='./analyzer/analyses/reliability.html'>Total</a>",
+      "specs": "<a href='./analyzer/analyses/reliability.html#analyze_reliability'>Total</a>",
       "comp_color": "darkgrey",
       "comp_supp": "n/a",
       "bin_color": "lightgrey",
@@ -655,7 +655,7 @@
     {
       "name": "Reliability Analysis",
       "rowspan": 0,
-      "specs": "<a href='./analyzer/analyses/reliability.html'>Per-category</a>",
+      "specs": "<a href='./analyzer/analyses/reliability.html#analyze_reliability_for_categories'>Per-category</a>",
       "comp_color": "darkgrey",
       "comp_supp": "n/a",
       "bin_color": "darkgrey",

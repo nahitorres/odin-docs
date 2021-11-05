@@ -473,6 +473,20 @@
   "analyze_reliability":
   [
     {
+        "name": "bins",
+        "type": "int, optional",
+        "description": "The number of bins the confidence values are split into.<br>(default is 10)"
+    },
+    {
+        "name": "show",
+        "type": "bool, optional",
+        "description": "Indicates whether the plot should be shown or not. If False, returns the results as dict.<br>(default is True)"
+    }
+  ],
+
+  "analyze_reliability_for_categories":
+  [
+    {
         "name": "categories",
         "type": "list, optional",
         "description": "If not specified, it performs the analysis on the entire data set, otherwise it performs a per-category analysis.<br>(default is None)"
