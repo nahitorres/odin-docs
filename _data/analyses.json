@@ -217,11 +217,6 @@
         "description": "Name of the category to be analyzed."
     },
     {
-        "name": "categories",
-        "type": "list, optional",
-        "description": "List of categories to be included in the analysis. If not specified, only the selected category is included.<br>(default is None)"
-    },
-    {
         "name": "metric",
         "type": "Metrics, optional",
         "description": "Evaluation metric used for the analysis. If not specified, the default one is used.<br>(default is None)"
