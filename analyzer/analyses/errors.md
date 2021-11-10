@@ -24,6 +24,17 @@ nav_order: 3
 
 It analyzes the false positives for a specific category, by identifying the type of the errors and shows the gain that the model could achieve by removing all the false positives of each type.
 
+For classification tasks we have categorized the False Positive into three different types:
+- **_Background_**: the observation does not represent any of the categories (only for multi-label classification task).
+- **_Similar_**: the observation represents a similar category to the predicted one.
+- **_Other_**: all the other cases.
+
+For localization tasks we have identified four different errors:
+- **_Background_**: the category predicted has been confused with the background or the IoU with the corresponding annotation is less than a minimum threshold (set to 0.2).
+- **_Localization_**: the model has correctly predicted the category but the IoU with the corresponding annotation is less than the threshold.
+- **_Similar_**: the ground truth annotation represents a similar category to the predicted one and the IoU is equal or greater than the threshold.
+- **_Other_**: all the other cases.
+
 #### Parameters
 {: .no_toc}
 <dl>
@@ -202,6 +213,16 @@ my_comparator.analyze_false_positive_errors()
 {: .mb-6}
 
 It analyzes the false negatives for a specific category, by identifying the type of the errors.
+
+For classification tasks we have categorized the false negative into two different types:
+- **_Similar_**: the model has wrongly predicted a class which is similar to the one represented in the observation.
+- **_Other_**: all the other cases.
+
+For localization tasks we have identified four different errors:
+- **_Localization_**: the model has correctly predicted the category but the IoU with the corresponding annotation is less than the threshold but equal or greater than a minimum threshold (set to 0.2).
+- **_Similar_**: the ground truth annotation represents a similar category to the predicted one and the IoU is equal or greater than the threshold.
+- **_No_prediction_**: the ground truth annotation does not have a corresponding prediction or the IoU is less than a minimum threshold (set to 0.2).
+- **_Other_**: all the other cases.
 
 #### Parameters
 {: .no_toc}
