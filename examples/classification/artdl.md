@@ -9,7 +9,7 @@ nav_order: 1
 [[Notebook example]](https://github.com/rnt-pmi/odin/tree/master/examples){:target="_blank"}
 {: .text-right .fs-2}
 
-# {{ page.title }}
+# {{ page.title }} - a multi label classification task example
 {: .mb-6}
 
 ### Package import and variables definition
