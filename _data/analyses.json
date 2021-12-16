@@ -116,6 +116,11 @@
         "description": "Property values to be analyzed. If not specified, all the property values are considered.<br>(default is None)"
     },
     {
+        "name": "categories",
+        "type": "list, optional",
+        "description": "List of categories to be included in the analysis. If not specified, all the categories are included.<br>(default is None)"
+    },
+    {
         "name": "show",
         "type": "bool, optional",
         "description": "Indicates whether the plot should be shown or not. If False, returns the results as dict.<br>(default is True)"
@@ -143,6 +148,11 @@
         "name": "properties",
         "type": "list, optional",
         "description": "List of properties to be included in the analysis. If not specified, all the properties are included.<br>(default is None)"
+    },
+    {
+        "name": "categories",
+        "type": "list, optional",
+        "description": "List of categories to be included in the analysis. If not specified, all the categories are included.<br>(default is None)"
     },
     {
         "name": "metric",
