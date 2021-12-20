@@ -800,8 +800,8 @@
     },
     {
         "name": "properties",
-        "type": "MetaProperties",
-        "description": "List of the meta-annotations to be included in the extraction"
+        "type": "MetaProperties, optional",
+        "description": "List of the meta-annotations to be included in the extraction. If None, no default meta-annotation will be extracted.<br>(default is None)"
     },
     {
         "name": "output_path",
