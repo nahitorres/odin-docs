@@ -283,6 +283,11 @@
         "description": "Intersection Over Union threshold. All the predictions with a iou value less than the threshold are considered False Positives. If not specified, the default value is 0.5.<br>(default is None)"
     },
     {
+        "name": "iou_weak",
+        "type": "float, optional",
+        "description": "Intersection Over Union weak threshold. Used for the identification of the localization errors. If not specified, the default value is 0.1.<br>(default is None)"
+    },
+    {
         "name": "conf_thresh",
         "type": "float, optional",
         "description": "Confidence threshold. All the predictions with a confidence value less than the threshold are ignored. <br>If not specified, the default value is 0.5.<br>(default is None)"
@@ -478,6 +483,11 @@
         "name": "iou",
         "type": "float, optional",
         "description": "Intersection Over Union threshold. All the predictions with a iou value less than the threshold are considered False Positives. If not specified, the default value is 0.5.<br>(default is None)"
+    },
+    {
+        "name": "iou_weak",
+        "type": "float, optional",
+        "description": "Intersection Over Union weak threshold. Used for the identification of the localization errors. If not specified, the default value is 0.1.<br>(default is None)"
     },
     {
         "name": "conf_thresh",
