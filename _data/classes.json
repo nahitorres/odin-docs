@@ -76,7 +76,7 @@
         "description": "Problem task type. It can be:<br><i>TaskType.OBJECT_DETECTION</i>, <i>TaskType.INSTANCE_SEGMENTATION</i>."
     },
     {
-        "name": "proposals_path",
+        "name": "proposals_paths",
         "type": "str or list of tuple, optional",
         "description": "Path of the proposals of a single model or list of couples. Each couple contains the model name and the corresponding proposals path.<br>(default is None)"
     },

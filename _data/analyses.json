@@ -238,6 +238,44 @@
     }
   ],
 
+  "analyze_false_positive_trend":
+  [
+    {
+        "name": "categories",
+        "type": "list, optional",
+        "description": "List of categories to be included in the analysis. If not specified, all the categories are included.<br>(default is None)"
+    },
+    {
+        "name": "include_correct_predictions",
+        "type": "bool, optional",
+        "description": "Indicates whether the correct detections should be included in the trend analysis or not.<br>(default is True)"
+    },
+    {
+        "name": "show",
+        "type": "bool, optional",
+        "description": "Indicates whether the plot should be shown or not. If False, returns the results as dict.<br>(default is True)"
+    }
+  ],
+
+  "analyze_false_positive_trend_for_category":
+  [
+    {
+        "name": "category",
+        "type": "str",
+        "description": "Name of the category to be analyzed."
+    },
+    {
+        "name": "include_correct_predictions",
+        "type": "bool, optional",
+        "description": "Indicates whether the correct detections should be included in the trend analysis or not.<br>(default is True)"
+    },
+    {
+        "name": "show",
+        "type": "bool, optional",
+        "description": "Indicates whether the plot should be shown or not. If False, returns the results as dict.<br>(default is True)"
+    }
+  ],
+
   "analyze_false_negative_errors":
   [
     {

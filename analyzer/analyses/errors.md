@@ -209,6 +209,154 @@ my_comparator.analyze_false_positive_errors()
   </tbody>
 </table>
 
+# analyze_false_positive_trend_for_category()
+{: .mb-6}
+
+It analyzes the trend of the false positives by indicating the percentage of each error type.
+
+#### Parameters
+{: .no_toc}
+<dl>
+  {% for param in site.data.analyses.analyze_false_positive_trend_for_category %}
+
+  <dt><strong>{{ param.name }}</strong></dt>
+  <dd><br><b><i>{{ param.type }}</i></b></dd><dd>{{ param.description }}</dd>
+
+  {% endfor %}
+</dl>
+
+<hr>
+
+### Example
+{: .no_toc}
+#### Classification
+{: .no_toc}
+```py
+from odin.classes import AnalyzerClassification
+
+my_analyzer = AnalyzerClassification("my_classifier_name", my_classification_dataset)
+my_analyzer.analyze_false_positive_trend_for_category('catA')
+```
+
+![analyze_false_positive_trend_for_cat_cl_output](../../img/analyzer/false_positive_trend_cl.png){:class="img-responsive" style="max-width:800px"}
+{: .text-center}
+
+#### Localization
+{: .no_toc}
+```py
+from odin.classes import AnalyzerLocalization
+
+my_analyzer = AnalyzerLocalization("my_detector_name", my_localization_dataset)
+my_analyzer.analyze_false_positive_trend_for_category('catA')
+```
+
+![analyze_false_positive_trend_for_cat_loc_output](../../img/analyzer/false_positive_trend_loc.png){:class="img-responsive" style="max-width:800px"}
+{: .text-center}
+
+<hr>
+
+### Tasks supported
+{: .no_toc}
+<table>
+  <thead>
+    <tr class="header">
+      <th>Binary Classification</th>
+      <th>Single-label Classification</th>
+      <th>Multi-label Classification</th>
+      <th>Object Detection</th>
+      <th>Instance Segmentation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="text-align:center;">
+      <td style="background:lightcoral;">no</td>
+      <td style="background:lightgreen;">yes</td>
+      <td style="background:lightgreen;">yes</td>
+      <td style="background:lightgreen;">yes</td>
+      <td style="background:lightgreen;">yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+
+# analyze_false_positive_trend()
+{: .mb-6}
+
+For each class, it analyzes the trend of the false positives by indicating the percentage of each error type.
+
+#### Parameters
+{: .no_toc}
+<dl>
+  {% for param in site.data.analyses.analyze_false_positive_trend %}
+
+  <dt><strong>{{ param.name }}</strong></dt>
+  <dd><br><b><i>{{ param.type }}</i></b></dd><dd>{{ param.description }}</dd>
+
+  {% endfor %}
+</dl>
+
+<hr>
+
+### Example
+{: .no_toc}
+#### Classification
+{: .no_toc}
+```py
+from odin.classes import AnalyzerClassification
+
+my_analyzer = AnalyzerClassification("my_classifier_name", my_classification_dataset)
+my_analyzer.analyze_false_positive_trend()
+```
+
+![analyze_false_positive_trend_cl_output](../../img/analyzer/false_positive_trend_cl.png){:class="img-responsive" style="max-width:800px"}
+{: .text-center}
+
+N.B. As example, it is shown only the output of a single category, but the analysis is performed for all the categories selected.
+{: .text-right .fs-1}
+
+#### Localization
+{: .no_toc}
+```py
+from odin.classes import AnalyzerLocalization
+
+my_analyzer = AnalyzerLocalization("my_detector_name", my_localization_dataset)
+my_analyzer.analyze_false_positive_trend()
+```
+
+![analyze_false_positive_trend_loc_output](../../img/analyzer/false_positive_trend_loc.png){:class="img-responsive" style="max-width:800px"}
+{: .text-center}
+
+N.B. As example, it is shown only the output of a single category, but the analysis is performed for all the categories selected.
+{: .text-right .fs-1}
+
+<hr>
+
+### Tasks supported
+{: .no_toc}
+<table>
+  <thead>
+    <tr class="header">
+      <th>Binary Classification</th>
+      <th>Single-label Classification</th>
+      <th>Multi-label Classification</th>
+      <th>Object Detection</th>
+      <th>Instance Segmentation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="text-align:center;">
+      <td style="background:lightcoral;">no</td>
+      <td style="background:lightgreen;">yes</td>
+      <td style="background:lightgreen;">yes</td>
+      <td style="background:lightgreen;">yes</td>
+      <td style="background:lightgreen;">yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+
 # analyze_false_negative_errors_for_category()
 {: .mb-6}
 
