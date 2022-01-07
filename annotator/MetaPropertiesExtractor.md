@@ -9,10 +9,9 @@ nav_order: 3
 {: .mb-6}
 
 The MetaPropertiesExtractor class allows the automatic extraction of meta-annotations from the observations.<br>
-_Odin_ provides the support to the extraction of three different meta-annotations:
+_Odin_ provides the support to the extraction of two different meta-annotations:
  - **MetaProperties.COLOR**: extraction of the image color space. It can be 'rgb' (colored) or 'bw' (greyscaled).
  - **MetaProperties.FACES**: extraction of the number of faces present in the image. It can be '0-1', '2-4', '5+'.
- - **MetaProperties.CHARACTERS**: extraction of the number of CHARACTERS present in the image. It can be '0-1', '2-4', '5+'.
 
 <hr>
 
@@ -33,7 +32,7 @@ _Odin_ provides the support to the extraction of three different meta-annotation
 from odin.annotator.meta_annotator_extractor import MetaPropertiesExtractor, MetaProperties
 
 # define the properties to be extracted
-my_properties = [MetaProperties.COLOR, MetaProperties.FACES, MetaProperties.CHARACTERS]
+my_properties = [MetaProperties.COLOR, MetaProperties.FACES]
 my_output_path = "path/to/save/the/new/annotated/dataset/"
 
 my_annotator = MetaPropertiesExtractor(my_classification_dataset,
