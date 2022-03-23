@@ -1,5 +1,5 @@
 {
-  "metrics":
+  "diagnosis_metrics":
   [
     {
       "category": "Base Metrics",
@@ -196,68 +196,6 @@
       "od_supp": "n/a",
       "is_color": "darkgrey",
       "is_supp": "n/a"
-    },
-
-
-    {
-      "category": "CAMs Metrics",
-      "rowspan": 4,
-      "name": "<a href='./metrics_curves/cams_metrics/cam_global_iou.html'>Global IoU</a>",
-      "bin_color": "lightgrey",
-      "bin_supp": "<strong>yes</strong>",
-      "sl_color": "lightgrey",
-      "sl_supp": "<strong>yes</strong>",
-      "ml_color": "lightgrey",
-      "ml_supp": "<strong>yes</strong>",
-      "od_color": "darkgrey",
-      "od_supp": "n/a",
-      "is_color": "darkgrey",
-      "is_supp": "n/a"
-    },
-    {
-      "category": "CAMs Metrics",
-      "rowspan": 0,
-      "name": "<a href='./metrics_curves/cams_metrics/cam_component_iou.html'>Component IoU</a>",
-      "bin_color": "lightgrey",
-      "bin_supp": "<strong>yes</strong>",
-      "sl_color": "lightgrey",
-      "sl_supp": "<strong>yes</strong>",
-      "ml_color": "lightgrey",
-      "ml_supp": "<strong>yes</strong>",
-      "od_color": "darkgrey",
-      "od_supp": "n/a",
-      "is_color": "darkgrey",
-      "is_supp": "n/a"
-    },
-    {
-      "category": "CAMs Metrics",
-      "rowspan": 0,
-      "name": "<a href='./metrics_curves/cams_metrics/cam_irrelevant_attention.html'>Irrelevant Attention</a>",
-      "bin_color": "lightgrey",
-      "bin_supp": "<strong>yes</strong>",
-      "sl_color": "lightgrey",
-      "sl_supp": "<strong>yes</strong>",
-      "ml_color": "lightgrey",
-      "ml_supp": "<strong>yes</strong>",
-      "od_color": "darkgrey",
-      "od_supp": "n/a",
-      "is_color": "darkgrey",
-      "is_supp": "n/a"
-    },
-    {
-      "category": "CAMs Metrics",
-      "rowspan": 0,
-      "name": "<a href='./metrics_curves/cams_metrics/cam_bbox_coverage.html'>Bbox Coverage</a>",
-      "bin_color": "lightgrey",
-      "bin_supp": "<strong>yes</strong>",
-      "sl_color": "lightgrey",
-      "sl_supp": "<strong>yes</strong>",
-      "ml_color": "lightgrey",
-      "ml_supp": "<strong>yes</strong>",
-      "od_color": "darkgrey",
-      "od_supp": "n/a",
-      "is_color": "darkgrey",
-      "is_supp": "n/a"
     }
   ],
 
@@ -340,7 +278,7 @@
     }
   ],
 
-  "analyses":
+  "diagnosis_analyses":
   [
     {
       "name": "Performance Analysis",
@@ -739,42 +677,6 @@
       "is_color": "lightgrey",
       "is_supp": "<strong>yes</strong>"
     },
-
-    {
-      "name": "CAMs Analysis",
-      "rowspan": 2,
-      "specs": "<a href='#'>Total</a>",
-      "comp_color": "lightgrey",
-      "comp_supp": "<strong>yes</strong>",
-      "bin_color": "lightgrey",
-      "bin_supp": "<strong>yes</strong>",
-      "sl_color": "lightgrey",
-      "sl_supp": "<strong>yes</strong>",
-      "ml_color": "lightgrey",
-      "ml_supp": "<strong>yes</strong>",
-      "od_color": "darkgrey",
-      "od_supp": "n/a",
-      "is_color": "darkgrey",
-      "is_supp": "n/a"
-    },
-    {
-      "name": "CAMs Analysis",
-      "rowspan": 0,
-      "specs": "<a href='#'>Per-category</a>",
-      "comp_color": "darkgrey",
-      "comp_supp": "no",
-      "bin_color": "lightgrey",
-      "bin_supp": "<strong>yes</strong>",
-      "sl_color": "lightgrey",
-      "sl_supp": "<strong>yes</strong>",
-      "ml_color": "lightgrey",
-      "ml_supp": "<strong>yes</strong>",
-      "od_color": "darkgrey",
-      "od_supp": "n/a",
-      "is_color": "darkgrey",
-      "is_supp": "n/a"
-    },
-
     {
       "name": "Performance Summary",
       "rowspan": 3,
@@ -825,6 +727,108 @@
       "od_supp": "<strong>yes</strong>",
       "is_color": "lightgrey",
       "is_supp": "<strong>yes</strong>"
+    }
+  ],
+
+  "cams_metrics":
+  [
+    {
+      "category": "CAMs Metrics",
+      "rowspan": 4,
+      "name": "<a href='./metrics_curves/cams_metrics/cam_global_iou.html'>Global IoU</a>",
+      "bin_color": "lightgrey",
+      "bin_supp": "<strong>yes</strong>",
+      "sl_color": "lightgrey",
+      "sl_supp": "<strong>yes</strong>",
+      "ml_color": "lightgrey",
+      "ml_supp": "<strong>yes</strong>",
+      "od_color": "darkgrey",
+      "od_supp": "n/a",
+      "is_color": "darkgrey",
+      "is_supp": "n/a"
+    },
+    {
+      "category": "CAMs Metrics",
+      "rowspan": 0,
+      "name": "<a href='./metrics_curves/cams_metrics/cam_component_iou.html'>Component IoU</a>",
+      "bin_color": "lightgrey",
+      "bin_supp": "<strong>yes</strong>",
+      "sl_color": "lightgrey",
+      "sl_supp": "<strong>yes</strong>",
+      "ml_color": "lightgrey",
+      "ml_supp": "<strong>yes</strong>",
+      "od_color": "darkgrey",
+      "od_supp": "n/a",
+      "is_color": "darkgrey",
+      "is_supp": "n/a"
+    },
+    {
+      "category": "CAMs Metrics",
+      "rowspan": 0,
+      "name": "<a href='./metrics_curves/cams_metrics/cam_irrelevant_attention.html'>Irrelevant Attention</a>",
+      "bin_color": "lightgrey",
+      "bin_supp": "<strong>yes</strong>",
+      "sl_color": "lightgrey",
+      "sl_supp": "<strong>yes</strong>",
+      "ml_color": "lightgrey",
+      "ml_supp": "<strong>yes</strong>",
+      "od_color": "darkgrey",
+      "od_supp": "n/a",
+      "is_color": "darkgrey",
+      "is_supp": "n/a"
+    },
+    {
+      "category": "CAMs Metrics",
+      "rowspan": 0,
+      "name": "<a href='./metrics_curves/cams_metrics/cam_bbox_coverage.html'>Bbox Coverage</a>",
+      "bin_color": "lightgrey",
+      "bin_supp": "<strong>yes</strong>",
+      "sl_color": "lightgrey",
+      "sl_supp": "<strong>yes</strong>",
+      "ml_color": "lightgrey",
+      "ml_supp": "<strong>yes</strong>",
+      "od_color": "darkgrey",
+      "od_supp": "n/a",
+      "is_color": "darkgrey",
+      "is_supp": "n/a"
+    }
+  ],
+
+  "cams_analyses":
+  [
+    {
+      "name": "CAMs Analysis",
+      "rowspan": 2,
+      "specs": "<a href='./analyzer/analyses/cams.html#analyze_cams'>Total</a>",
+      "comp_color": "lightgrey",
+      "comp_supp": "<strong>yes</strong>",
+      "bin_color": "lightgrey",
+      "bin_supp": "<strong>yes</strong>",
+      "sl_color": "lightgrey",
+      "sl_supp": "<strong>yes</strong>",
+      "ml_color": "lightgrey",
+      "ml_supp": "<strong>yes</strong>",
+      "od_color": "darkgrey",
+      "od_supp": "n/a",
+      "is_color": "darkgrey",
+      "is_supp": "n/a"
+    },
+    {
+      "name": "CAMs Analysis",
+      "rowspan": 0,
+      "specs": "<a href='./analyzer/analyses/cams.html#analyze_cams_for_categories'>Per-category</a>",
+      "comp_color": "darkgrey",
+      "comp_supp": "no",
+      "bin_color": "lightgrey",
+      "bin_supp": "<strong>yes</strong>",
+      "sl_color": "lightgrey",
+      "sl_supp": "<strong>yes</strong>",
+      "ml_color": "lightgrey",
+      "ml_supp": "<strong>yes</strong>",
+      "od_color": "darkgrey",
+      "od_supp": "n/a",
+      "is_color": "darkgrey",
+      "is_supp": "n/a"
     }
   ]
 }
