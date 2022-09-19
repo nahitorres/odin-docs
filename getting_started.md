@@ -48,8 +48,12 @@ nav_order: 1
 ```
   .\venv\Scripts\activate
 ```
-5. Install all the libraries required:
+5. Install the framework and its requirements:
 ```
-  pip install -r requirements.txt
+  pip install -e . --user
 ```
-6. Start a <a href="https://jupyter.org/" target="_blank">Jupyter Notebook</a>, go to the folder 'examples' and try the ready-to-use notebooks.
+6. N.B. To be able to use the meta-annotation extractor, two more packages need to be installed (tensorflow and mtcnn). Simply execute the following command:
+```
+  pip install tensorflow mtcnn
+```
+7. Start a <a href="https://jupyter.org/" target="_blank">Jupyter Notebook</a>, go to the folder 'examples' and try the ready-to-use notebooks.
